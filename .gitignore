@@ -8,6 +8,7 @@
 
 # Machine-local environments and training artifacts
 .venv/
+.runtime/
 venv/
 outputs/
 __pycache__/

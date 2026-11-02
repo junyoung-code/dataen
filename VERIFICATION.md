@@ -27,3 +27,33 @@ Homebrew 설치 스크립트 자체는 현재 컴퓨터의 전역 환경을 변�
 - Git에 포함할 파일을 코드·문서 11개로 한정하고 데이터, 기존 패키지, ZIP, outputs, 가상환경 제외를 확인했습니다.
 - 작은 실제 데이터의 전체 처리 경로 검사는 위 초기 검증 기록이며, 코드가 같아 이번에는 반복 실행하지 않았습니다.
 - 데이터는 GitHub에 포함하지 않습니다. 다른 기기에서 별도로 배치해야 합니다.
+
+## 맥 미니 환경 설정 — 2026-11-02
+
+
+- macOS 27.0.1 / arm64, 프로젝트 전용 Python 3.12.16.
+- `.runtime/python`의 Python으로 `.venv` 생성. Homebrew 전역 설치 없이 구성.
+- `requirements.txt`의 5개 패키지 버전 일치, `pip check` 통과.
+- OpenMP 23.1.4: 공식 Homebrew `arm64_sequoia` bottle 다운로드 및 SHA-256 검증.
+  검증 해시: `af8425bbe39630ec9b2022b67449ac737e0ed6d48e98a6309f841295d3c6f0f2`.
+- OpenMP를 `.venv/lib/python3.12/site-packages/lightgbm/lib/`에 배치하고
+  `lib_lightgbm.dylib`에 `@loader_path` RPATH 추가 및 ad-hoc 서명 적용.
+- `train_smoke.py --self-test`: CPU 학습·저장·재로딩 및 예측 일치 검사 통과.
+- `train_smoke.py --check-only`: 데이터 12개, 발전소 253개, 평가 시각 8,760개 검사 통과.
+- 별도 검사로 데이터 12개의 파일 크기와 SHA-256 일치 확인.
+- `bash -n setup.sh run_smoke.sh` 통과. 이 환경 설치 시점에는 전체 학습 전이었으며, 아래 후속 실행에서 완료함.
+- 설치 버전 기록: `environment-lock.txt`. 실행 명령: `bash run_smoke.sh`.
+
+설치 방식 참고: [uv Python 설치](https://docs.astral.sh/uv/guides/install-python/),
+[uv 저장 위치](https://docs.astral.sh/uv/reference/storage/),
+[Homebrew OpenMP 배포 정보](https://formulae.brew.sh/api/formula/libomp.json).
+
+## 맥 미니 전체 학습 및 시간순 검증 — 2026-11-02
+
+- 전체 시험 학습 `smoke_20261102_200221_LPmZAS`: 두 모델 각각 50트리, 팀 예측 17,520행, 발전소 예측 2,216,280행. 출력 형식·시간축·결측/중복·음수/비유한값·팀 합계 일치 검사 통과.
+- 저장된 모델로 최초 48시간의 발전소 예측 12,144행을 다시 계산해 저장 예측과 일치 확인.
+- 시간순 검증 `temporal_20261102_200911_C859iM`: 원본 라벨 유지, 학습 시점 경계, 모든 주요 지표 및 역사적 가중 오차 패널티 독립 재계산 통과.
+- 완전 관측 팀×시간 11,592개(66.16%). 2024년 6월은 완전 관측 팀×시간이 없어 팀별 월 지표를 계산하지 않음. 발전소별 월 지표는 12개월 모두 존재.
+- 테스트: `.venv/bin/python -m unittest discover -v` — 5개 통과.
+- 코드 검토에서 수정이 필요한 오류 없음. 성능 수치·한계는 EXPERIMENTS 및 검증 보고서 참조.
+- 원본 결과 파일은 맥 미니 `outputs/`에 보관하며 Git에는 요약 문서만 포함.
