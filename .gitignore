@@ -1,0 +1,24 @@
+# Local datasets and existing transfer packages
+/data/
+/data
+/handover 2/
+/private/
+*.zip
+*.parquet
+
+# Machine-local environments and training artifacts
+.venv/
+venv/
+outputs/
+__pycache__/
+*.py[cod]
+environment-lock.txt
+model_round_*.txt
+.DS_Store
+
+# Credentials and machine-local settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
