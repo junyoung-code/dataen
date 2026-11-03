@@ -1,0 +1,66 @@
+{
+  "protocol": "p0-v1",
+  "data_hashes": {
+    "train/generation.parquet": "a2c334a5d2dd0983be78c7ac138e25a013cf70fd9d027515953129ea79964e95",
+    "sites.csv": "93d166fffd009c3643db748fc6d5a1d48851e5f70b314171130e6ab6b7997ea2",
+    "train/smp.csv": "6ae610fc3e527e603681da3867ecd79d210ed24a17e676ac16149ba7d349645b"
+  },
+  "labels_seen_previously": true,
+  "model_training_performed": false,
+  "windows": {
+    "seasonal_diagnostic": {
+      "train_start": "2023-06-01 01:00:00+09:00",
+      "train_end_exclusive": "2024-06-30 01:00:00+09:00",
+      "eval_start": "2024-07-01 01:00:00+09:00",
+      "eval_end_exclusive": "2025-01-01 01:00:00+09:00",
+      "train_rows": 1404530,
+      "eval_observed_rows": 1100462,
+      "expected_hours": 4416,
+      "common_hours": 178,
+      "common_coverage_pct": 4.030797101449275,
+      "weighted_peak_hours": 36,
+      "unseen_sites": 29,
+      "mask_sha256": "969e327c14af3bcb8e1f48dcabbbdd1e98583069442d1f0914696d1fb176bf78",
+      "monthly_common_hours": {
+        "2024-12-01 00:00:00+09:00": 178
+      }
+    },
+    "tune": {
+      "train_start": "2023-06-01 01:00:00+09:00",
+      "train_end_exclusive": "2024-12-31 01:00:00+09:00",
+      "eval_start": "2025-01-01 01:00:00+09:00",
+      "eval_end_exclusive": "2025-03-01 01:00:00+09:00",
+      "train_rows": 2504296,
+      "eval_observed_rows": 358248,
+      "expected_hours": 1416,
+      "common_hours": 1416,
+      "common_coverage_pct": 100.0,
+      "weighted_peak_hours": 295,
+      "unseen_sites": 0,
+      "mask_sha256": "9d2e7486aae0ef1f20b31bb46c6e0a83e9b7ce8ea66d2184b984665d7d2b85fe",
+      "monthly_common_hours": {
+        "2025-01-01 00:00:00+09:00": 744,
+        "2025-02-01 00:00:00+09:00": 672
+      }
+    },
+    "confirmation": {
+      "train_start": "2023-06-01 01:00:00+09:00",
+      "train_end_exclusive": "2025-02-28 01:00:00+09:00",
+      "eval_start": "2025-03-01 01:00:00+09:00",
+      "eval_end_exclusive": "2025-06-01 01:00:00+09:00",
+      "train_rows": 2862544,
+      "eval_observed_rows": 558624,
+      "expected_hours": 2208,
+      "common_hours": 2208,
+      "common_coverage_pct": 100.0,
+      "weighted_peak_hours": 460,
+      "unseen_sites": 0,
+      "mask_sha256": "6cffbd4129ac8f471066bc65cf0d09aaa1bfb51acba1ef7562e691317445e45a",
+      "monthly_common_hours": {
+        "2025-03-01 00:00:00+09:00": 744,
+        "2025-04-01 00:00:00+09:00": 720,
+        "2025-05-01 00:00:00+09:00": 744
+      }
+    }
+  }
+}

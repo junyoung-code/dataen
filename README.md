@@ -7,6 +7,7 @@
 - 현재 결정과 진행 상태: [CONTEXT.md](CONTEXT.md)
 - Codex 작업 지침: [AGENTS.md](AGENTS.md)
 - 실험 기록: [EXPERIMENTS.md](EXPERIMENTS.md)
+- 확정 평가 기준: [P0 프로토콜](docs/experiments/validation-protocol.md) — 설정 비교·확인 기간, 공통 관측 시각, 가중 오차
 - 다음 실험과 세션 인수인계: [EXPERIMENT_PLAN.md](EXPERIMENT_PLAN.md)
 - 실행·환경 검증: [VERIFICATION.md](VERIFICATION.md)
 - 시간순 검증 보고서: [2026-11-02 결과](docs/experiments/2026-11-02-temporal-evaluation.md)
