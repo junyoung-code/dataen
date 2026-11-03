@@ -9,6 +9,7 @@
 - 실험 기록: [EXPERIMENTS.md](EXPERIMENTS.md)
 - 확정 평가 기준: [P0 프로토콜](docs/experiments/validation-protocol.md) — 설정 비교·확인 기간, 공통 관측 시각, 가중 오차
 - 다음 실험과 세션 인수인계: [EXPERIMENT_PLAN.md](EXPERIMENT_PLAN.md)
+- 다른 모델 비교 계획: [MODEL_COMPARISON_PLAN.md](MODEL_COMPARISON_PLAN.md) — LightGBM·CatBoost·XGBoost 우선 비교, CatBoost 설치·구현 완료
 - 실행·환경 검증: [VERIFICATION.md](VERIFICATION.md)
 - P5 팀 배정 결과: [2026-11-03 결과](docs/experiments/2026-11-03-p5-assignment.md) — tune 개선·확인 악화로 새 배정 채택 보류
 - P4 학습 방식 결과: [2026-11-03 결과](docs/experiments/2026-11-03-p4-objectives.md) — L1+용량 가중 선택, 계절 악화와 검증 기록
