@@ -1,7 +1,7 @@
 # dataen — 태양광 발전량 예측
 
 대회 제공 데이터를 이용해 LightGBM을 학습하고 발전소별 예측을 두 팀의 발전량으로 합산하는 프로젝트입니다.
-현재는 **Mac mini에서 P0~P5의 계획한 1차 실험과 팀 배정 고정 후 역사적 확인을 완료**했습니다. P5 새 배정은 1~2월에는 개선했으나 3~5월 확인에서 0.35% 악화해 채택 보류했습니다. 현재 작업 기준은 P4 모델 후보(거리 포함 26특징·200트리·0.03·25:75·L1+용량 가중)와 기존 참조 배정입니다. CatBoost 1차 비교도 완료했으며 1~2월·3~5월 팀 오차가 악화해 LightGBM을 유지합니다. 최종 전체 학습·공식 제출은 아직 하지 않았습니다.
+현재는 **Mac mini에서 P0~P5의 계획한 1차 실험과 팀 배정 고정 후 역사적 확인을 완료**했습니다. P5 새 배정은 1~2월에는 개선했으나 3~5월 확인에서 0.35% 악화해 채택 보류했습니다. 현재 작업 기준은 P4 모델 후보(거리 포함 26특징·200트리·0.03·25:75·L1+용량 가중)와 기존 참조 배정입니다. CatBoost·XGBoost 1차 비교도 완료했으며 1~2월·3~5월 팀 오차는 LightGBM이 더 작아 현재 기준을 유지합니다. 평가 조건은 같지만 LightGBM의 누적 튜닝 기회가 더 많았습니다. 최종 전체 학습·공식 제출은 아직 하지 않았습니다.
 
 - 대회: https://dataen.ai/en/challenge/2026
 - 현재 결정과 진행 상태: [CONTEXT.md](CONTEXT.md)
@@ -9,8 +9,9 @@
 - 실험 기록: [EXPERIMENTS.md](EXPERIMENTS.md)
 - 확정 평가 기준: [P0 프로토콜](docs/experiments/validation-protocol.md) — 설정 비교·확인 기간, 공통 관측 시각, 가중 오차
 - 다음 실험과 세션 인수인계: [EXPERIMENT_PLAN.md](EXPERIMENT_PLAN.md)
-- 다른 모델 비교 계획: [MODEL_COMPARISON_PLAN.md](MODEL_COMPARISON_PLAN.md) — CatBoost 1차 완료, XGBoost 미실행
+- 다른 모델 비교 계획: [MODEL_COMPARISON_PLAN.md](MODEL_COMPARISON_PLAN.md) — CatBoost·XGBoost 1차 완료, 누적 튜닝 차이 명시
 - 실행·환경 검증: [VERIFICATION.md](VERIFICATION.md)
+- XGBoost·세 모델 비교: [2026-11-03 결과](docs/experiments/2026-11-03-xgboost.md) — 같은 맥북에서 재학습·검증, 현재 LightGBM 유지
 - CatBoost 비교 결과: [2026-11-03 결과](docs/experiments/2026-11-03-catboost.md) — 세 설정 비교·역사적 확인 완료, 교체 보류
 - P5 팀 배정 결과: [2026-11-03 결과](docs/experiments/2026-11-03-p5-assignment.md) — tune 개선·확인 악화로 새 배정 채택 보류
 - P4 학습 방식 결과: [2026-11-03 결과](docs/experiments/2026-11-03-p4-objectives.md) — L1+용량 가중 선택, 계절 악화와 검증 기록
@@ -82,6 +83,8 @@ LightGBM에 로컬 라이브러리 검색 경로와 ad-hoc 서명을 적용했�
 복사하지 말고 위 최초 설치 절차를 따릅니다. 두 폴더는 Git에서 제외합니다.
 
 2026-11-03에는 CatBoost 1.2.10을 추가해 설치·데이터 검사와 비교를 완료했습니다. 새 환경에서 CatBoost를 사용할 때는 `python -m pip install -r requirements-catboost.txt`로 설치합니다. 이번 비교는 기존 폴더 옆 `catboost_compare_199bada/`에서 실행했으며, 코드·결과 문서는 원격 main push가 거절되어 아직 GitHub에 반영되지 않았습니다. 자세한 경로와 재실행 명령은 CatBoost 결과 보고서에 있습니다.
+
+이후 맥 미니 SSH 인증 실패로 XGBoost 비교는 맥북 M1 Pro에서 수행했습니다. `requirements-xgboost.txt`로 세 모델 비교 환경을 설치할 수 있습니다. 실행기는 `run_xgboost.py`, 결과는 맥북 `outputs/xgboost_20261103_150530/`이며 같은 기기에서 세 모델을 재학습했습니다. 상세 조건·실패 기록은 XGBoost 보고서에 있습니다.
 
 ### 4. 시험 학습 실행
 

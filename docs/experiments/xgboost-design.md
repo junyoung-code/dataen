@@ -20,3 +20,5 @@
 설치: 프로젝트 환경에서 `python -m pip install -r requirements-xgboost.txt`. 실행: `python run_xgboost.py --threads 8 --output-dir outputs/xgboost_<새ID>`.
 
 공식 문서 확인(2026-11-03): [L1·hist·표본/열 비율](https://xgboost.readthedocs.io/en/stable/parameter.html), [표본 가중치·모델 저장](https://xgboost.readthedocs.io/en/stable/python/python_api.html), [Apple Silicon CPU 설치](https://xgboost.readthedocs.io/en/stable/install.html), [설치 버전](https://pypi.org/project/xgboost/3.4.1/).
+
+실행 완료: [세 모델 결과·검증](2026-11-03-xgboost.md). 코드 `1fbf67e`, 실행 `xgboost_20261103_150530`.
