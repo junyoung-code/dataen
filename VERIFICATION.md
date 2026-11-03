@@ -57,3 +57,10 @@ Homebrew 설치 스크립트 자체는 현재 컴퓨터의 전역 환경을 변�
 - 테스트: `.venv/bin/python -m unittest discover -v` — 5개 통과.
 - 코드 검토에서 수정이 필요한 오류 없음. 성능 수치·한계는 EXPERIMENTS 및 검증 보고서 참조.
 - 원본 결과 파일은 맥 미니 `outputs/`에 보관하며 Git에는 요약 문서만 포함.
+
+## CatBoost 설치·비교 검사 — 2026-11-03
+
+- 맥북의 Python 3.12.13 임시 가상환경과 맥 미니의 Python 3.12.16 프로젝트 `.venv`에 CatBoost 1.2.10 설치. 기존 5개 고정 패키지 버전 유지, 두 환경 `pip check`, `train_smoke.py --self-test`, `--check-only` 통과.
+- 기본 Exact의 합성 가중치 테스트가 최초 실패해 원인 재현 후 Gradient로 명시했다. 두 환경 단위 테스트 각각 37개 통과(건너뛰기 없음). 상세 재현과 한계는 [보고서](docs/experiments/2026-11-03-catboost.md)에 기록.
+- 맥 미니의 8개 비교 실행·16개 모델 학습 정상 종료. 3기간 기존 LightGBM 점수 재현, 원본 실측·마스크·주/월별 지표·학습 가중치·선택 해시 독립 확인. 저장 모델 각 512행 재예측 일치.
+- 실행 `catboost_20261103_144056`, 코드 `199bada`, 결과는 맥 미니 분리 worktree `catboost_compare_199bada/outputs/`에 보관. 기존 폴더의 `outputs/catboost_env_20261103/`에 설치 전후 버전 기록.
