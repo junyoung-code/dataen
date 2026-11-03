@@ -137,3 +137,10 @@
 - 설치 검사에서 CatBoost 기본 Exact의 합성 표본 가중치 동작 문제를 재현해 Gradient로 변경했다. 따라서 기본 설정 전체나 범주형 입력을 활용한 CatBoost 결과로 일반화하지 않는다.
 - 맥 미니 기존 폴더 옆 `catboost_compare_199bada/outputs/catboost_20261103_144056/`에 결과 보관. 기존 `oibc_mac_mini/.venv`에 CatBoost를 추가했고 고정된 기존 패키지 버전은 유지했다. 원본 데이터는 링크로 읽었다.
 - 자동 승인 검토가 명시적 승인 없는 원격 main push를 거절했다. 로컬 코드 commit을 Git bundle로 맥 미니 분리 worktree에 전달해 실행했다. **GitHub와 맥 미니 기존 main은 0539472이며 이번 코드·결과 문서는 미반영**이다. 다음 세션은 Git 실제 상태와 별도 결과 폴더를 먼저 확인한다. 최종 문서 사본 전송은 검증 이후 SSH 인증 실패로 미완료다. 최신 문서는 현재 맥북 폴더에 있으며 접속 복구 후 먼저 동기화한다.
+
+## 현재 작업 — XGBoost 비교 준비, 2026-11-03
+
+- 사용자 요청: XGBoost를 같은 조건으로 실행하고 LightGBM·CatBoost와 비교하되 LightGBM의 누적 튜닝 우위를 명확히 구분한다. 같은 데이터·26특징·분할·그룹·용량 가중·25:75를 쓰지만 동일한 튜닝 예산은 아니다.
+- 맥 미니 SSH 인증 실패가 계속되어 현재 맥북 M1 Pro/16GiB/macOS27.0.1에서 실행한다. 원본 데이터 12개 검사를 통과했다. 비용 비교를 위해 기존 LightGBM·선택 CatBoost도 같은 맥북에서 재학습한다.
+- XGBoost3.4.1만 로컬 임시 가상환경에 추가, 기존 버전 변경 없음. pip check·self-test·check-only·전체42개 단위 검사 통과. `run_xgboost.py`·`test_xgboost.py`·`requirements-xgboost.txt` 준비. [설계](docs/experiments/xgboost-design.md).
+- XGBoost는 깊이/트리 (6,400)/(6,1000)/(8,1000), 학습률0.03, L1+용량, CPU hist8스레드. 1~2월에서 선택 후 고정해 계절·3~5월 확인. 아직 새 성능 수치는 없다. GitHub push나 맥 미니 환경 변경은 하지 않는다.

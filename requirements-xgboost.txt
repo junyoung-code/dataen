@@ -1,0 +1,2 @@
+-r requirements-catboost.txt
+xgboost==3.4.1
