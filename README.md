@@ -7,6 +7,7 @@
 - 현재 결정과 진행 상태: [CONTEXT.md](CONTEXT.md)
 - Codex 작업 지침: [AGENTS.md](AGENTS.md)
 - 실험 기록: [EXPERIMENTS.md](EXPERIMENTS.md)
+- 다음 실험과 세션 인수인계: [EXPERIMENT_PLAN.md](EXPERIMENT_PLAN.md)
 - 실행·환경 검증: [VERIFICATION.md](VERIFICATION.md)
 - 시간순 검증 보고서: [2026-11-02 결과](docs/experiments/2026-11-02-temporal-evaluation.md)
 
@@ -140,7 +141,7 @@ bash run_smoke.sh
 ## 두 기기에서 Codex와 이어서 작업하기
 
 1. 작업 시작 전 Git 상태를 확인하고 최신 변경 사항을 받습니다.
-2. Codex에게 `AGENTS.md`, `CONTEXT.md`, `EXPERIMENTS.md`를 읽고 현재 상태를 파악하도록 요청합니다.
+2. Codex에게 `AGENTS.md`, `CONTEXT.md`, `EXPERIMENT_PLAN.md`, `EXPERIMENTS.md`를 읽고 현재 상태와 다음 실험을 파악하도록 요청합니다.
 3. 노트북의 VS Code Remote-SSH로 맥 미니 폴더를 열면 코드·데이터·학습은 맥 미니에 유지됩니다. 두 기기에서 별도 clone을 사용하는 경우에는 commit/push/pull로 맞춥니다. 같은 파일의 동시 수정은 피하거나 작업별 브랜치를 사용합니다.
 4. 작업 종료 시 현재 상태와 다음 할 일을 `CONTEXT.md`에, 실험은 `EXPERIMENTS.md`에 기록합니다.
 5. 코드와 문서를 commit/push하고 다른 기기에서 pull합니다. 수정 중인 파일을 덮어쓰거나 force push하지 않습니다.
