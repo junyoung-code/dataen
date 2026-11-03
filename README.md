@@ -1,7 +1,7 @@
 # dataen — 태양광 발전량 예측
 
 대회 제공 데이터를 이용해 LightGBM을 학습하고 발전소별 예측을 두 팀의 발전량으로 합산하는 프로젝트입니다.
-현재는 **Mac mini에서 P0 평가 설계와 P1 트리 수·학습률 비교를 완료**했습니다. 다음 후보는 200트리·0.03이며, 1~2월 오차 개선과 계절 진단의 일부 악화를 함께 기록했습니다. 다음 단계는 두 예보 모델의 혼합 비율 비교(P2)입니다.
+현재는 **Mac mini에서 P0 평가 설계, P1 트리 수·학습률 비교, P2 혼합 비율 비교를 완료**했습니다. 다음 실험 기준은 200트리·학습률 0.03·10시 25%/17시 75% 혼합입니다. 다음 단계는 특징 개선(P3)이며, 역사적 튜닝 결과의 월별·계절별 한계는 보고서에 기록했습니다.
 
 - 대회: https://dataen.ai/en/challenge/2026
 - 현재 결정과 진행 상태: [CONTEXT.md](CONTEXT.md)
@@ -10,6 +10,7 @@
 - 확정 평가 기준: [P0 프로토콜](docs/experiments/validation-protocol.md) — 설정 비교·확인 기간, 공통 관측 시각, 가중 오차
 - 다음 실험과 세션 인수인계: [EXPERIMENT_PLAN.md](EXPERIMENT_PLAN.md)
 - 실행·환경 검증: [VERIFICATION.md](VERIFICATION.md)
+- P2 혼합 비율 결과: [2026-11-03 결과](docs/experiments/2026-11-03-p2-blend.md) — 25:75 선택, 개선 폭과 월별 한계
 - P1 설정 비교 결과: [2026-11-03 결과](docs/experiments/2026-11-03-p1-grid.md) — 실행 명령, 전체 결과, 한계와 다음 작업
 - 시간순 검증 보고서: [2026-11-02 결과](docs/experiments/2026-11-02-temporal-evaluation.md)
 

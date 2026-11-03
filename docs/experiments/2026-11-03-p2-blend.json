@@ -1,0 +1,1326 @@
+{
+  "summary": {
+    "status": "complete",
+    "protocol": "p0-v1",
+    "code_commit": "4ee86e4d60a09bb5980aeab918c8d4aadf7ff5f1",
+    "dirty": false,
+    "source_run": "p1_20261103_125104",
+    "source_code_commit": "ac0658ee0652a00ac78f4f5d60a00dbdcaee6713",
+    "model": {
+      "trees": 200,
+      "learning_rate": 0.03
+    },
+    "training_performed": false,
+    "confirmation_evaluated": false,
+    "data_hashes": {
+      "train/generation.parquet": "a2c334a5d2dd0983be78c7ac138e25a013cf70fd9d027515953129ea79964e95",
+      "sites.csv": "93d166fffd009c3643db748fc6d5a1d48851e5f70b314171130e6ab6b7997ea2",
+      "train/smp.csv": "6ae610fc3e527e603681da3867ecd79d210ed24a17e676ac16149ba7d349645b"
+    },
+    "versions": {
+      "python": "3.12.16",
+      "numpy": "2.2.6",
+      "pandas": "2.2.3"
+    },
+    "windows": {
+      "tune": {
+        "common_hours": 1416,
+        "eval_rows": 358248,
+        "unseen_sites": 0,
+        "mask_sha256": "9d2e7486aae0ef1f20b31bb46c6e0a83e9b7ce8ea66d2184b984665d7d2b85fe",
+        "source_predictions_sha256": "3b97151292d9c919f5b2384f2815a12ebe4ccdc82ba4d55d4130030e5411e32f",
+        "candidates": [
+          {
+            "weight_17": 0.5,
+            "weighted_group_mae": 598.4632660353793,
+            "group": {
+              "rows": 2832,
+              "mae_kwh": 331.54123147937406,
+              "rmse_kwh": 764.2336478313488,
+              "nmae_capacity_pct": 1.5510990039384398,
+              "wape_pct": 11.078272451518643,
+              "bias_kwh": 59.758950644988005
+            },
+            "site_daylight": {
+              "rows": 151756,
+              "mae_kwh": 11.957235772180587,
+              "rmse_kwh": 34.465173972946495,
+              "nmae_capacity_pct": 6.794253014010704,
+              "wape_pct": 21.445166256926573,
+              "bias_kwh": 1.2066161374103366
+            },
+            "unseen_daylight": {
+              "rows": 0,
+              "mae_kwh": null,
+              "rmse_kwh": null,
+              "nmae_capacity_pct": null,
+              "wape_pct": null,
+              "bias_kwh": null
+            },
+            "by_group": {
+              "G1": {
+                "metrics": {
+                  "rows": 1416,
+                  "mae_kwh": 300.1655561826773,
+                  "rmse_kwh": 680.8630321482926,
+                  "nmae_capacity_pct": 1.4666794499500617,
+                  "wape_pct": 10.57553219446559,
+                  "bias_kwh": 36.672754878232276
+                },
+                "weighted_mae": 546.0273738374528
+              },
+              "G2": {
+                "metrics": {
+                  "rows": 1416,
+                  "mae_kwh": 362.91690677607085,
+                  "rmse_kwh": 839.3638474517788,
+                  "nmae_capacity_pct": 1.6355185579268179,
+                  "wape_pct": 11.531678829066246,
+                  "bias_kwh": 82.84514641174373
+                },
+                "weighted_mae": 650.8991582333059
+              }
+            }
+          },
+          {
+            "weight_17": 0.75,
+            "weighted_group_mae": 595.7537808506336,
+            "group": {
+              "rows": 2832,
+              "mae_kwh": 330.38951888671784,
+              "rmse_kwh": 769.6615456363203,
+              "nmae_capacity_pct": 1.5460091809415317,
+              "wape_pct": 11.039788592873496,
+              "bias_kwh": 57.611884564460006
+            },
+            "site_daylight": {
+              "rows": 151756,
+              "mae_kwh": 11.976365519015776,
+              "rmse_kwh": 34.577507383396274,
+              "nmae_capacity_pct": 6.8043050227969974,
+              "wape_pct": 21.479475240135553,
+              "bias_kwh": 1.1665485872636845
+            },
+            "unseen_daylight": {
+              "rows": 0,
+              "mae_kwh": null,
+              "rmse_kwh": null,
+              "nmae_capacity_pct": null,
+              "wape_pct": null,
+              "bias_kwh": null
+            },
+            "by_group": {
+              "G1": {
+                "metrics": {
+                  "rows": 1416,
+                  "mae_kwh": 300.6948758883697,
+                  "rmse_kwh": 687.7003637449977,
+                  "nmae_capacity_pct": 1.469265830428441,
+                  "wape_pct": 10.594181361478306,
+                  "bias_kwh": 33.97636818853762
+                },
+                "weighted_mae": 546.3992990088832
+              },
+              "G2": {
+                "metrics": {
+                  "rows": 1416,
+                  "mae_kwh": 360.084161885066,
+                  "rmse_kwh": 843.6978128261188,
+                  "nmae_capacity_pct": 1.6227525314546223,
+                  "wape_pct": 11.441668406080078,
+                  "bias_kwh": 81.24740094038239
+                },
+                "weighted_mae": 645.1082626923838
+              }
+            }
+          },
+          {
+            "weight_17": 1.0,
+            "weighted_group_mae": 600.3056851292941,
+            "group": {
+              "rows": 2832,
+              "mae_kwh": 332.4936334428618,
+              "rmse_kwh": 781.5335576394519,
+              "nmae_capacity_pct": 1.5560311583115476,
+              "wape_pct": 11.110096452376089,
+              "bias_kwh": 55.46481848393199
+            },
+            "site_daylight": {
+              "rows": 151756,
+              "mae_kwh": 12.075341070834158,
+              "rmse_kwh": 34.83560607897667,
+              "nmae_capacity_pct": 6.862494409715193,
+              "wape_pct": 21.656986765755423,
+              "bias_kwh": 1.1264810371170324
+            },
+            "unseen_daylight": {
+              "rows": 0,
+              "mae_kwh": null,
+              "rmse_kwh": null,
+              "nmae_capacity_pct": null,
+              "wape_pct": null,
+              "bias_kwh": null
+            },
+            "by_group": {
+              "G1": {
+                "metrics": {
+                  "rows": 1416,
+                  "mae_kwh": 303.53750058799415,
+                  "rmse_kwh": 700.3862982542868,
+                  "nmae_capacity_pct": 1.4831555627610948,
+                  "wape_pct": 10.694333655465579,
+                  "bias_kwh": 31.279981498842968
+                },
+                "weighted_mae": 552.1179736136496
+              },
+              "G2": {
+                "metrics": {
+                  "rows": 1416,
+                  "mae_kwh": 361.4497662977294,
+                  "rmse_kwh": 855.0137055339022,
+                  "nmae_capacity_pct": 1.6289067538620003,
+                  "wape_pct": 11.485060464152772,
+                  "bias_kwh": 79.64965546902103
+                },
+                "weighted_mae": 648.4933966449386
+              }
+            }
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2025-01",
+            "scope": "site_daylight",
+            "weight_17": 0.5,
+            "rows": 74817,
+            "mae_kwh": 11.048259224558288,
+            "rmse_kwh": 26.669244439277385,
+            "nmae_capacity_pct": 6.472252593943109,
+            "wape_pct": 22.324677840469075,
+            "bias_kwh": 2.6467007020482836,
+            "weighted_mae": null
+          },
+          {
+            "month": "2025-01",
+            "scope": "reference_G1_complete",
+            "weight_17": 0.5,
+            "rows": 744,
+            "mae_kwh": 271.13841493112,
+            "rmse_kwh": 601.4546997950648,
+            "nmae_capacity_pct": 1.324846016074834,
+            "wape_pct": 11.678296689500561,
+            "bias_kwh": 127.7214324338461,
+            "weighted_mae": 495.9002844581939
+          },
+          {
+            "month": "2025-01",
+            "scope": "reference_G2_complete",
+            "weight_17": 0.5,
+            "rows": 744,
+            "mae_kwh": 308.20923266651783,
+            "rmse_kwh": 663.1305263309567,
+            "nmae_capacity_pct": 1.3889733719721853,
+            "wape_pct": 11.548439981221478,
+            "bias_kwh": 124.50179497422707,
+            "weighted_mae": 551.5026798084648
+          },
+          {
+            "month": "2025-02",
+            "scope": "site_daylight",
+            "weight_17": 0.5,
+            "rows": 76939,
+            "mae_kwh": 12.841142482216556,
+            "rmse_kwh": 40.63622865019248,
+            "nmae_capacity_pct": 7.107372568829419,
+            "wape_pct": 20.760867420489678,
+            "bias_kwh": -0.1937504760434034,
+            "weighted_mae": null
+          },
+          {
+            "month": "2025-02",
+            "scope": "reference_G1_complete",
+            "weight_17": 0.5,
+            "rows": 672,
+            "mae_kwh": 332.30274828261565,
+            "rmse_kwh": 759.1516226107539,
+            "nmae_capacity_pct": 1.6237093231690636,
+            "wape_pct": 9.74431350247283,
+            "bias_kwh": -64.13113812976874,
+            "weighted_mae": 601.310265411444
+          },
+          {
+            "month": "2025-02",
+            "scope": "reference_G2_complete",
+            "weight_17": 0.5,
+            "rows": 672,
+            "mae_kwh": 423.48611739736174,
+            "rmse_kwh": 998.8451097682587,
+            "nmae_capacity_pct": 1.9084792995194473,
+            "wape_pct": 11.518208580355193,
+            "bias_kwh": 36.72528550328004,
+            "weighted_mae": 760.5190226148735
+          },
+          {
+            "month": "2025-01",
+            "scope": "site_daylight",
+            "weight_17": 0.75,
+            "rows": 74817,
+            "mae_kwh": 11.045393277911383,
+            "rmse_kwh": 26.67264433408553,
+            "nmae_capacity_pct": 6.484290698416739,
+            "wape_pct": 22.318886762046706,
+            "bias_kwh": 2.606744820864623,
+            "weighted_mae": null
+          },
+          {
+            "month": "2025-01",
+            "scope": "reference_G1_complete",
+            "weight_17": 0.75,
+            "rows": 744,
+            "mae_kwh": 269.57732529034126,
+            "rmse_kwh": 600.4778834785122,
+            "nmae_capacity_pct": 1.3172181652155344,
+            "wape_pct": 11.611058456258872,
+            "bias_kwh": 125.51110402204975,
+            "weighted_mae": 491.89917885214226
+          },
+          {
+            "month": "2025-01",
+            "scope": "reference_G2_complete",
+            "weight_17": 0.75,
+            "rows": 744,
+            "mae_kwh": 304.5581507240141,
+            "rmse_kwh": 661.9976973218667,
+            "nmae_capacity_pct": 1.3725194339991031,
+            "wape_pct": 11.411635835820851,
+            "bias_kwh": 122.69414064070365,
+            "weighted_mae": 543.29123055974
+          },
+          {
+            "month": "2025-02",
+            "scope": "site_daylight",
+            "weight_17": 0.75,
+            "rows": 76939,
+            "mae_kwh": 12.881661274909497,
+            "rmse_kwh": 40.82186199187995,
+            "nmae_capacity_pct": 7.1154932590251505,
+            "wape_pct": 20.826376021792207,
+            "bias_kwh": -0.23392661529056513,
+            "weighted_mae": null
+          },
+          {
+            "month": "2025-02",
+            "scope": "reference_G1_complete",
+            "weight_17": 0.75,
+            "rows": 672,
+            "mae_kwh": 335.14644976475836,
+            "rmse_kwh": 772.8701443888341,
+            "nmae_capacity_pct": 1.637604316914159,
+            "wape_pct": 9.827701072670953,
+            "bias_kwh": -67.36566076999364,
+            "weighted_mae": 606.5050077325434
+          },
+          {
+            "month": "2025-02",
+            "scope": "reference_G2_complete",
+            "weight_17": 0.75,
+            "rows": 672,
+            "mae_kwh": 421.5593885276591,
+            "rmse_kwh": 1007.334964746866,
+            "nmae_capacity_pct": 1.899796317923232,
+            "wape_pct": 11.465804347755043,
+            "bias_kwh": 35.359939129312416,
+            "weighted_mae": 757.3976458877218
+          },
+          {
+            "month": "2025-01",
+            "scope": "site_daylight",
+            "weight_17": 1.0,
+            "rows": 74817,
+            "mae_kwh": 11.137730594137869,
+            "rmse_kwh": 26.87132418488526,
+            "nmae_capacity_pct": 6.552494401323336,
+            "wape_pct": 22.505468267378124,
+            "bias_kwh": 2.5667889396809622,
+            "weighted_mae": null
+          },
+          {
+            "month": "2025-01",
+            "scope": "reference_G1_complete",
+            "weight_17": 1.0,
+            "rows": 744,
+            "mae_kwh": 271.087626503435,
+            "rmse_kwh": 607.3777390252161,
+            "nmae_capacity_pct": 1.3245978518812862,
+            "wape_pct": 11.676109163520335,
+            "bias_kwh": 123.30077561025334,
+            "weighted_mae": 495.26709694935187
+          },
+          {
+            "month": "2025-01",
+            "scope": "reference_G2_complete",
+            "weight_17": 1.0,
+            "rows": 744,
+            "mae_kwh": 307.81340461203285,
+            "rmse_kwh": 670.9639068985704,
+            "nmae_capacity_pct": 1.387189536287568,
+            "wape_pct": 11.53360850946265,
+            "bias_kwh": 120.88648630718022,
+            "weighted_mae": 551.4492277484096
+          },
+          {
+            "month": "2025-02",
+            "scope": "site_daylight",
+            "weight_17": 1.0,
+            "rows": 76939,
+            "mae_kwh": 12.987091977851227,
+            "rmse_kwh": 41.12683389359301,
+            "nmae_capacity_pct": 7.163944527702866,
+            "wape_pct": 20.996830702818723,
+            "bias_kwh": -0.27410275453772703,
+            "weighted_mae": null
+          },
+          {
+            "month": "2025-02",
+            "scope": "reference_G1_complete",
+            "weight_17": 1.0,
+            "rows": 672,
+            "mae_kwh": 339.46414689589886,
+            "rmse_kwh": 790.6999111635513,
+            "nmae_capacity_pct": 1.6587015998065975,
+            "wape_pct": 9.954311504489526,
+            "bias_kwh": -70.60018341021853,
+            "weighted_mae": 614.816224987071
+          },
+          {
+            "month": "2025-02",
+            "scope": "reference_G2_complete",
+            "weight_17": 1.0,
+            "rows": 672,
+            "mae_kwh": 420.8328810211791,
+            "rmse_kwh": 1020.7820578084035,
+            "nmae_capacity_pct": 1.8965222447479793,
+            "wape_pct": 11.446044396599481,
+            "bias_kwh": 33.994592755344804,
+            "weighted_mae": 755.5190056206465
+          }
+        ]
+      },
+      "seasonal_diagnostic": {
+        "common_hours": 178,
+        "eval_rows": 1100462,
+        "unseen_sites": 29,
+        "mask_sha256": "969e327c14af3bcb8e1f48dcabbbdd1e98583069442d1f0914696d1fb176bf78",
+        "source_predictions_sha256": "7a991e90d3724d53c43dd87031b1e78e5bceaadd39ff91e499f9767eb130f04a",
+        "candidates": [
+          {
+            "weight_17": 0.5,
+            "weighted_group_mae": 447.24376410582266,
+            "group": {
+              "rows": 356,
+              "mae_kwh": 231.0232061159503,
+              "rmse_kwh": 513.4032381141135,
+              "nmae_capacity_pct": 1.0791721420749412,
+              "wape_pct": 9.179817400738221,
+              "bias_kwh": -143.91253039278064
+            },
+            "site_daylight": {
+              "rows": 536844,
+              "mae_kwh": 12.509714430793569,
+              "rmse_kwh": 28.99167532904934,
+              "nmae_capacity_pct": 7.855805078729866,
+              "wape_pct": 26.275206210405887,
+              "bias_kwh": -0.6235654518033662
+            },
+            "unseen_daylight": {
+              "rows": 52841,
+              "mae_kwh": 14.333704103233677,
+              "rmse_kwh": 32.76812722577752,
+              "nmae_capacity_pct": 8.369768961163535,
+              "wape_pct": 26.302398156529105,
+              "bias_kwh": -2.5273803215965054
+            },
+            "by_group": {
+              "G1": {
+                "metrics": {
+                  "rows": 178,
+                  "mae_kwh": 200.42388156250792,
+                  "rmse_kwh": 457.01392377711704,
+                  "nmae_capacity_pct": 0.9793181872874722,
+                  "wape_pct": 8.507646802837185,
+                  "bias_kwh": -115.6016192463835
+                },
+                "weighted_mae": 380.47532393501274
+              },
+              "G2": {
+                "metrics": {
+                  "rows": 178,
+                  "mae_kwh": 261.62253066939275,
+                  "rmse_kwh": 564.1844053906113,
+                  "nmae_capacity_pct": 1.1790260968624102,
+                  "wape_pct": 9.771234421095077,
+                  "bias_kwh": -172.2234415391778
+                },
+                "weighted_mae": 514.0122042766326
+              }
+            }
+          },
+          {
+            "weight_17": 0.75,
+            "weighted_group_mae": 441.4413943296169,
+            "group": {
+              "rows": 356,
+              "mae_kwh": 228.58437926607607,
+              "rmse_kwh": 505.4990699831304,
+              "nmae_capacity_pct": 1.0677857360393916,
+              "wape_pct": 9.082909451401623,
+              "bias_kwh": -149.9999304596467
+            },
+            "site_daylight": {
+              "rows": 536844,
+              "mae_kwh": 12.483327868588662,
+              "rmse_kwh": 28.94253893007732,
+              "nmae_capacity_pct": 7.843910525299503,
+              "wape_pct": 26.21978429274716,
+              "bias_kwh": -0.6674850287025967
+            },
+            "unseen_daylight": {
+              "rows": 52841,
+              "mae_kwh": 14.332595358216892,
+              "rmse_kwh": 32.77013394736562,
+              "nmae_capacity_pct": 8.38351926753716,
+              "wape_pct": 26.300363605468508,
+              "bias_kwh": -2.654612559861761
+            },
+            "by_group": {
+              "G1": {
+                "metrics": {
+                  "rows": 178,
+                  "mae_kwh": 198.33977646879558,
+                  "rmse_kwh": 447.9033167205561,
+                  "nmae_capacity_pct": 0.9691347600103472,
+                  "wape_pct": 8.419180149566783,
+                  "bias_kwh": -121.59889927251766
+                },
+                "weighted_mae": 376.724755674198
+              },
+              "G2": {
+                "metrics": {
+                  "rows": 178,
+                  "mae_kwh": 258.8289820633566,
+                  "rmse_kwh": 557.1725391459496,
+                  "nmae_capacity_pct": 1.1664367120684358,
+                  "wape_pct": 9.666899300467424,
+                  "bias_kwh": -178.40096164677576
+                },
+                "weighted_mae": 506.1580329850358
+              }
+            }
+          },
+          {
+            "weight_17": 1.0,
+            "weighted_group_mae": 437.8101257510943,
+            "group": {
+              "rows": 356,
+              "mae_kwh": 227.74838850240357,
+              "rmse_kwh": 500.8911642727716,
+              "nmae_capacity_pct": 1.0639874545465056,
+              "wape_pct": 9.049690959249949,
+              "bias_kwh": -156.08733052651277
+            },
+            "site_daylight": {
+              "rows": 536844,
+              "mae_kwh": 12.536362615144888,
+              "rmse_kwh": 29.097862714356896,
+              "nmae_capacity_pct": 7.879104947951911,
+              "wape_pct": 26.331177635080483,
+              "bias_kwh": -0.7114046056018278
+            },
+            "unseen_daylight": {
+              "rows": 52841,
+              "mae_kwh": 14.405094664816948,
+              "rmse_kwh": 32.97622344517132,
+              "nmae_capacity_pct": 8.43919061114637,
+              "wape_pct": 26.433400091678433,
+              "bias_kwh": -2.7818447981270165
+            },
+            "by_group": {
+              "G1": {
+                "metrics": {
+                  "rows": 178,
+                  "mae_kwh": 198.1774558907909,
+                  "rmse_kwh": 442.47897083046746,
+                  "nmae_capacity_pct": 0.9683416235189682,
+                  "wape_pct": 8.41228992203636,
+                  "bias_kwh": -127.59617929865182
+                },
+                "weighted_mae": 375.43385256851167
+              },
+              "G2": {
+                "metrics": {
+                  "rows": 178,
+                  "mae_kwh": 257.31932111401625,
+                  "rmse_kwh": 553.1693025339309,
+                  "nmae_capacity_pct": 1.1596332855740428,
+                  "wape_pct": 9.610515582311981,
+                  "bias_kwh": -184.57848175437374
+                },
+                "weighted_mae": 500.1863989336769
+              }
+            }
+          }
+        ],
+        "monthly": [
+          {
+            "month": "2024-07",
+            "scope": "site_daylight",
+            "weight_17": 0.5,
+            "rows": 106535,
+            "mae_kwh": 13.039257253924637,
+            "rmse_kwh": 31.896627930169256,
+            "nmae_capacity_pct": 8.186174227152945,
+            "wape_pct": 31.78553440067544,
+            "bias_kwh": -2.988434310493253,
+            "weighted_mae": null
+          },
+          {
+            "month": "2024-07",
+            "scope": "reference_G1_complete",
+            "weight_17": 0.5,
+            "rows": 494,
+            "mae_kwh": 449.0106969823634,
+            "rmse_kwh": 840.208618908889,
+            "nmae_capacity_pct": 2.193971788258736,
+            "wape_pct": 13.860781243185535,
+            "bias_kwh": -206.16405159987764,
+            "weighted_mae": 721.4762516562262
+          },
+          {
+            "month": "2024-07",
+            "scope": "reference_G2_complete",
+            "weight_17": 0.5,
+            "rows": 0,
+            "mae_kwh": null,
+            "rmse_kwh": null,
+            "nmae_capacity_pct": null,
+            "wape_pct": null,
+            "bias_kwh": null,
+            "weighted_mae": null
+          },
+          {
+            "month": "2024-08",
+            "scope": "site_daylight",
+            "weight_17": 0.5,
+            "rows": 101205,
+            "mae_kwh": 12.04587507991327,
+            "rmse_kwh": 26.96593690746083,
+            "nmae_capacity_pct": 7.725593659479479,
+            "wape_pct": 21.030721169539316,
+            "bias_kwh": -0.056794333600705085,
+            "weighted_mae": null
+          },
+          {
+            "month": "2024-08",
+            "scope": "reference_G1_complete",
+            "weight_17": 0.5,
+            "rows": 744,
+            "mae_kwh": 296.84993686793035,
+            "rmse_kwh": 557.3737570870022,
+            "nmae_capacity_pct": 1.4504785547686132,
+            "wape_pct": 7.863907413867237,
+            "bias_kwh": 57.298132207753326,
+            "weighted_mae": 441.60687189175275
+          },
+          {
+            "month": "2024-08",
+            "scope": "reference_G2_complete",
+            "weight_17": 0.5,
+            "rows": 0,
+            "mae_kwh": null,
+            "rmse_kwh": null,
+            "nmae_capacity_pct": null,
+            "wape_pct": null,
+            "bias_kwh": null,
+            "weighted_mae": null
+          },
+          {
+            "month": "2024-09",
+            "scope": "site_daylight",
+            "weight_17": 0.5,
+            "rows": 94314,
+            "mae_kwh": 13.967930214400187,
+            "rmse_kwh": 31.861862710893366,
+            "nmae_capacity_pct": 8.713642938900582,
+            "wape_pct": 29.04073541079521,
+            "bias_kwh": 0.04977175385016684,
+            "weighted_mae": null
+          },
+          {
+            "month": "2024-09",
+            "scope": "reference_G1_complete",
+            "weight_17": 0.5,
+            "rows": 720,
+            "mae_kwh": 518.7211074681654,
+            "rmse_kwh": 1057.501454413295,
+            "nmae_capacity_pct": 2.534593236659982,
+            "wape_pct": 17.139815299267198,
+            "bias_kwh": 27.997161216307862,
+            "weighted_mae": 860.1972114254993
+          },
+          {
+            "month": "2024-09",
+            "scope": "reference_G2_complete",
+            "weight_17": 0.5,
+            "rows": 0,
+            "mae_kwh": null,
+            "rmse_kwh": null,
+            "nmae_capacity_pct": null,
+            "wape_pct": null,
+            "bias_kwh": null,
+            "weighted_mae": null
+          },
+          {
+            "month": "2024-10",
+            "scope": "site_daylight",
+            "weight_17": 0.5,
+            "rows": 86849,
+            "mae_kwh": 12.720070957927582,
+            "rmse_kwh": 29.39430054929504,
+            "nmae_capacity_pct": 7.922510014897009,
+            "wape_pct": 29.413899979616748,
+            "bias_kwh": -0.4811167317948576,
+            "weighted_mae": null
+          },
+          {
+            "month": "2024-10",
+            "scope": "reference_G1_complete",
+            "weight_17": 0.5,
+            "rows": 744,
+            "mae_kwh": 433.57500985915516,
+            "rmse_kwh": 911.8974642754418,
+            "nmae_capacity_pct": 2.1185493934064423,
+            "wape_pct": 18.02148509677565,
+            "bias_kwh": 35.08810679797642,
+            "weighted_mae": 775.4109479087688
+          },
+          {
+            "month": "2024-10",
+            "scope": "reference_G2_complete",
+            "weight_17": 0.5,
+            "rows": 0,
+            "mae_kwh": null,
+            "rmse_kwh": null,
+            "nmae_capacity_pct": null,
+            "wape_pct": null,
+            "bias_kwh": null,
+            "weighted_mae": null
+          },
+          {
+            "month": "2024-11",
+            "scope": "site_daylight",
+            "weight_17": 0.5,
+            "rows": 75522,
+            "mae_kwh": 11.6969862724228,
+            "rmse_kwh": 26.659523614417402,
+            "nmae_capacity_pct": 7.345455063065037,
+            "wape_pct": 25.903728824469447,
+            "bias_kwh": 0.45579561180038175,
+            "weighted_mae": null
+          },
+          {
+            "month": "2024-11",
+            "scope": "reference_G1_complete",
+            "weight_17": 0.5,
+            "rows": 720,
+            "mae_kwh": 319.14503138029346,
+            "rmse_kwh": 742.755625681828,
+            "nmae_capacity_pct": 1.559417626165854,
+            "wape_pct": 14.078824694584899,
+            "bias_kwh": 54.175872566203196,
+            "weighted_mae": 580.6844420549874
+          },
+          {
+            "month": "2024-11",
+            "scope": "reference_G2_complete",
+            "weight_17": 0.5,
+            "rows": 0,
+            "mae_kwh": null,
+            "rmse_kwh": null,
+            "nmae_capacity_pct": null,
+            "wape_pct": null,
+            "bias_kwh": null,
+            "weighted_mae": null
+          },
+          {
+            "month": "2024-12",
+            "scope": "site_daylight",
+            "weight_17": 0.5,
+            "rows": 72419,
+            "mae_kwh": 11.075111017047327,
+            "rmse_kwh": 24.86797390218445,
+            "nmae_capacity_pct": 6.886797586161622,
+            "wape_pct": 21.736407251847524,
+            "bias_kwh": -0.1100389946675552,
+            "weighted_mae": null
+          },
+          {
+            "month": "2024-12",
+            "scope": "reference_G1_complete",
+            "weight_17": 0.5,
+            "rows": 744,
+            "mae_kwh": 237.40997344217655,
+            "rmse_kwh": 551.0492179517598,
+            "nmae_capacity_pct": 1.1600409243788021,
+            "wape_pct": 10.012848912553162,
+            "bias_kwh": 14.308022945506229,
+            "weighted_mae": 445.88243747455596
+          },
+          {
+            "month": "2024-12",
+            "scope": "reference_G2_complete",
+            "weight_17": 0.5,
+            "rows": 178,
+            "mae_kwh": 261.62253066939275,
+            "rmse_kwh": 564.1844053906113,
+            "nmae_capacity_pct": 1.1790260968624102,
+            "wape_pct": 9.771234421095077,
+            "bias_kwh": -172.2234415391778,
+            "weighted_mae": 514.0122042766326
+          },
+          {
+            "month": "2024-07",
+            "scope": "site_daylight",
+            "weight_17": 0.75,
+            "rows": 106535,
+            "mae_kwh": 12.970006147595626,
+            "rmse_kwh": 31.787765405372348,
+            "nmae_capacity_pct": 8.156507279398632,
+            "wape_pct": 31.61672237560069,
+            "bias_kwh": -2.790638544640602,
+            "weighted_mae": null
+          },
+          {
+            "month": "2024-07",
+            "scope": "reference_G1_complete",
+            "weight_17": 0.75,
+            "rows": 494,
+            "mae_kwh": 434.67650808458785,
+            "rmse_kwh": 818.4946461305867,
+            "nmae_capacity_pct": 2.123931572600964,
+            "wape_pct": 13.418290545423005,
+            "bias_kwh": -193.42290430945684,
+            "weighted_mae": 699.1912880395614
+          },
+          {
+            "month": "2024-07",
+            "scope": "reference_G2_complete",
+            "weight_17": 0.75,
+            "rows": 0,
+            "mae_kwh": null,
+            "rmse_kwh": null,
+            "nmae_capacity_pct": null,
+            "wape_pct": null,
+            "bias_kwh": null,
+            "weighted_mae": null
+          },
+          {
+            "month": "2024-08",
+            "scope": "site_daylight",
+            "weight_17": 0.75,
+            "rows": 101205,
+            "mae_kwh": 12.051789588376332,
+            "rmse_kwh": 26.976323333018662,
+            "nmae_capacity_pct": 7.734429110617108,
+            "wape_pct": 21.04104722534816,
+            "bias_kwh": -0.006823167654491046,
+            "weighted_mae": null
+          },
+          {
+            "month": "2024-08",
+            "scope": "reference_G1_complete",
+            "weight_17": 0.75,
+            "rows": 744,
+            "mae_kwh": 297.16021712095903,
+            "rmse_kwh": 554.3000386095854,
+            "nmae_capacity_pct": 1.4519946570044255,
+            "wape_pct": 7.872127106308183,
+            "bias_kwh": 60.69697305490477,
+            "weighted_mae": 444.4221786081003
+          },
+          {
+            "month": "2024-08",
+            "scope": "reference_G2_complete",
+            "weight_17": 0.75,
+            "rows": 0,
+            "mae_kwh": null,
+            "rmse_kwh": null,
+            "nmae_capacity_pct": null,
+            "wape_pct": null,
+            "bias_kwh": null,
+            "weighted_mae": null
+          },
+          {
+            "month": "2024-09",
+            "scope": "site_daylight",
+            "weight_17": 0.75,
+            "rows": 94314,
+            "mae_kwh": 14.00338586669889,
+            "rmse_kwh": 31.88281422439767,
+            "nmae_capacity_pct": 8.74182909785053,
+            "wape_pct": 29.11445128719344,
+            "bias_kwh": -0.15539351935543108,
+            "weighted_mae": null
+          },
+          {
+            "month": "2024-09",
+            "scope": "reference_G1_complete",
+            "weight_17": 0.75,
+            "rows": 720,
+            "mae_kwh": 522.1014329406934,
+            "rmse_kwh": 1060.5970073578214,
+            "nmae_capacity_pct": 2.551110301335058,
+            "wape_pct": 17.251509528432713,
+            "bias_kwh": 15.390069114873686,
+            "weighted_mae": 865.1655779418305
+          },
+          {
+            "month": "2024-09",
+            "scope": "reference_G2_complete",
+            "weight_17": 0.75,
+            "rows": 0,
+            "mae_kwh": null,
+            "rmse_kwh": null,
+            "nmae_capacity_pct": null,
+            "wape_pct": null,
+            "bias_kwh": null,
+            "weighted_mae": null
+          },
+          {
+            "month": "2024-10",
+            "scope": "site_daylight",
+            "weight_17": 0.75,
+            "rows": 86849,
+            "mae_kwh": 12.602522386771458,
+            "rmse_kwh": 29.178239286995886,
+            "nmae_capacity_pct": 7.850991443626038,
+            "wape_pct": 29.14208059070224,
+            "bias_kwh": -0.48255510252548617,
+            "weighted_mae": null
+          },
+          {
+            "month": "2024-10",
+            "scope": "reference_G1_complete",
+            "weight_17": 0.75,
+            "rows": 744,
+            "mae_kwh": 428.74382917428045,
+            "rmse_kwh": 897.2496317239359,
+            "nmae_capacity_pct": 2.0949431091957744,
+            "wape_pct": 17.820677742263722,
+            "bias_kwh": 35.951232445949,
+            "weighted_mae": 766.4070327026799
+          },
+          {
+            "month": "2024-10",
+            "scope": "reference_G2_complete",
+            "weight_17": 0.75,
+            "rows": 0,
+            "mae_kwh": null,
+            "rmse_kwh": null,
+            "nmae_capacity_pct": null,
+            "wape_pct": null,
+            "bias_kwh": null,
+            "weighted_mae": null
+          },
+          {
+            "month": "2024-11",
+            "scope": "site_daylight",
+            "weight_17": 0.75,
+            "rows": 75522,
+            "mae_kwh": 11.699480659517423,
+            "rmse_kwh": 26.765984192895356,
+            "nmae_capacity_pct": 7.340664636844038,
+            "wape_pct": 25.90925280520923,
+            "bias_kwh": 0.15847460629915314,
+            "weighted_mae": null
+          },
+          {
+            "month": "2024-11",
+            "scope": "reference_G1_complete",
+            "weight_17": 0.75,
+            "rows": 720,
+            "mae_kwh": 319.8295062680297,
+            "rmse_kwh": 737.6790694799134,
+            "nmae_capacity_pct": 1.5627621313269953,
+            "wape_pct": 14.109019750138815,
+            "bias_kwh": 38.794993369428205,
+            "weighted_mae": 581.8140786890102
+          },
+          {
+            "month": "2024-11",
+            "scope": "reference_G2_complete",
+            "weight_17": 0.75,
+            "rows": 0,
+            "mae_kwh": null,
+            "rmse_kwh": null,
+            "nmae_capacity_pct": null,
+            "wape_pct": null,
+            "bias_kwh": null,
+            "weighted_mae": null
+          },
+          {
+            "month": "2024-12",
+            "scope": "site_daylight",
+            "weight_17": 0.75,
+            "rows": 72419,
+            "mae_kwh": 11.065310433591423,
+            "rmse_kwh": 24.78377810348448,
+            "nmae_capacity_pct": 6.883975210473205,
+            "wape_pct": 21.717172277771386,
+            "bias_kwh": -0.21744602171057603,
+            "weighted_mae": null
+          },
+          {
+            "month": "2024-12",
+            "scope": "reference_G1_complete",
+            "weight_17": 0.75,
+            "rows": 744,
+            "mae_kwh": 236.75890259948395,
+            "rmse_kwh": 547.1946428051006,
+            "nmae_capacity_pct": 1.1568596392320887,
+            "wape_pct": 9.985389771369114,
+            "bias_kwh": 9.282673513715462,
+            "weighted_mae": 446.355456551767
+          },
+          {
+            "month": "2024-12",
+            "scope": "reference_G2_complete",
+            "weight_17": 0.75,
+            "rows": 178,
+            "mae_kwh": 258.8289820633566,
+            "rmse_kwh": 557.1725391459496,
+            "nmae_capacity_pct": 1.1664367120684358,
+            "wape_pct": 9.666899300467424,
+            "bias_kwh": -178.40096164677576,
+            "weighted_mae": 506.1580329850358
+          },
+          {
+            "month": "2024-07",
+            "scope": "site_daylight",
+            "weight_17": 1.0,
+            "rows": 106535,
+            "mae_kwh": 12.999988997868893,
+            "rmse_kwh": 31.93039584736093,
+            "nmae_capacity_pct": 8.185012908657159,
+            "wape_pct": 31.689810964945337,
+            "bias_kwh": -2.5928427787879516,
+            "weighted_mae": null
+          },
+          {
+            "month": "2024-07",
+            "scope": "reference_G1_complete",
+            "weight_17": 1.0,
+            "rows": 494,
+            "mae_kwh": 424.8781646908238,
+            "rmse_kwh": 806.9650055401992,
+            "nmae_capacity_pct": 2.076054564052916,
+            "wape_pct": 13.115819590411636,
+            "bias_kwh": -180.6817570190361,
+            "weighted_mae": 683.9269376639708
+          },
+          {
+            "month": "2024-07",
+            "scope": "reference_G2_complete",
+            "weight_17": 1.0,
+            "rows": 0,
+            "mae_kwh": null,
+            "rmse_kwh": null,
+            "nmae_capacity_pct": null,
+            "wape_pct": null,
+            "bias_kwh": null,
+            "weighted_mae": null
+          },
+          {
+            "month": "2024-08",
+            "scope": "site_daylight",
+            "weight_17": 1.0,
+            "rows": 101205,
+            "mae_kwh": 12.155447638691456,
+            "rmse_kwh": 27.251100106488085,
+            "nmae_capacity_pct": 7.800694869073335,
+            "wape_pct": 21.222022334146246,
+            "bias_kwh": 0.04314799829172284,
+            "weighted_mae": null
+          },
+          {
+            "month": "2024-08",
+            "scope": "reference_G1_complete",
+            "weight_17": 1.0,
+            "rows": 744,
+            "mae_kwh": 302.0356095966064,
+            "rmse_kwh": 561.7710689201649,
+            "nmae_capacity_pct": 1.4758169704150998,
+            "wape_pct": 8.00128204378022,
+            "bias_kwh": 64.0958139020562,
+            "weighted_mae": 453.02796433653384
+          },
+          {
+            "month": "2024-08",
+            "scope": "reference_G2_complete",
+            "weight_17": 1.0,
+            "rows": 0,
+            "mae_kwh": null,
+            "rmse_kwh": null,
+            "nmae_capacity_pct": null,
+            "wape_pct": null,
+            "bias_kwh": null,
+            "weighted_mae": null
+          },
+          {
+            "month": "2024-09",
+            "scope": "site_daylight",
+            "weight_17": 1.0,
+            "rows": 94314,
+            "mae_kwh": 14.111271185087645,
+            "rmse_kwh": 32.08570548441036,
+            "nmae_capacity_pct": 8.812895615371968,
+            "wape_pct": 29.33875574303953,
+            "bias_kwh": -0.36055879256102846,
+            "weighted_mae": null
+          },
+          {
+            "month": "2024-09",
+            "scope": "reference_G1_complete",
+            "weight_17": 1.0,
+            "rows": 720,
+            "mae_kwh": 526.9789514328861,
+            "rmse_kwh": 1067.1476529335066,
+            "nmae_capacity_pct": 2.574943002962212,
+            "wape_pct": 17.412674680325193,
+            "bias_kwh": 2.78297701343951,
+            "weighted_mae": 872.0511714243579
+          },
+          {
+            "month": "2024-09",
+            "scope": "reference_G2_complete",
+            "weight_17": 1.0,
+            "rows": 0,
+            "mae_kwh": null,
+            "rmse_kwh": null,
+            "nmae_capacity_pct": null,
+            "wape_pct": null,
+            "bias_kwh": null,
+            "weighted_mae": null
+          },
+          {
+            "month": "2024-10",
+            "scope": "site_daylight",
+            "weight_17": 1.0,
+            "rows": 86849,
+            "mae_kwh": 12.56156310132877,
+            "rmse_kwh": 29.15901154171794,
+            "nmae_capacity_pct": 7.826802349874103,
+            "wape_pct": 29.047366313617413,
+            "bias_kwh": -0.48399347325611436,
+            "weighted_mae": null
+          },
+          {
+            "month": "2024-10",
+            "scope": "reference_G1_complete",
+            "weight_17": 1.0,
+            "rows": 744,
+            "mae_kwh": 425.0293606720351,
+            "rmse_kwh": 888.1727084605089,
+            "nmae_capacity_pct": 2.076793343149951,
+            "wape_pct": 17.666286374603022,
+            "bias_kwh": 36.814358093921605,
+            "weighted_mae": 759.311215727774
+          },
+          {
+            "month": "2024-10",
+            "scope": "reference_G2_complete",
+            "weight_17": 1.0,
+            "rows": 0,
+            "mae_kwh": null,
+            "rmse_kwh": null,
+            "nmae_capacity_pct": null,
+            "wape_pct": null,
+            "bias_kwh": null,
+            "weighted_mae": null
+          },
+          {
+            "month": "2024-11",
+            "scope": "site_daylight",
+            "weight_17": 1.0,
+            "rows": 75522,
+            "mae_kwh": 11.77667794529023,
+            "rmse_kwh": 27.05446340305964,
+            "nmae_capacity_pct": 7.381023140831128,
+            "wape_pct": 26.080211162351052,
+            "bias_kwh": -0.13884639920207478,
+            "weighted_mae": null
+          },
+          {
+            "month": "2024-11",
+            "scope": "reference_G1_complete",
+            "weight_17": 1.0,
+            "rows": 720,
+            "mae_kwh": 322.41600726333246,
+            "rmse_kwh": 738.2647755714144,
+            "nmae_capacity_pct": 1.575400383048246,
+            "wape_pct": 14.223121147637452,
+            "bias_kwh": 23.414114172653232,
+            "weighted_mae": 585.2707864472962
+          },
+          {
+            "month": "2024-11",
+            "scope": "reference_G2_complete",
+            "weight_17": 1.0,
+            "rows": 0,
+            "mae_kwh": null,
+            "rmse_kwh": null,
+            "nmae_capacity_pct": null,
+            "wape_pct": null,
+            "bias_kwh": null,
+            "weighted_mae": null
+          },
+          {
+            "month": "2024-12",
+            "scope": "site_daylight",
+            "weight_17": 1.0,
+            "rows": 72419,
+            "mae_kwh": 11.097602141444137,
+            "rmse_kwh": 24.801673762220517,
+            "nmae_capacity_pct": 6.90470067572987,
+            "wape_pct": 21.780549133467357,
+            "bias_kwh": -0.32485304875359705,
+            "weighted_mae": null
+          },
+          {
+            "month": "2024-12",
+            "scope": "reference_G1_complete",
+            "weight_17": 1.0,
+            "rows": 744,
+            "mae_kwh": 236.99357334492828,
+            "rmse_kwh": 546.3664048363336,
+            "nmae_capacity_pct": 1.1580062956447197,
+            "wape_pct": 9.995287092379947,
+            "bias_kwh": 4.257324081924663,
+            "weighted_mae": 448.0304799449089
+          },
+          {
+            "month": "2024-12",
+            "scope": "reference_G2_complete",
+            "weight_17": 1.0,
+            "rows": 178,
+            "mae_kwh": 257.31932111401625,
+            "rmse_kwh": 553.1693025339309,
+            "nmae_capacity_pct": 1.1596332855740428,
+            "wape_pct": 9.610515582311981,
+            "bias_kwh": -184.57848175437374,
+            "weighted_mae": 500.1863989336769
+          }
+        ]
+      }
+    },
+    "selected": {
+      "weight_17": 0.75,
+      "weighted_group_mae": 595.7537808506336,
+      "group": {
+        "rows": 2832,
+        "mae_kwh": 330.38951888671784,
+        "rmse_kwh": 769.6615456363203,
+        "nmae_capacity_pct": 1.5460091809415317,
+        "wape_pct": 11.039788592873496,
+        "bias_kwh": 57.611884564460006
+      },
+      "site_daylight": {
+        "rows": 151756,
+        "mae_kwh": 11.976365519015776,
+        "rmse_kwh": 34.577507383396274,
+        "nmae_capacity_pct": 6.8043050227969974,
+        "wape_pct": 21.479475240135553,
+        "bias_kwh": 1.1665485872636845
+      },
+      "unseen_daylight": {
+        "rows": 0,
+        "mae_kwh": null,
+        "rmse_kwh": null,
+        "nmae_capacity_pct": null,
+        "wape_pct": null,
+        "bias_kwh": null
+      },
+      "by_group": {
+        "G1": {
+          "metrics": {
+            "rows": 1416,
+            "mae_kwh": 300.6948758883697,
+            "rmse_kwh": 687.7003637449977,
+            "nmae_capacity_pct": 1.469265830428441,
+            "wape_pct": 10.594181361478306,
+            "bias_kwh": 33.97636818853762
+          },
+          "weighted_mae": 546.3992990088832
+        },
+        "G2": {
+          "metrics": {
+            "rows": 1416,
+            "mae_kwh": 360.084161885066,
+            "rmse_kwh": 843.6978128261188,
+            "nmae_capacity_pct": 1.6227525314546223,
+            "wape_pct": 11.441668406080078,
+            "bias_kwh": 81.24740094038239
+          },
+          "weighted_mae": 645.1082626923838
+        }
+      }
+    },
+    "selection_basis": "tune weighted group MAE; ties within 1e-9 prefer larger weight_17",
+    "total_seconds": 2.955609792028554
+  },
+  "verification": {
+    "status": "passed",
+    "checks": [
+      {
+        "window": "tune",
+        "candidates": [
+          {
+            "weight_17": 0.5,
+            "weighted_group_mae": 598.4632660353793
+          },
+          {
+            "weight_17": 0.75,
+            "weighted_group_mae": 595.7537808506336
+          },
+          {
+            "weight_17": 1.0,
+            "weighted_group_mae": 600.305685129294
+          }
+        ],
+        "monthly_rows_checked": 18
+      },
+      {
+        "window": "seasonal_diagnostic",
+        "candidates": [
+          {
+            "weight_17": 0.5,
+            "weighted_group_mae": 447.24376410582266
+          },
+          {
+            "weight_17": 0.75,
+            "weighted_group_mae": 441.44139432961697
+          },
+          {
+            "weight_17": 1.0,
+            "weighted_group_mae": 437.8101257510943
+          }
+        ],
+        "monthly_rows_checked": 54
+      }
+    ],
+    "source_group_predictions_match": true,
+    "monthly_metrics_recomputed": true,
+    "site_daylight_nmae_recomputed": true,
+    "selection_recomputed": true,
+    "confirmation_evaluated": false
+  }
+}
