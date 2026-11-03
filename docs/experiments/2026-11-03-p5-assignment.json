@@ -1,0 +1,1414 @@
+{
+  "summary": {
+    "status": "complete",
+    "protocol": "p0-v1",
+    "code_commit": "840d4a11322afe7e4918d36ec3e35443dce78373",
+    "dirty": false,
+    "threads": 8,
+    "source_run": "p4_20261103_132834",
+    "source_code_commit": "0318f966314140eb6fc255f7635ec1509db240b0",
+    "confirmation_evaluated": true,
+    "versions": {
+      "python": "3.12.16",
+      "numpy": "2.2.6",
+      "pandas": "2.2.3"
+    },
+    "evaluations": {
+      "tune": {
+        "reference": {
+          "weighted_group_mae": 578.4385746033645,
+          "group_metrics": {
+            "rows": 2832,
+            "mae_kwh": 321.76214446435534,
+            "rmse_kwh": 762.8486555901474,
+            "nmae_capacity_pct": 1.5047849041159165,
+            "wape_pct": 10.751509503223854,
+            "bias_kwh": 69.51861080683595
+          },
+          "common_hours": 1416,
+          "by_group": {
+            "G1": {
+              "weighted_group_mae": 517.1064566584904,
+              "rows": 1416,
+              "mae_kwh": 288.34527730744395,
+              "rmse_kwh": 673.4851505304733,
+              "nmae_capacity_pct": 1.4089227894608989,
+              "wape_pct": 10.159076218029323,
+              "bias_kwh": 51.84590592898387
+            },
+            "G2": {
+              "weighted_group_mae": 639.7706925482383,
+              "rows": 1416,
+              "mae_kwh": 355.1790116212668,
+              "rmse_kwh": 842.7893536859232,
+              "nmae_capacity_pct": 1.6006470187709338,
+              "wape_pct": 11.285807335971972,
+              "bias_kwh": 87.19131568468804
+            }
+          },
+          "monthly": [
+            {
+              "month": "2025-01",
+              "group": "both",
+              "hours": 744,
+              "weighted_group_mae": 503.9607839235391,
+              "rows": 1488,
+              "mae_kwh": 279.8027210107645,
+              "rmse_kwh": 627.6474975789677,
+              "nmae_capacity_pct": 1.3108383964754187,
+              "wape_pct": 11.213261996442574,
+              "bias_kwh": 123.8245509886727
+            },
+            {
+              "month": "2025-01",
+              "group": "G1",
+              "hours": 744,
+              "weighted_group_mae": 476.1195012058647,
+              "rows": 744,
+              "mae_kwh": 262.7818135101968,
+              "rmse_kwh": 597.7107021397771,
+              "nmae_capacity_pct": 1.2840136976324323,
+              "wape_pct": 11.318366611963466,
+              "bias_kwh": 133.41223762362495
+            },
+            {
+              "month": "2025-01",
+              "group": "G2",
+              "hours": 744,
+              "weighted_group_mae": 531.8020666412135,
+              "rows": 744,
+              "mae_kwh": 296.82362851133234,
+              "rmse_kwh": 656.2199928239423,
+              "nmae_capacity_pct": 1.3376630953184045,
+              "wape_pct": 11.121827302884311,
+              "bias_kwh": 114.23686435372046
+            },
+            {
+              "month": "2025-02",
+              "group": "both",
+              "hours": 672,
+              "weighted_group_mae": 660.576749346996,
+              "rows": 1344,
+              "mae_kwh": 368.2172204308309,
+              "rmse_kwh": 888.8629050460778,
+              "nmae_capacity_pct": 1.7195113947178962,
+              "wape_pct": 10.39150556247788,
+              "bias_kwh": 9.394177034088127
+            },
+            {
+              "month": "2025-02",
+              "group": "G1",
+              "hours": 672,
+              "weighted_group_mae": 562.3091094016412,
+              "rows": 672,
+              "mae_kwh": 316.647683654396,
+              "rmse_kwh": 748.4830383633339,
+              "nmae_capacity_pct": 1.5472149982709864,
+              "wape_pct": 9.28525061952277,
+              "bias_kwh": -38.45967559008305
+            },
+            {
+              "month": "2025-02",
+              "group": "G2",
+              "hours": 672,
+              "weighted_group_mae": 758.8443892923506,
+              "rows": 672,
+              "mae_kwh": 419.78675720726574,
+              "rmse_kwh": 1009.9146841274749,
+              "nmae_capacity_pct": 1.8918077911648061,
+              "wape_pct": 11.41759134514272,
+              "bias_kwh": 57.248029658259306
+            }
+          ]
+        },
+        "optimized": {
+          "weighted_group_mae": 568.0648427720145,
+          "group_metrics": {
+            "rows": 2832,
+            "mae_kwh": 315.8353740009276,
+            "rmse_kwh": 752.4648954553276,
+            "nmae_capacity_pct": 1.4779488458896863,
+            "wape_pct": 10.553469646586745,
+            "bias_kwh": 69.51861080683595
+          },
+          "common_hours": 1416,
+          "by_group": {
+            "G1": {
+              "weighted_group_mae": 516.5552035562675,
+              "rows": 1416,
+              "mae_kwh": 286.2799737455267,
+              "rmse_kwh": 675.1127986249462,
+              "nmae_capacity_pct": 1.4306380539638976,
+              "wape_pct": 10.309258236586832,
+              "bias_kwh": 66.69179997759622
+            },
+            "G2": {
+              "weighted_group_mae": 619.5744819877613,
+              "rows": 1416,
+              "mae_kwh": 345.3907742563284,
+              "rmse_kwh": 822.5749491189158,
+              "nmae_capacity_pct": 1.5252596378154748,
+              "wape_pct": 10.764831200252381,
+              "bias_kwh": 72.34542163607568
+            }
+          },
+          "monthly": [
+            {
+              "month": "2025-01",
+              "group": "both",
+              "hours": 744,
+              "weighted_group_mae": 495.4310622907257,
+              "rows": 1488,
+              "mae_kwh": 275.4033466879734,
+              "rmse_kwh": 620.1118767770633,
+              "nmae_capacity_pct": 1.2916391238834497,
+              "wape_pct": 11.036954429726734,
+              "bias_kwh": 123.82455098867268
+            },
+            {
+              "month": "2025-01",
+              "group": "G1",
+              "hours": 744,
+              "weighted_group_mae": 472.4257070692239,
+              "rows": 744,
+              "mae_kwh": 259.5802531797635,
+              "rmse_kwh": 582.0014829659868,
+              "nmae_capacity_pct": 1.2972105013068713,
+              "wape_pct": 11.313145646705198,
+              "bias_kwh": 129.15717497998222
+            },
+            {
+              "month": "2025-01",
+              "group": "G2",
+              "hours": 744,
+              "weighted_group_mae": 518.4364175122274,
+              "rows": 744,
+              "mae_kwh": 291.2264401961833,
+              "rmse_kwh": 656.0120069521105,
+              "nmae_capacity_pct": 1.2860677464600283,
+              "wape_pct": 10.801900504436848,
+              "bias_kwh": 118.49192699736315
+            },
+            {
+              "month": "2025-02",
+              "group": "both",
+              "hours": 672,
+              "weighted_group_mae": 648.1693423685467,
+              "rows": 1344,
+              "mae_kwh": 360.5994042402697,
+              "rmse_kwh": 875.974982995358,
+              "nmae_capacity_pct": 1.6842203238251623,
+              "wape_pct": 10.17652219145159,
+              "bias_kwh": 9.394177034088113
+            },
+            {
+              "month": "2025-02",
+              "group": "G1",
+              "hours": 672,
+              "weighted_group_mae": 565.2236221642211,
+              "rows": 672,
+              "mae_kwh": 315.8403786576217,
+              "rmse_kwh": 765.0948272168707,
+              "nmae_capacity_pct": 1.5783614158341768,
+              "wape_pct": 9.539039729951927,
+              "bias_kwh": -2.466293775045469
+            },
+            {
+              "month": "2025-02",
+              "group": "G2",
+              "hours": 672,
+              "weighted_group_mae": 731.1150625728727,
+              "rows": 672,
+              "mae_kwh": 405.3584298229177,
+              "rmse_kwh": 974.317323582734,
+              "nmae_capacity_pct": 1.7900792318161483,
+              "wape_pct": 10.735526797343537,
+              "bias_kwh": 21.254647843221694
+            }
+          ]
+        }
+      },
+      "seasonal_diagnostic": {
+        "reference": {
+          "weighted_group_mae": 439.7813678035474,
+          "group_metrics": {
+            "rows": 356,
+            "mae_kwh": 230.94966127766943,
+            "rmse_kwh": 503.3693371664155,
+            "nmae_capacity_pct": 1.0770433412228881,
+            "wape_pct": 9.176895061473973,
+            "bias_kwh": -142.5661618067353
+          },
+          "common_hours": 178,
+          "by_group": {
+            "G1": {
+              "weighted_group_mae": 362.6539127798597,
+              "rows": 178,
+              "mae_kwh": 190.9551655554993,
+              "rmse_kwh": 433.46478722542054,
+              "nmae_capacity_pct": 0.9330518156174297,
+              "wape_pct": 8.10571620037614,
+              "bias_kwh": -97.58677697256705
+            },
+            "G2": {
+              "weighted_group_mae": 516.9088228272351,
+              "rows": 178,
+              "mae_kwh": 270.94415699983955,
+              "rmse_kwh": 564.6854499934753,
+              "nmae_capacity_pct": 1.2210348668283462,
+              "wape_pct": 10.119384084763567,
+              "bias_kwh": -187.54554664090352
+            }
+          },
+          "monthly": [
+            {
+              "month": "2024-12",
+              "group": "both",
+              "hours": 178,
+              "weighted_group_mae": 439.7813678035474,
+              "rows": 356,
+              "mae_kwh": 230.94966127766943,
+              "rmse_kwh": 503.3693371664155,
+              "nmae_capacity_pct": 1.0770433412228881,
+              "wape_pct": 9.176895061473973,
+              "bias_kwh": -142.5661618067353
+            },
+            {
+              "month": "2024-12",
+              "group": "G1",
+              "hours": 178,
+              "weighted_group_mae": 362.6539127798597,
+              "rows": 178,
+              "mae_kwh": 190.9551655554993,
+              "rmse_kwh": 433.46478722542054,
+              "nmae_capacity_pct": 0.9330518156174297,
+              "wape_pct": 8.10571620037614,
+              "bias_kwh": -97.58677697256705
+            },
+            {
+              "month": "2024-12",
+              "group": "G2",
+              "hours": 178,
+              "weighted_group_mae": 516.9088228272351,
+              "rows": 178,
+              "mae_kwh": 270.94415699983955,
+              "rmse_kwh": 564.6854499934753,
+              "nmae_capacity_pct": 1.2210348668283462,
+              "wape_pct": 10.119384084763567,
+              "bias_kwh": -187.54554664090352
+            }
+          ]
+        },
+        "optimized": {
+          "weighted_group_mae": 437.6202115788907,
+          "group_metrics": {
+            "rows": 356,
+            "mae_kwh": 230.29960210352172,
+            "rmse_kwh": 504.9257463809723,
+            "nmae_capacity_pct": 1.0733795995423723,
+            "wape_pct": 9.151064649808074,
+            "bias_kwh": -142.56616180673532
+          },
+          "common_hours": 178,
+          "by_group": {
+            "G1": {
+              "weighted_group_mae": 373.74576964870244,
+              "rows": 178,
+              "mae_kwh": 193.93561580268096,
+              "rmse_kwh": 421.58174865203694,
+              "nmae_capacity_pct": 0.9691620002482724,
+              "wape_pct": 8.405007157093323,
+              "bias_kwh": -87.99428134894455
+            },
+            "G2": {
+              "weighted_group_mae": 501.49465350907894,
+              "rows": 178,
+              "mae_kwh": 266.66358840436243,
+              "rmse_kwh": 576.3409129328359,
+              "nmae_capacity_pct": 1.1775971988364724,
+              "wape_pct": 9.78257620731208,
+              "bias_kwh": -197.1380422645261
+            }
+          },
+          "monthly": [
+            {
+              "month": "2024-12",
+              "group": "both",
+              "hours": 178,
+              "weighted_group_mae": 437.6202115788907,
+              "rows": 356,
+              "mae_kwh": 230.29960210352172,
+              "rmse_kwh": 504.9257463809723,
+              "nmae_capacity_pct": 1.0733795995423723,
+              "wape_pct": 9.151064649808074,
+              "bias_kwh": -142.56616180673532
+            },
+            {
+              "month": "2024-12",
+              "group": "G1",
+              "hours": 178,
+              "weighted_group_mae": 373.74576964870244,
+              "rows": 178,
+              "mae_kwh": 193.93561580268096,
+              "rmse_kwh": 421.58174865203694,
+              "nmae_capacity_pct": 0.9691620002482724,
+              "wape_pct": 8.405007157093323,
+              "bias_kwh": -87.99428134894455
+            },
+            {
+              "month": "2024-12",
+              "group": "G2",
+              "hours": 178,
+              "weighted_group_mae": 501.49465350907894,
+              "rows": 178,
+              "mae_kwh": 266.66358840436243,
+              "rmse_kwh": 576.3409129328359,
+              "nmae_capacity_pct": 1.1775971988364724,
+              "wape_pct": 9.78257620731208,
+              "bias_kwh": -197.1380422645261
+            }
+          ]
+        }
+      },
+      "confirmation": {
+        "reference": {
+          "weighted_group_mae": 709.4742658133208,
+          "group_metrics": {
+            "rows": 4416,
+            "mae_kwh": 454.0257001386729,
+            "rmse_kwh": 942.7934335235681,
+            "nmae_capacity_pct": 2.1248128000543756,
+            "wape_pct": 11.540251637900893,
+            "bias_kwh": 8.380895819665893
+          },
+          "common_hours": 2208,
+          "by_group": {
+            "G1": {
+              "weighted_group_mae": 644.1237511605384,
+              "rows": 2208,
+              "mae_kwh": 414.6217459647056,
+              "rmse_kwh": 873.138512514562,
+              "nmae_capacity_pct": 2.0259392917778865,
+              "wape_pct": 11.17749722770346,
+              "bias_kwh": 58.605440878510045
+            },
+            "G2": {
+              "weighted_group_mae": 774.8247804661032,
+              "rows": 2208,
+              "mae_kwh": 493.4296543126402,
+              "rmse_kwh": 1007.6448057496129,
+              "nmae_capacity_pct": 2.2236863083308647,
+              "wape_pct": 11.863784354253585,
+              "bias_kwh": -41.843649239178255
+            }
+          },
+          "monthly": [
+            {
+              "month": "2025-03",
+              "group": "both",
+              "hours": 744,
+              "weighted_group_mae": 565.625386517148,
+              "rows": 1488,
+              "mae_kwh": 363.90986261171975,
+              "rmse_kwh": 757.0584290000855,
+              "nmae_capacity_pct": 1.705894572318916,
+              "wape_pct": 10.357849209395868,
+              "bias_kwh": 9.350494216426942
+            },
+            {
+              "month": "2025-03",
+              "group": "G1",
+              "hours": 744,
+              "weighted_group_mae": 539.3198336740833,
+              "rows": 744,
+              "mae_kwh": 347.1747244610345,
+              "rmse_kwh": 713.7059536837947,
+              "nmae_capacity_pct": 1.6963772938664043,
+              "wape_pct": 10.335333412366573,
+              "bias_kwh": 26.96196732091673
+            },
+            {
+              "month": "2025-03",
+              "group": "G2",
+              "hours": 744,
+              "weighted_group_mae": 591.9309393602127,
+              "rows": 744,
+              "mae_kwh": 380.6450007624051,
+              "rmse_kwh": 798.0593596446695,
+              "nmae_capacity_pct": 1.715411850771428,
+              "wape_pct": 10.378470895631255,
+              "bias_kwh": -8.260978888062848
+            },
+            {
+              "month": "2025-04",
+              "group": "both",
+              "hours": 720,
+              "weighted_group_mae": 684.5015993630878,
+              "rows": 1440,
+              "mae_kwh": 450.1634638637142,
+              "rmse_kwh": 924.0234513054788,
+              "nmae_capacity_pct": 2.1034861209933116,
+              "wape_pct": 10.312304468214593,
+              "bias_kwh": -70.93928947285775
+            },
+            {
+              "month": "2025-04",
+              "group": "G1",
+              "hours": 720,
+              "weighted_group_mae": 591.9330893503666,
+              "rows": 720,
+              "mae_kwh": 393.96466474721416,
+              "rmse_kwh": 822.1029085555672,
+              "nmae_capacity_pct": 1.9250039382918072,
+              "wape_pct": 9.628363508804815,
+              "bias_kwh": 7.842305056630201
+            },
+            {
+              "month": "2025-04",
+              "group": "G2",
+              "hours": 720,
+              "weighted_group_mae": 777.0701093758091,
+              "rows": 720,
+              "mae_kwh": 506.3622629802142,
+              "rmse_kwh": 1015.7684208861062,
+              "nmae_capacity_pct": 2.281968303694816,
+              "wape_pct": 10.915569971908912,
+              "bias_kwh": -149.7208840023457
+            },
+            {
+              "month": "2025-05",
+              "group": "both",
+              "hours": 744,
+              "weighted_group_mae": 861.1737350985262,
+              "rows": 1488,
+              "mae_kwh": 547.8791856736506,
+              "rmse_kwh": 1112.875215358811,
+              "nmae_capacity_pct": 2.564369749461833,
+              "wape_pct": 13.91239911023363,
+              "bias_kwh": 84.17276706083096
+            },
+            {
+              "month": "2025-05",
+              "group": "G1",
+              "hours": 744,
+              "weighted_group_mae": 787.3160075241038,
+              "rows": 744,
+              "mae_kwh": 502.0594912272395,
+              "rmse_kwh": 1048.3760360460547,
+              "nmae_capacity_pct": 2.4531806640307363,
+              "wape_pct": 13.606630020464463,
+              "bias_kwh": 139.37452974759998
+            },
+            {
+              "month": "2025-05",
+              "group": "G2",
+              "hours": 744,
+              "weighted_group_mae": 935.0314626729487,
+              "rows": 744,
+              "mae_kwh": 593.6988801200616,
+              "rmse_kwh": 1173.8356686368845,
+              "nmae_capacity_pct": 2.6755588348929304,
+              "wape_pct": 14.181903904068982,
+              "bias_kwh": 28.971004374061934
+            }
+          ]
+        },
+        "optimized": {
+          "weighted_group_mae": 711.9874229422006,
+          "group_metrics": {
+            "rows": 4416,
+            "mae_kwh": 455.39295734874037,
+            "rmse_kwh": 942.4280391115379,
+            "nmae_capacity_pct": 2.1313225428135256,
+            "wape_pct": 11.57500405886097,
+            "bias_kwh": 8.380895819665886
+          },
+          "common_hours": 2208,
+          "by_group": {
+            "G1": {
+              "weighted_group_mae": 645.659333522501,
+              "rows": 2208,
+              "mae_kwh": 413.8624952298438,
+              "rmse_kwh": 869.8271002310796,
+              "nmae_capacity_pct": 2.0682111537098677,
+              "wape_pct": 11.364229902960556,
+              "bias_kwh": 73.38356071515946
+            },
+            "G2": {
+              "weighted_group_mae": 778.3155123619003,
+              "rows": 2208,
+              "mae_kwh": 496.92341946763696,
+              "rmse_kwh": 1009.8227733175898,
+              "nmae_capacity_pct": 2.1944339319171844,
+              "wape_pct": 11.756608307039757,
+              "bias_kwh": -56.62176907582769
+            }
+          },
+          "monthly": [
+            {
+              "month": "2025-03",
+              "group": "both",
+              "hours": 744,
+              "weighted_group_mae": 569.5862320507622,
+              "rows": 1488,
+              "mae_kwh": 367.4696197157156,
+              "rmse_kwh": 757.2750564191977,
+              "nmae_capacity_pct": 1.7254955011442548,
+              "wape_pct": 10.459169429300447,
+              "bias_kwh": 9.350494216426947
+            },
+            {
+              "month": "2025-03",
+              "group": "G1",
+              "hours": 744,
+              "weighted_group_mae": 550.483653242516,
+              "rows": 744,
+              "mae_kwh": 353.46658537897514,
+              "rmse_kwh": 721.4423427588007,
+              "nmae_capacity_pct": 1.7663923229828873,
+              "wape_pct": 10.775378079276985,
+              "bias_kwh": 42.18249812347396
+            },
+            {
+              "month": "2025-03",
+              "group": "G2",
+              "hours": 744,
+              "weighted_group_mae": 588.6888108590085,
+              "rows": 744,
+              "mae_kwh": 381.4726540524561,
+              "rmse_kwh": 791.4871876563076,
+              "nmae_capacity_pct": 1.6845986793056222,
+              "wape_pct": 10.18230182146657,
+              "bias_kwh": -23.48150969062007
+            },
+            {
+              "month": "2025-04",
+              "group": "both",
+              "hours": 720,
+              "weighted_group_mae": 693.178192335856,
+              "rows": 1440,
+              "mae_kwh": 454.53555503318574,
+              "rmse_kwh": 928.497674150176,
+              "nmae_capacity_pct": 2.1222569598026504,
+              "wape_pct": 10.4124599426625,
+              "bias_kwh": -70.93928947285778
+            },
+            {
+              "month": "2025-04",
+              "group": "G1",
+              "hours": 720,
+              "weighted_group_mae": 600.2019807355912,
+              "rows": 720,
+              "mae_kwh": 395.69881448781746,
+              "rmse_kwh": 834.4461118526425,
+              "nmae_capacity_pct": 1.9774410850612916,
+              "wape_pct": 9.839459599648075,
+              "bias_kwh": 29.40543457897083
+            },
+            {
+              "month": "2025-04",
+              "group": "G2",
+              "hours": 720,
+              "weighted_group_mae": 786.154403936121,
+              "rows": 720,
+              "mae_kwh": 513.3722955785541,
+              "rmse_kwh": 1013.8617007356477,
+              "nmae_capacity_pct": 2.267072834544009,
+              "wape_pct": 10.901804008662092,
+              "bias_kwh": -171.28401352468637
+            },
+            {
+              "month": "2025-05",
+              "group": "both",
+              "hours": 744,
+              "weighted_group_mae": 856.4789764178412,
+              "rows": 1488,
+              "mae_kwh": 544.1460391581082,
+              "rmse_kwh": 1108.195674592461,
+              "nmae_capacity_pct": 2.545922729332032,
+              "wape_pct": 13.81760261929313,
+              "bias_kwh": 84.17276706083094
+            },
+            {
+              "month": "2025-05",
+              "group": "G1",
+              "hours": 744,
+              "weighted_group_mae": 773.8337605713753,
+              "rows": 744,
+              "mae_kwh": 491.836160637512,
+              "rmse_kwh": 1025.2185428074836,
+              "nmae_capacity_pct": 2.4578719863548257,
+              "wape_pct": 13.5276591992367,
+              "bias_kwh": 147.14410021283393
+            },
+            {
+              "month": "2025-05",
+              "group": "G2",
+              "hours": 744,
+              "weighted_group_mae": 939.1241922643071,
+              "rows": 744,
+              "mae_kwh": 596.4559176787045,
+              "rmse_kwh": 1185.3785242928016,
+              "nmae_capacity_pct": 2.633973472309238,
+              "wape_pct": 14.066207544716153,
+              "bias_kwh": 21.20143390882792
+            }
+          ]
+        }
+      }
+    },
+    "selection": {
+      "selected_using": "tune only",
+      "assignment_sha256": "5f926d28d2dc3a59652e130ebad566dd09c69ec67de31c749eeb4d1d9648bd5b",
+      "code_commit": "840d4a11322afe7e4918d36ec3e35443dce78373",
+      "model": {
+        "variant": "l1_capacity",
+        "trees": 200,
+        "learning_rate": 0.03,
+        "weight_17": 0.75,
+        "feature_bundle": "station_distance"
+      },
+      "search": {
+        "initial_score": 578.4385746033644,
+        "final_score": 568.0648427720145,
+        "mathematical_lower_bound": 565.0141007343295,
+        "steps": 33,
+        "stop_reason": "no_improving_feasible_move_or_swap",
+        "candidates_evaluated": 449255,
+        "history": [
+          {
+            "step": 1,
+            "kind": "swap",
+            "weighted_group_mae": 574.1300993146651,
+            "capacity_g1": 20385.225,
+            "capacity_g2": 22270.145,
+            "neighbors_evaluated": 15436
+          },
+          {
+            "step": 2,
+            "kind": "swap",
+            "weighted_group_mae": 573.1143299753675,
+            "capacity_g1": 20447.010000000002,
+            "capacity_g2": 22208.36,
+            "neighbors_evaluated": 15163
+          },
+          {
+            "step": 3,
+            "kind": "swap",
+            "weighted_group_mae": 572.411386327187,
+            "capacity_g1": 20606.964999999997,
+            "capacity_g2": 22048.405000000002,
+            "neighbors_evaluated": 15422
+          },
+          {
+            "step": 4,
+            "kind": "swap",
+            "weighted_group_mae": 572.0065557309038,
+            "capacity_g1": 20444.114999999998,
+            "capacity_g2": 22211.255,
+            "neighbors_evaluated": 15479
+          },
+          {
+            "step": 5,
+            "kind": "swap",
+            "weighted_group_mae": 571.527174684182,
+            "capacity_g1": 20108.875,
+            "capacity_g2": 22546.495,
+            "neighbors_evaluated": 15423
+          },
+          {
+            "step": 6,
+            "kind": "swap",
+            "weighted_group_mae": 571.257177689529,
+            "capacity_g1": 20106.074999999997,
+            "capacity_g2": 22549.295000000002,
+            "neighbors_evaluated": 14392
+          },
+          {
+            "step": 7,
+            "kind": "swap",
+            "weighted_group_mae": 571.0128822588985,
+            "capacity_g1": 20106.434999999998,
+            "capacity_g2": 22548.935,
+            "neighbors_evaluated": 14386
+          },
+          {
+            "step": 8,
+            "kind": "swap",
+            "weighted_group_mae": 570.7694826226478,
+            "capacity_g1": 20106.769999999997,
+            "capacity_g2": 22548.600000000002,
+            "neighbors_evaluated": 14387
+          },
+          {
+            "step": 9,
+            "kind": "swap",
+            "weighted_group_mae": 570.5419091958144,
+            "capacity_g1": 20106.86,
+            "capacity_g2": 22548.51,
+            "neighbors_evaluated": 14388
+          },
+          {
+            "step": 10,
+            "kind": "swap",
+            "weighted_group_mae": 570.3442206376243,
+            "capacity_g1": 20309.36,
+            "capacity_g2": 22346.01,
+            "neighbors_evaluated": 14388
+          },
+          {
+            "step": 11,
+            "kind": "swap",
+            "weighted_group_mae": 570.1515105012113,
+            "capacity_g1": 20315.269999999997,
+            "capacity_g2": 22340.100000000002,
+            "neighbors_evaluated": 15220
+          },
+          {
+            "step": 12,
+            "kind": "swap",
+            "weighted_group_mae": 569.9838485235807,
+            "capacity_g1": 20087.045,
+            "capacity_g2": 22568.325,
+            "neighbors_evaluated": 15220
+          },
+          {
+            "step": 13,
+            "kind": "swap",
+            "weighted_group_mae": 569.8033528389592,
+            "capacity_g1": 20101.86,
+            "capacity_g2": 22553.51,
+            "neighbors_evaluated": 14239
+          },
+          {
+            "step": 14,
+            "kind": "swap",
+            "weighted_group_mae": 569.6402386555937,
+            "capacity_g1": 20120.35,
+            "capacity_g2": 22535.02,
+            "neighbors_evaluated": 14361
+          },
+          {
+            "step": 15,
+            "kind": "swap",
+            "weighted_group_mae": 569.2315101145792,
+            "capacity_g1": 20018.34,
+            "capacity_g2": 22637.03,
+            "neighbors_evaluated": 14415
+          },
+          {
+            "step": 16,
+            "kind": "swap",
+            "weighted_group_mae": 569.0574113838062,
+            "capacity_g1": 20019.359999999997,
+            "capacity_g2": 22636.01,
+            "neighbors_evaluated": 12285
+          },
+          {
+            "step": 17,
+            "kind": "swap",
+            "weighted_group_mae": 568.9522338805186,
+            "capacity_g1": 20019.36,
+            "capacity_g2": 22636.01,
+            "neighbors_evaluated": 12317
+          },
+          {
+            "step": 18,
+            "kind": "swap",
+            "weighted_group_mae": 568.8366313664857,
+            "capacity_g1": 20019.894999999997,
+            "capacity_g2": 22635.475,
+            "neighbors_evaluated": 12317
+          },
+          {
+            "step": 19,
+            "kind": "swap",
+            "weighted_group_mae": 568.7302828861089,
+            "capacity_g1": 20016.434999999998,
+            "capacity_g2": 22638.934999999998,
+            "neighbors_evaluated": 12321
+          },
+          {
+            "step": 20,
+            "kind": "swap",
+            "weighted_group_mae": 568.6386568332709,
+            "capacity_g1": 20009.864999999998,
+            "capacity_g2": 22645.504999999997,
+            "neighbors_evaluated": 12198
+          },
+          {
+            "step": 21,
+            "kind": "swap",
+            "weighted_group_mae": 568.5786360179595,
+            "capacity_g1": 20010.28,
+            "capacity_g2": 22645.09,
+            "neighbors_evaluated": 11621
+          },
+          {
+            "step": 22,
+            "kind": "swap",
+            "weighted_group_mae": 568.5087601131125,
+            "capacity_g1": 20048.064999999995,
+            "capacity_g2": 22607.305,
+            "neighbors_evaluated": 11648
+          },
+          {
+            "step": 23,
+            "kind": "swap",
+            "weighted_group_mae": 568.4434719860752,
+            "capacity_g1": 20004.144999999997,
+            "capacity_g2": 22651.225,
+            "neighbors_evaluated": 13743
+          },
+          {
+            "step": 24,
+            "kind": "swap",
+            "weighted_group_mae": 568.3607603585965,
+            "capacity_g1": 20003.899999999998,
+            "capacity_g2": 22651.469999999998,
+            "neighbors_evaluated": 10963
+          },
+          {
+            "step": 25,
+            "kind": "swap",
+            "weighted_group_mae": 568.3212505536688,
+            "capacity_g1": 20008.699999999997,
+            "capacity_g2": 22646.67,
+            "neighbors_evaluated": 10937
+          },
+          {
+            "step": 26,
+            "kind": "swap",
+            "weighted_group_mae": 568.2901952773477,
+            "capacity_g1": 20012.144999999997,
+            "capacity_g2": 22643.225000000002,
+            "neighbors_evaluated": 11478
+          },
+          {
+            "step": 27,
+            "kind": "swap",
+            "weighted_group_mae": 568.2471390722366,
+            "capacity_g1": 20003.25,
+            "capacity_g2": 22652.12,
+            "neighbors_evaluated": 11739
+          },
+          {
+            "step": 28,
+            "kind": "swap",
+            "weighted_group_mae": 568.1925239215061,
+            "capacity_g1": 20025.21,
+            "capacity_g2": 22630.16,
+            "neighbors_evaluated": 10777
+          },
+          {
+            "step": 29,
+            "kind": "swap",
+            "weighted_group_mae": 568.1401290171536,
+            "capacity_g1": 20026.37,
+            "capacity_g2": 22629.000000000004,
+            "neighbors_evaluated": 12727
+          },
+          {
+            "step": 30,
+            "kind": "swap",
+            "weighted_group_mae": 568.1070256794624,
+            "capacity_g1": 20003.754999999997,
+            "capacity_g2": 22651.615,
+            "neighbors_evaluated": 12755
+          },
+          {
+            "step": 31,
+            "kind": "swap",
+            "weighted_group_mae": 568.0871512648123,
+            "capacity_g1": 20036.329999999998,
+            "capacity_g2": 22619.040000000005,
+            "neighbors_evaluated": 10796
+          },
+          {
+            "step": 32,
+            "kind": "move",
+            "weighted_group_mae": 568.0666417248179,
+            "capacity_g1": 20012.329999999998,
+            "capacity_g2": 22643.04,
+            "neighbors_evaluated": 13254
+          },
+          {
+            "step": 33,
+            "kind": "swap",
+            "weighted_group_mae": 568.0648427720145,
+            "capacity_g1": 20010.649999999998,
+            "capacity_g2": 22644.72,
+            "neighbors_evaluated": 11613
+          }
+        ]
+      },
+      "changed_sites": 65,
+      "reference_groups": {
+        "G1": {
+          "capacity_kw": 20465.655,
+          "sites": 134
+        },
+        "G2": {
+          "capacity_kw": 22189.715,
+          "sites": 119
+        }
+      },
+      "optimized_groups": {
+        "G1": {
+          "capacity_kw": 20010.65,
+          "sites": 133
+        },
+        "G2": {
+          "capacity_kw": 22644.72,
+          "sites": 120
+        }
+      },
+      "source_tune_predictions_sha256": "91b2572d61e0dedc6823b7049e6b4a5a7232206b34dd2f8810951da258328c93",
+      "confirmation_seen_at_selection": false
+    },
+    "confirmation_model": {
+      "status": "complete",
+      "protocol": "p0-v1",
+      "window": "confirmation",
+      "variant": "l1_capacity",
+      "weighting": "capacity",
+      "feature_columns": [
+        "wa_cloud",
+        "wa_temp",
+        "wa_humidity",
+        "wa_rain",
+        "wa_wind_speed",
+        "wa_ground_press",
+        "wb_cloud",
+        "wb_temp",
+        "wb_rel_hum",
+        "wb_uv_idx",
+        "wb_precip_prob",
+        "wb_total_liq",
+        "wb_vis",
+        "wb_wind_speed",
+        "wb_dew_point",
+        "elev",
+        "azim",
+        "cosz",
+        "doy_sin",
+        "doy_cos",
+        "hour",
+        "cap",
+        "lat",
+        "lon",
+        "wa_dist",
+        "wb_dist"
+      ],
+      "weight_17": 0.75,
+      "parameters": {
+        "objective": "regression_l1",
+        "n_estimators": 200,
+        "learning_rate": 0.03,
+        "num_leaves": 127,
+        "min_child_samples": 200,
+        "subsample": 0.8,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.8,
+        "verbosity": -1,
+        "n_jobs": 8,
+        "random_state": 0
+      },
+      "split": {
+        "train_start": "2023-06-01 01:00:00+09:00",
+        "train_end_exclusive": "2025-02-28 01:00:00+09:00",
+        "eval_start": "2025-03-01 01:00:00+09:00",
+        "eval_end_exclusive": "2025-06-01 01:00:00+09:00"
+      },
+      "train_rows": 2862544,
+      "eval_rows": 558624,
+      "common_hours": 2208,
+      "mask_sha256": "6cffbd4129ac8f471066bc65cf0d09aaa1bfb51acba1ef7562e691317445e45a",
+      "training": {
+        "10": {
+          "rows": 1409147,
+          "fit_seconds": 12.493780332995811,
+          "trees": 200,
+          "train_missing_feature_fraction": {
+            "wa_cloud": 0.0,
+            "wa_temp": 0.0,
+            "wa_humidity": 0.0,
+            "wa_rain": 0.0,
+            "wa_wind_speed": 0.0,
+            "wa_ground_press": 0.0,
+            "wb_cloud": 0.0009509298887908784,
+            "wb_temp": 0.0009509298887908784,
+            "wb_rel_hum": 0.0009509298887908784,
+            "wb_uv_idx": 0.0009509298887908784,
+            "wb_precip_prob": 0.0009509298887908784,
+            "wb_total_liq": 0.0009509298887908784,
+            "wb_vis": 0.0009509298887908784,
+            "wb_wind_speed": 0.0009509298887908784,
+            "wb_dew_point": 0.0009509298887908784,
+            "elev": 0.0,
+            "azim": 0.0,
+            "cosz": 0.0,
+            "doy_sin": 0.0,
+            "doy_cos": 0.0,
+            "hour": 0.0,
+            "cap": 0.0,
+            "lat": 0.0,
+            "lon": 0.0,
+            "wa_dist": 0.0,
+            "wb_dist": 0.0
+          },
+          "weights": {
+            "mode": "capacity",
+            "rows": 1409147,
+            "mean": 1.0,
+            "min": 0.09544253377083216,
+            "max": 9.196551426722943,
+            "zero_rows": 0,
+            "raw_mean": 150.8761246123896,
+            "price_rows_used": 0
+          },
+          "missing_feature_fraction": {
+            "wa_cloud": 0.0,
+            "wa_temp": 0.0,
+            "wa_humidity": 0.0,
+            "wa_rain": 0.0,
+            "wa_wind_speed": 0.0,
+            "wa_ground_press": 0.0,
+            "wb_cloud": 0.0,
+            "wb_temp": 0.0,
+            "wb_rel_hum": 0.0,
+            "wb_uv_idx": 0.0,
+            "wb_precip_prob": 0.0,
+            "wb_total_liq": 0.0,
+            "wb_vis": 0.0,
+            "wb_wind_speed": 0.0,
+            "wb_dew_point": 0.0,
+            "elev": 0.0,
+            "azim": 0.0,
+            "cosz": 0.0,
+            "doy_sin": 0.0,
+            "doy_cos": 0.0,
+            "hour": 0.0,
+            "cap": 0.0,
+            "lat": 0.0,
+            "lon": 0.0,
+            "wa_dist": 0.0,
+            "wb_dist": 0.0
+          }
+        },
+        "17": {
+          "rows": 1409147,
+          "fit_seconds": 12.263258041988593,
+          "trees": 200,
+          "train_missing_feature_fraction": {
+            "wa_cloud": 2.9805265171057384e-05,
+            "wa_temp": 2.9805265171057384e-05,
+            "wa_humidity": 2.9805265171057384e-05,
+            "wa_rain": 2.9805265171057384e-05,
+            "wa_wind_speed": 2.9805265171057384e-05,
+            "wa_ground_press": 2.9805265171057384e-05,
+            "wb_cloud": 0.0,
+            "wb_temp": 0.0,
+            "wb_rel_hum": 0.0,
+            "wb_uv_idx": 0.0,
+            "wb_precip_prob": 0.0,
+            "wb_total_liq": 0.0,
+            "wb_vis": 0.0,
+            "wb_wind_speed": 0.0,
+            "wb_dew_point": 0.0,
+            "elev": 0.0,
+            "azim": 0.0,
+            "cosz": 0.0,
+            "doy_sin": 0.0,
+            "doy_cos": 0.0,
+            "hour": 0.0,
+            "cap": 0.0,
+            "lat": 0.0,
+            "lon": 0.0,
+            "wa_dist": 0.0,
+            "wb_dist": 0.0
+          },
+          "weights": {
+            "mode": "capacity",
+            "rows": 1409147,
+            "mean": 1.0,
+            "min": 0.09544253377083216,
+            "max": 9.196551426722943,
+            "zero_rows": 0,
+            "raw_mean": 150.8761246123896,
+            "price_rows_used": 0
+          },
+          "missing_feature_fraction": {
+            "wa_cloud": 0.0,
+            "wa_temp": 0.0,
+            "wa_humidity": 0.0,
+            "wa_rain": 0.0,
+            "wa_wind_speed": 0.0,
+            "wa_ground_press": 0.0,
+            "wb_cloud": 0.0,
+            "wb_temp": 0.0,
+            "wb_rel_hum": 0.0,
+            "wb_uv_idx": 0.0,
+            "wb_precip_prob": 0.0,
+            "wb_total_liq": 0.0,
+            "wb_vis": 0.0,
+            "wb_wind_speed": 0.0,
+            "wb_dew_point": 0.0,
+            "elev": 0.0,
+            "azim": 0.0,
+            "cosz": 0.0,
+            "doy_sin": 0.0,
+            "doy_cos": 0.0,
+            "hour": 0.0,
+            "cap": 0.0,
+            "lat": 0.0,
+            "lon": 0.0,
+            "wa_dist": 0.0,
+            "wb_dist": 0.0
+          }
+        }
+      },
+      "weighted_group_mae": {
+        "pred_10": 777.7519907426102,
+        "pred_17": 698.066720646931,
+        "ensemble": 709.4742658133208
+      },
+      "group_fixed": {
+        "pred_10": {
+          "rows": 4416,
+          "mae_kwh": 493.5353762258467,
+          "rmse_kwh": 1012.4001929353722,
+          "nmae_capacity_pct": 2.309182792667899,
+          "wape_pct": 12.544493477159508,
+          "bias_kwh": 8.895982410389914
+        },
+        "pred_17": {
+          "rows": 4416,
+          "mae_kwh": 448.34308677053525,
+          "rmse_kwh": 939.8433048905578,
+          "nmae_capacity_pct": 2.0988382261755447,
+          "wape_pct": 11.395813144200693,
+          "bias_kwh": 8.209200289424539
+        },
+        "ensemble": {
+          "rows": 4416,
+          "mae_kwh": 454.0257001386729,
+          "rmse_kwh": 942.7934335235681,
+          "nmae_capacity_pct": 2.1248128000543756,
+          "wape_pct": 11.540251637900893,
+          "bias_kwh": 8.380895819665893
+        }
+      },
+      "by_group": {
+        "G1": {
+          "metrics": {
+            "pred_10": {
+              "rows": 2208,
+              "mae_kwh": 447.8950795889571,
+              "rmse_kwh": 928.4677888285477,
+              "nmae_capacity_pct": 2.188520619491324,
+              "wape_pct": 12.074489722576564,
+              "bias_kwh": 55.783624839878456
+            },
+            "pred_17": {
+              "rows": 2208,
+              "mae_kwh": 412.69703120207276,
+              "rmse_kwh": 874.8699690122013,
+              "nmae_capacity_pct": 2.0165346831170208,
+              "wape_pct": 11.125610190583897,
+              "bias_kwh": 59.54604622472057
+            },
+            "ensemble": {
+              "rows": 2208,
+              "mae_kwh": 414.6217459647056,
+              "rmse_kwh": 873.138512514562,
+              "nmae_capacity_pct": 2.0259392917778865,
+              "wape_pct": 11.17749722770346,
+              "bias_kwh": 58.605440878510045
+            }
+          },
+          "weighted_mae": {
+            "pred_10": 702.7717228315771,
+            "pred_17": 638.9461329844605,
+            "ensemble": 644.1237511605384
+          }
+        },
+        "G2": {
+          "metrics": {
+            "pred_10": {
+              "rows": 2208,
+              "mae_kwh": 539.1756728627363,
+              "rmse_kwh": 1089.888006365326,
+              "nmae_capacity_pct": 2.4298449658444747,
+              "wape_pct": 12.963679535665104,
+              "bias_kwh": -37.99166001909863
+            },
+            "pred_17": {
+              "rows": 2208,
+              "mae_kwh": 483.9891423389976,
+              "rmse_kwh": 1000.6065224731456,
+              "nmae_capacity_pct": 2.1811417692340687,
+              "wape_pct": 11.636801242739821,
+              "bias_kwh": -43.12764564587149
+            },
+            "ensemble": {
+              "rows": 2208,
+              "mae_kwh": 493.4296543126402,
+              "rmse_kwh": 1007.6448057496129,
+              "nmae_capacity_pct": 2.2236863083308647,
+              "wape_pct": 11.863784354253585,
+              "bias_kwh": -41.843649239178255
+            }
+          },
+          "weighted_mae": {
+            "pred_10": 852.7322586536434,
+            "pred_17": 757.1873083094014,
+            "ensemble": 774.8247804661032
+          }
+        }
+      },
+      "site_daylight": {
+        "pred_10": {
+          "rows": 299028,
+          "mae_kwh": 12.345190905318072,
+          "rmse_kwh": 36.042103401564056,
+          "nmae_capacity_pct": 7.089233834635937,
+          "wape_pct": 21.266082173383335,
+          "bias_kwh": 0.1811260384591003
+        },
+        "pred_17": {
+          "rows": 299028,
+          "mae_kwh": 11.883005219008973,
+          "rmse_kwh": 35.46947603482047,
+          "nmae_capacity_pct": 6.791142603124123,
+          "wape_pct": 20.469911513910034,
+          "bias_kwh": 0.17098374460640758
+        },
+        "ensemble": {
+          "rows": 299028,
+          "mae_kwh": 11.83669865467322,
+          "rmse_kwh": 35.204205005202375,
+          "nmae_capacity_pct": 6.763170968041105,
+          "wape_pct": 20.39014286473451,
+          "bias_kwh": 0.1735193180695807
+        }
+      },
+      "unseen_sites_count": 0,
+      "unseen_daylight": {
+        "pred_10": {
+          "rows": 0,
+          "mae_kwh": null,
+          "rmse_kwh": null,
+          "nmae_capacity_pct": null,
+          "wape_pct": null,
+          "bias_kwh": null
+        },
+        "pred_17": {
+          "rows": 0,
+          "mae_kwh": null,
+          "rmse_kwh": null,
+          "nmae_capacity_pct": null,
+          "wape_pct": null,
+          "bias_kwh": null
+        },
+        "ensemble": {
+          "rows": 0,
+          "mae_kwh": null,
+          "rmse_kwh": null,
+          "nmae_capacity_pct": null,
+          "wape_pct": null,
+          "bias_kwh": null
+        }
+      },
+      "seen_daylight": {
+        "pred_10": {
+          "rows": 299028,
+          "mae_kwh": 12.345190905318072,
+          "rmse_kwh": 36.042103401564056,
+          "nmae_capacity_pct": 7.089233834635937,
+          "wape_pct": 21.266082173383335,
+          "bias_kwh": 0.1811260384591003
+        },
+        "pred_17": {
+          "rows": 299028,
+          "mae_kwh": 11.883005219008973,
+          "rmse_kwh": 35.46947603482047,
+          "nmae_capacity_pct": 6.791142603124123,
+          "wape_pct": 20.469911513910034,
+          "bias_kwh": 0.17098374460640758
+        },
+        "ensemble": {
+          "rows": 299028,
+          "mae_kwh": 11.83669865467322,
+          "rmse_kwh": 35.204205005202375,
+          "nmae_capacity_pct": 6.763170968041105,
+          "wape_pct": 20.39014286473451,
+          "bias_kwh": 0.1735193180695807
+        }
+      },
+      "peak_memory_mib": 4465.0,
+      "seconds_including_prediction_writes": 30.69242741598282,
+      "versions": {
+        "python": "3.12.16",
+        "lightgbm": "4.6.0",
+        "numpy": "2.2.6",
+        "pandas": "2.2.3"
+      },
+      "machine": "arm64",
+      "saved_model_reload_checks_passed": true,
+      "confirmation_evaluated": true
+    },
+    "assignment_unchanged_after_confirmation": true,
+    "total_seconds": 37.14781941700494,
+    "peak_parent_memory_mib": 929.8
+  },
+  "verification": {
+    "status": "passed",
+    "checks": [
+      {
+        "window": "tune",
+        "assignment": "reference",
+        "common_hours": 1416,
+        "weighted_group_mae_recomputed": 578.4385746033644
+      },
+      {
+        "window": "tune",
+        "assignment": "optimized",
+        "common_hours": 1416,
+        "weighted_group_mae_recomputed": 568.0648427720145
+      },
+      {
+        "window": "seasonal_diagnostic",
+        "assignment": "reference",
+        "common_hours": 178,
+        "weighted_group_mae_recomputed": 439.7813678035474
+      },
+      {
+        "window": "seasonal_diagnostic",
+        "assignment": "optimized",
+        "common_hours": 178,
+        "weighted_group_mae_recomputed": 437.6202115788907
+      },
+      {
+        "window": "confirmation",
+        "assignment": "reference",
+        "common_hours": 2208,
+        "weighted_group_mae_recomputed": 709.4742658133209
+      },
+      {
+        "window": "confirmation",
+        "assignment": "optimized",
+        "common_hours": 2208,
+        "weighted_group_mae_recomputed": 711.9874229422007
+      }
+    ],
+    "assignment_constraints_verified": true,
+    "search_history_replayed": true,
+    "original_labels_and_fixed_masks_verified": true,
+    "monthly_scores_recomputed": true,
+    "assignment_hash_unchanged": true,
+    "confirmation_training_rows_and_weights_verified": true,
+    "confirmation_model_predictions_rebuilt_on_512_rows": true,
+    "confirmation_evaluated": true
+  }
+}
