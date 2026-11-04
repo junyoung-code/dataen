@@ -1,0 +1,3105 @@
+{
+  "status": "complete",
+  "date_kst": "2026-11-03",
+  "protocol": "p0-v1",
+  "historical_validation_not_independent_final_test": true,
+  "reference_report": "2026-11-03-xgboost.json",
+  "scores": {
+    "LightGBM": {
+      "tune": 578.4385746033644,
+      "seasonal_diagnostic": 439.7813678035474,
+      "confirmation": 709.4742658133209
+    },
+    "CatBoost": {
+      "tune": 603.4486970964416,
+      "seasonal_diagnostic": 453.76037390120956,
+      "confirmation": 739.6895685515818
+    },
+    "XGBoost": {
+      "tune": 586.4438264684393,
+      "seasonal_diagnostic": 409.5368416420997,
+      "confirmation": 730.5421526143954
+    },
+    "tabm": {
+      "tune": 542.9576843217263,
+      "seasonal_diagnostic": 394.0280347890011,
+      "confirmation": 712.8554851353879
+    },
+    "lstm": {
+      "tune": 664.879777766057,
+      "seasonal_diagnostic": 297.2441758476637,
+      "confirmation": 768.2128881626028
+    },
+    "tft": {
+      "tune": 608.6879665873906,
+      "seasonal_diagnostic": 404.4582101795535,
+      "confirmation": 709.6099711601145
+    }
+  },
+  "neural": {
+    "tabm": {
+      "run": {
+        "status": "complete",
+        "family": "tabm",
+        "config": {
+          "n_blocks": 3,
+          "d_block": 128,
+          "k": 8,
+          "dropout": 0.1
+        },
+        "epochs": [
+          5,
+          10,
+          20
+        ],
+        "base_commit": "a9001d72ad718513ebd24107769ffe61822f4934",
+        "source_hashes": {
+          "confirm_p5.py": "03c342cf65f782595ff543de561774aec1a26a8c96542a5e1f359f5d75955957",
+          "evaluate_temporal.py": "2387c667c8cb725b70e0790e963c24c6ec202d4a6428bf85394af86b11e1e17b",
+          "features_p3.py": "0620732e57b4d2d4884d3c23ee9b4221aeaeb17c840d1a71666abac44d37c15e",
+          "neural_data.py": "63a4fea07dd7fe01be494ef185f3996279b1a63140b3ac459d90dd1fcb7d1eea",
+          "neural_models.py": "c2e83745f5a81e0016123dc589e102d74451711cfa39268237c19794d2b51758",
+          "run_catboost.py": "35465f4b23802b40bbd5e3a63a2ee0842864ae20602c5fda0ab5298f70199f70",
+          "run_neural.py": "d6268175c8e7b54bbfbd1f6392c21616e7b3b200110743e532778369a9532729",
+          "run_p1.py": "bddc2daa13f610e0b632162be2491d00e1b690fec3ba56a4f1a9dca483fc42e4",
+          "run_p2.py": "4537cfe41c308ad0470ed55a13db5dd9dd1f03908a20c8cb418d26d468fdfe20",
+          "run_p3.py": "f6e4199f4ed553fce830aa36b2d32c22495f4f9a7b52e6261f625eddb4c81d8d",
+          "run_p4.py": "c85d420ce9a831dab2303ff4d8b28bb037ca6a70722e093db245be0c2dea9cb6",
+          "run_p5.py": "7fedb90783930b95199818da4524024046dac42c8e512b39a041a8c890c5e531",
+          "run_xgboost.py": "56dfde269c33d4b7c6681a1268b8f09d8103a91c33e136c64820dbea5f2bbf38",
+          "team_assignment.py": "4c0aa9505f3e3f7be871e907895b4a04d1dcd901d50283dd34c7616684ec7c2c",
+          "test_catboost.py": "feed10d4bb8ed123a8caf52ac3b8549b630304a61c4d2f5cf89b3fdbcb7e7e90",
+          "test_neural.py": "5f41bb8347942e21b72fbde57151dd1e7678ed886945863971506c14255d03fa",
+          "test_p1.py": "0a8b08c102f9b13778e9c5442443beff428f6d04b9286ab3c5b069c1ddcc022c",
+          "test_p2.py": "e85a828d041a8348328439876c5dc089dcd34b44cbda8808d28d95451625f569",
+          "test_p3.py": "68a1df8c82e4b889c96f3fd4f4e3ca9a49c98bc06ec6634d182e6fe8632c2c81",
+          "test_p4.py": "ac046db753ce26f9134743aab7a9adc7cdccfd2146aa1b5ce7fe57a720347061",
+          "test_p5.py": "d6f447733cf629267c4755b0a3c4b11c5847bb33edbef78018ee84c95e8c892a",
+          "test_temporal.py": "ec49bab163b167c828d2a1165d1c4ebd348a86041c5780e67cfb38e5414a51f5",
+          "test_validation_protocol.py": "fa46b6151903f1d1771741b5b72214af75ed4b8e38322be1e4519f67edb6c038",
+          "test_xgboost.py": "fefab48d9aabc34f2940ab65a09b57a3535181c3ba3ce1ae2dcdc1d84a1448dc",
+          "train_smoke.py": "1b9cf67f279cebf8225cacc57f3e2d50afc0b47b08abd78c4bd2b5289c2bb605",
+          "training_weights.py": "66909735fa4a2881613b8b251f08fbf98444853773c3206b8f082e953f188be9",
+          "validation_protocol.py": "063d9092296658f9ba6f011349820d7f2ffafc7166f5dccfca403eadbf321983",
+          "requirements-neural.txt": "2e100b63b96edb874f58800d5859fce62d72ac870139abe41a73b75e56b6e21d",
+          "docs/experiments/neural-design.md": "6da63e1bd81babb090f816c955e257739b38d9cc5775a262f47cb57e835ea777"
+        },
+        "machine": {
+          "chip": "Apple M1 Pro",
+          "memory_bytes": 17179869184,
+          "macos": "27.0.1"
+        },
+        "device": "mps",
+        "threads": 8,
+        "versions": {
+          "torch": "2.15.0",
+          "tabm": "0.0.3",
+          "pytorch-forecasting": "1.8.0",
+          "numpy": "2.2.6",
+          "pandas": "2.2.3",
+          "lightgbm": "4.6.0"
+        },
+        "python": "3.12.13",
+        "results": [
+          {
+            "window": "tune",
+            "family": "tabm",
+            "epochs": 5,
+            "weighted_group_mae": 580.3227570353253,
+            "fit_seconds": 89.62041479197796,
+            "output": "outputs/tabm_20261103_155606/tune/e005",
+            "peak_memory_mib": 2697.6
+          },
+          {
+            "window": "tune",
+            "family": "tabm",
+            "epochs": 10,
+            "weighted_group_mae": 542.9576843217263,
+            "fit_seconds": 175.76115337203373,
+            "output": "outputs/tabm_20261103_155606/tune/e010",
+            "peak_memory_mib": 2697.6
+          },
+          {
+            "window": "tune",
+            "family": "tabm",
+            "epochs": 20,
+            "weighted_group_mae": 578.1231990244175,
+            "fit_seconds": 351.59635245695245,
+            "output": "outputs/tabm_20261103_155606/tune/e020",
+            "peak_memory_mib": 2697.6
+          },
+          {
+            "window": "seasonal_diagnostic",
+            "family": "tabm",
+            "epochs": 10,
+            "weighted_group_mae": 394.0280347890011,
+            "fit_seconds": 101.44046562100993,
+            "output": "outputs/tabm_20261103_155606/seasonal_diagnostic/e010",
+            "peak_memory_mib": 2313.9
+          },
+          {
+            "window": "confirmation",
+            "family": "tabm",
+            "epochs": 10,
+            "weighted_group_mae": 712.8554851353879,
+            "fit_seconds": 200.81321274797665,
+            "output": "outputs/tabm_20261103_155606/confirmation/e010",
+            "peak_memory_mib": 3143.7
+          }
+        ],
+        "selected_epochs": 10,
+        "selection_sha256": "99a5b546a037a94299cde3fe922d2321ab378329192de95734b8fcac67321c5a",
+        "total_seconds": 749.029250416992,
+        "git_status_at_launch": " M CONTEXT.md\n M EXPERIMENTS.md\n M EXPERIMENT_PLAN.md\n M MODEL_COMPARISON_PLAN.md\n M README.md\n M docs/experiments/2026-11-03-xgboost.md\n?? docs/experiments/neural-design.md\n?? neural_data.py\n?? neural_models.py\n?? requirements-neural.txt\n?? run_neural.py\n?? test_neural.py\n"
+      },
+      "selection": {
+        "family": "tabm",
+        "config": {
+          "n_blocks": 3,
+          "d_block": 128,
+          "k": 8,
+          "dropout": 0.1
+        },
+        "selected_epochs": 10,
+        "selection_window": "tune",
+        "score": 542.9576843217263,
+        "source_hashes": {
+          "confirm_p5.py": "03c342cf65f782595ff543de561774aec1a26a8c96542a5e1f359f5d75955957",
+          "evaluate_temporal.py": "2387c667c8cb725b70e0790e963c24c6ec202d4a6428bf85394af86b11e1e17b",
+          "features_p3.py": "0620732e57b4d2d4884d3c23ee9b4221aeaeb17c840d1a71666abac44d37c15e",
+          "neural_data.py": "63a4fea07dd7fe01be494ef185f3996279b1a63140b3ac459d90dd1fcb7d1eea",
+          "neural_models.py": "c2e83745f5a81e0016123dc589e102d74451711cfa39268237c19794d2b51758",
+          "run_catboost.py": "35465f4b23802b40bbd5e3a63a2ee0842864ae20602c5fda0ab5298f70199f70",
+          "run_neural.py": "d6268175c8e7b54bbfbd1f6392c21616e7b3b200110743e532778369a9532729",
+          "run_p1.py": "bddc2daa13f610e0b632162be2491d00e1b690fec3ba56a4f1a9dca483fc42e4",
+          "run_p2.py": "4537cfe41c308ad0470ed55a13db5dd9dd1f03908a20c8cb418d26d468fdfe20",
+          "run_p3.py": "f6e4199f4ed553fce830aa36b2d32c22495f4f9a7b52e6261f625eddb4c81d8d",
+          "run_p4.py": "c85d420ce9a831dab2303ff4d8b28bb037ca6a70722e093db245be0c2dea9cb6",
+          "run_p5.py": "7fedb90783930b95199818da4524024046dac42c8e512b39a041a8c890c5e531",
+          "run_xgboost.py": "56dfde269c33d4b7c6681a1268b8f09d8103a91c33e136c64820dbea5f2bbf38",
+          "team_assignment.py": "4c0aa9505f3e3f7be871e907895b4a04d1dcd901d50283dd34c7616684ec7c2c",
+          "test_catboost.py": "feed10d4bb8ed123a8caf52ac3b8549b630304a61c4d2f5cf89b3fdbcb7e7e90",
+          "test_neural.py": "5f41bb8347942e21b72fbde57151dd1e7678ed886945863971506c14255d03fa",
+          "test_p1.py": "0a8b08c102f9b13778e9c5442443beff428f6d04b9286ab3c5b069c1ddcc022c",
+          "test_p2.py": "e85a828d041a8348328439876c5dc089dcd34b44cbda8808d28d95451625f569",
+          "test_p3.py": "68a1df8c82e4b889c96f3fd4f4e3ca9a49c98bc06ec6634d182e6fe8632c2c81",
+          "test_p4.py": "ac046db753ce26f9134743aab7a9adc7cdccfd2146aa1b5ce7fe57a720347061",
+          "test_p5.py": "d6f447733cf629267c4755b0a3c4b11c5847bb33edbef78018ee84c95e8c892a",
+          "test_temporal.py": "ec49bab163b167c828d2a1165d1c4ebd348a86041c5780e67cfb38e5414a51f5",
+          "test_validation_protocol.py": "fa46b6151903f1d1771741b5b72214af75ed4b8e38322be1e4519f67edb6c038",
+          "test_xgboost.py": "fefab48d9aabc34f2940ab65a09b57a3535181c3ba3ce1ae2dcdc1d84a1448dc",
+          "train_smoke.py": "1b9cf67f279cebf8225cacc57f3e2d50afc0b47b08abd78c4bd2b5289c2bb605",
+          "training_weights.py": "66909735fa4a2881613b8b251f08fbf98444853773c3206b8f082e953f188be9",
+          "validation_protocol.py": "063d9092296658f9ba6f011349820d7f2ffafc7166f5dccfca403eadbf321983",
+          "requirements-neural.txt": "2e100b63b96edb874f58800d5859fce62d72ac870139abe41a73b75e56b6e21d",
+          "docs/experiments/neural-design.md": "6da63e1bd81babb090f816c955e257739b38d9cc5775a262f47cb57e835ea777"
+        },
+        "sites_sha256": "93d166fffd009c3643db748fc6d5a1d48851e5f70b314171130e6ab6b7997ea2"
+      },
+      "verification": {
+        "status": "passed",
+        "family": "tabm",
+        "checks": [
+          {
+            "window": "tune",
+            "epochs": 5,
+            "score": 580.3227570353253,
+            "rows": 358248,
+            "common_hours": 1416
+          },
+          {
+            "window": "tune",
+            "epochs": 10,
+            "score": 542.9576843217263,
+            "rows": 358248,
+            "common_hours": 1416
+          },
+          {
+            "window": "tune",
+            "epochs": 20,
+            "score": 578.1231990244175,
+            "rows": 358248,
+            "common_hours": 1416
+          },
+          {
+            "window": "seasonal_diagnostic",
+            "epochs": 10,
+            "score": 394.0280347890011,
+            "rows": 1100462,
+            "common_hours": 178
+          },
+          {
+            "window": "confirmation",
+            "epochs": 10,
+            "score": 712.8554851353879,
+            "rows": 558624,
+            "common_hours": 2208
+          }
+        ],
+        "source_hashes_match": true,
+        "selection_frozen": true,
+        "original_labels_and_masks_match": true,
+        "training_targets_weights_verified": true,
+        "feature_samples_rebuilt_from_original": true,
+        "saved_models_reloaded": true
+      },
+      "details": [
+        {
+          "status": "complete",
+          "window": "tune",
+          "variant": "tabm_e005",
+          "family": "tabm",
+          "epochs": 5,
+          "protocol": "p0-v1",
+          "feature_columns": [
+            "wa_cloud",
+            "wa_temp",
+            "wa_humidity",
+            "wa_rain",
+            "wa_wind_speed",
+            "wa_ground_press",
+            "wb_cloud",
+            "wb_temp",
+            "wb_rel_hum",
+            "wb_uv_idx",
+            "wb_precip_prob",
+            "wb_total_liq",
+            "wb_vis",
+            "wb_wind_speed",
+            "wb_dew_point",
+            "elev",
+            "azim",
+            "cosz",
+            "doy_sin",
+            "doy_cos",
+            "hour",
+            "cap",
+            "lat",
+            "lon",
+            "wa_dist",
+            "wb_dist"
+          ],
+          "weight_17": 0.75,
+          "weighting": "capacity",
+          "split": {
+            "train_start": "2023-06-01 01:00:00+09:00",
+            "train_end_exclusive": "2024-12-31 01:00:00+09:00",
+            "eval_start": "2025-01-01 01:00:00+09:00",
+            "eval_end_exclusive": "2025-03-01 01:00:00+09:00"
+          },
+          "train_rows": 2504296,
+          "eval_rows": 358248,
+          "common_hours": 1416,
+          "mask_sha256": "9d2e7486aae0ef1f20b31bb46c6e0a83e9b7ce8ea66d2184b984665d7d2b85fe",
+          "weighted_group_mae": {
+            "pred_10": 602.2515212382052,
+            "pred_17": 581.0496748518325,
+            "ensemble": 580.3227570353253
+          },
+          "group_fixed": {
+            "pred_10": {
+              "rows": 2832,
+              "mae_kwh": 341.8306548533261,
+              "rmse_kwh": 798.9832036504044,
+              "nmae_capacity_pct": 1.600191245867992,
+              "wape_pct": 11.422088015564883,
+              "bias_kwh": 150.76748261369477
+            },
+            "pred_17": {
+              "rows": 2832,
+              "mae_kwh": 333.8705746195894,
+              "rmse_kwh": 792.1164078048952,
+              "nmae_capacity_pct": 1.5623801357735598,
+              "wape_pct": 11.156106203372783,
+              "bias_kwh": 121.27101769892094
+            },
+            "ensemble": {
+              "rows": 2832,
+              "mae_kwh": 332.5363612178865,
+              "rmse_kwh": 786.4518074739186,
+              "nmae_capacity_pct": 1.5563061582262485,
+              "wape_pct": 11.111524178064563,
+              "bias_kwh": 128.64513723569323
+            }
+          },
+          "site_daylight": {
+            "pred_10": {
+              "rows": 151756,
+              "mae_kwh": 12.059480413411537,
+              "rmse_kwh": 35.22537456212795,
+              "nmae_capacity_pct": 7.001777265113857,
+              "wape_pct": 21.628540857198228,
+              "bias_kwh": 2.904975156595441
+            },
+            "pred_17": {
+              "rows": 151756,
+              "mae_kwh": 12.058196765118813,
+              "rmse_kwh": 35.15111743834318,
+              "nmae_capacity_pct": 6.992927355184841,
+              "wape_pct": 21.62623864859606,
+              "bias_kwh": 2.354525837364973
+            },
+            "ensemble": {
+              "rows": 151756,
+              "mae_kwh": 11.9709018774223,
+              "rmse_kwh": 34.97837375449377,
+              "nmae_capacity_pct": 6.939957541849867,
+              "wape_pct": 21.469676261126295,
+              "bias_kwh": 2.492138167158131
+            }
+          },
+          "monthly_common": [
+            {
+              "month": "2025-01",
+              "common_hours": 744,
+              "weighted_group_mae": 509.7374736072593
+            },
+            {
+              "month": "2025-02",
+              "common_hours": 672,
+              "weighted_group_mae": 658.1680622145211
+            }
+          ],
+          "by_group": {
+            "G1": 530.7324735135006,
+            "G2": 629.9130405571499
+          },
+          "training": {
+            "10": {
+              "rows": 1257897,
+              "weights": {
+                "mode": "capacity",
+                "rows": 1257897,
+                "mean": 1.0000000000000002,
+                "min": 0.09681035269282622,
+                "max": 9.328350285801509,
+                "zero_rows": 0,
+                "raw_mean": 148.74441852536845,
+                "price_rows_used": 0
+              },
+              "fit_seconds": 47.03012366700568,
+              "weighted_training_mae": 0.07460317015647888,
+              "parameter_count": 45528,
+              "saved_model_reload": true
+            },
+            "17": {
+              "rows": 1257897,
+              "weights": {
+                "mode": "capacity",
+                "rows": 1257897,
+                "mean": 1.0000000000000002,
+                "min": 0.09681035269282622,
+                "max": 9.328350285801509,
+                "zero_rows": 0,
+                "raw_mean": 148.74441852536845,
+                "price_rows_used": 0
+              },
+              "fit_seconds": 42.59029112497228,
+              "weighted_training_mae": 0.07365236431360245,
+              "parameter_count": 45528,
+              "saved_model_reload": true
+            }
+          },
+          "peak_memory_mib": 2697.6,
+          "window_seconds_including_all_checkpoints": 371.3936107910122,
+          "evaluation_labels_seen_previously": true,
+          "sequence_context_hours": 0,
+          "preprocessing_fit": "training observed daytime rows only"
+        },
+        {
+          "status": "complete",
+          "window": "tune",
+          "variant": "tabm_e010",
+          "family": "tabm",
+          "epochs": 10,
+          "protocol": "p0-v1",
+          "feature_columns": [
+            "wa_cloud",
+            "wa_temp",
+            "wa_humidity",
+            "wa_rain",
+            "wa_wind_speed",
+            "wa_ground_press",
+            "wb_cloud",
+            "wb_temp",
+            "wb_rel_hum",
+            "wb_uv_idx",
+            "wb_precip_prob",
+            "wb_total_liq",
+            "wb_vis",
+            "wb_wind_speed",
+            "wb_dew_point",
+            "elev",
+            "azim",
+            "cosz",
+            "doy_sin",
+            "doy_cos",
+            "hour",
+            "cap",
+            "lat",
+            "lon",
+            "wa_dist",
+            "wb_dist"
+          ],
+          "weight_17": 0.75,
+          "weighting": "capacity",
+          "split": {
+            "train_start": "2023-06-01 01:00:00+09:00",
+            "train_end_exclusive": "2024-12-31 01:00:00+09:00",
+            "eval_start": "2025-01-01 01:00:00+09:00",
+            "eval_end_exclusive": "2025-03-01 01:00:00+09:00"
+          },
+          "train_rows": 2504296,
+          "eval_rows": 358248,
+          "common_hours": 1416,
+          "mask_sha256": "9d2e7486aae0ef1f20b31bb46c6e0a83e9b7ce8ea66d2184b984665d7d2b85fe",
+          "weighted_group_mae": {
+            "pred_10": 547.7378945541942,
+            "pred_17": 552.2005069754365,
+            "ensemble": 542.9576843217263
+          },
+          "group_fixed": {
+            "pred_10": {
+              "rows": 2832,
+              "mae_kwh": 311.48889717835357,
+              "rmse_kwh": 763.0157797826851,
+              "nmae_capacity_pct": 1.457137505913171,
+              "wape_pct": 10.40823445448159,
+              "bias_kwh": 24.190101077372297
+            },
+            "pred_17": {
+              "rows": 2832,
+              "mae_kwh": 316.5990756556631,
+              "rmse_kwh": 784.0032152160759,
+              "nmae_capacity_pct": 1.4809334211003278,
+              "wape_pct": 10.578988327823115,
+              "bias_kwh": 40.90630901483077
+            },
+            "ensemble": {
+              "rows": 2832,
+              "mae_kwh": 311.1677301969826,
+              "rmse_kwh": 771.13211998134,
+              "nmae_capacity_pct": 1.4555263327354913,
+              "wape_pct": 10.39750283203396,
+              "bias_kwh": 36.727257828467536
+            }
+          },
+          "site_daylight": {
+            "pred_10": {
+              "rows": 151756,
+              "mae_kwh": 11.94117974372459,
+              "rmse_kwh": 34.39597408449789,
+              "nmae_capacity_pct": 6.998264921807744,
+              "wape_pct": 21.416369952644786,
+              "bias_kwh": 0.5428467604145254
+            },
+            "pred_17": {
+              "rows": 151756,
+              "mae_kwh": 11.948734856409683,
+              "rmse_kwh": 34.72843620725923,
+              "nmae_capacity_pct": 6.966171432383026,
+              "wape_pct": 21.429919961251173,
+              "bias_kwh": 0.8547969450106464
+            },
+            "ensemble": {
+              "rows": 151756,
+              "mae_kwh": 11.856806169575181,
+              "rmse_kwh": 34.45436785881121,
+              "nmae_capacity_pct": 6.915889252145055,
+              "wape_pct": 21.265046907770575,
+              "bias_kwh": 0.776809402459084
+            }
+          },
+          "monthly_common": [
+            {
+              "month": "2025-01",
+              "common_hours": 744,
+              "weighted_group_mae": 448.03314237332074
+            },
+            {
+              "month": "2025-02",
+              "common_hours": 672,
+              "weighted_group_mae": 647.6456529476458
+            }
+          ],
+          "by_group": {
+            "G1": 487.6899484970207,
+            "G2": 598.2254201464324
+          },
+          "training": {
+            "10": {
+              "rows": 1257897,
+              "weights": {
+                "mode": "capacity",
+                "rows": 1257897,
+                "mean": 1.0000000000000002,
+                "min": 0.09681035269282622,
+                "max": 9.328350285801509,
+                "zero_rows": 0,
+                "raw_mean": 148.74441852536845,
+                "price_rows_used": 0
+              },
+              "fit_seconds": 89.11510241602082,
+              "weighted_training_mae": 0.07287302613258362,
+              "parameter_count": 45528,
+              "saved_model_reload": true
+            },
+            "17": {
+              "rows": 1257897,
+              "weights": {
+                "mode": "capacity",
+                "rows": 1257897,
+                "mean": 1.0000000000000002,
+                "min": 0.09681035269282622,
+                "max": 9.328350285801509,
+                "zero_rows": 0,
+                "raw_mean": 148.74441852536845,
+                "price_rows_used": 0
+              },
+              "fit_seconds": 86.64605095601291,
+              "weighted_training_mae": 0.07181957364082336,
+              "parameter_count": 45528,
+              "saved_model_reload": true
+            }
+          },
+          "peak_memory_mib": 2697.6,
+          "window_seconds_including_all_checkpoints": 372.96575462500914,
+          "evaluation_labels_seen_previously": true,
+          "sequence_context_hours": 0,
+          "preprocessing_fit": "training observed daytime rows only"
+        },
+        {
+          "status": "complete",
+          "window": "tune",
+          "variant": "tabm_e020",
+          "family": "tabm",
+          "epochs": 20,
+          "protocol": "p0-v1",
+          "feature_columns": [
+            "wa_cloud",
+            "wa_temp",
+            "wa_humidity",
+            "wa_rain",
+            "wa_wind_speed",
+            "wa_ground_press",
+            "wb_cloud",
+            "wb_temp",
+            "wb_rel_hum",
+            "wb_uv_idx",
+            "wb_precip_prob",
+            "wb_total_liq",
+            "wb_vis",
+            "wb_wind_speed",
+            "wb_dew_point",
+            "elev",
+            "azim",
+            "cosz",
+            "doy_sin",
+            "doy_cos",
+            "hour",
+            "cap",
+            "lat",
+            "lon",
+            "wa_dist",
+            "wb_dist"
+          ],
+          "weight_17": 0.75,
+          "weighting": "capacity",
+          "split": {
+            "train_start": "2023-06-01 01:00:00+09:00",
+            "train_end_exclusive": "2024-12-31 01:00:00+09:00",
+            "eval_start": "2025-01-01 01:00:00+09:00",
+            "eval_end_exclusive": "2025-03-01 01:00:00+09:00"
+          },
+          "train_rows": 2504296,
+          "eval_rows": 358248,
+          "common_hours": 1416,
+          "mask_sha256": "9d2e7486aae0ef1f20b31bb46c6e0a83e9b7ce8ea66d2184b984665d7d2b85fe",
+          "weighted_group_mae": {
+            "pred_10": 595.5029312055639,
+            "pred_17": 584.4105306121714,
+            "ensemble": 578.1231990244175
+          },
+          "group_fixed": {
+            "pred_10": {
+              "rows": 2832,
+              "mae_kwh": 341.083825336811,
+              "rmse_kwh": 812.0137907034588,
+              "nmae_capacity_pct": 1.5956503958823531,
+              "wape_pct": 11.397133107778986,
+              "bias_kwh": 134.30188439441523
+            },
+            "pred_17": {
+              "rows": 2832,
+              "mae_kwh": 343.46036671708794,
+              "rmse_kwh": 824.1374702085122,
+              "nmae_capacity_pct": 1.607164720517485,
+              "wape_pct": 11.476543963513391,
+              "bias_kwh": 133.55456769268818
+            },
+            "ensemble": {
+              "rows": 2832,
+              "mae_kwh": 338.31047717825277,
+              "rmse_kwh": 813.4438263750425,
+              "nmae_capacity_pct": 1.583000765348794,
+              "wape_pct": 11.304463166347169,
+              "bias_kwh": 133.741397572947
+            }
+          },
+          "site_daylight": {
+            "pred_10": {
+              "rows": 151756,
+              "mae_kwh": 11.914404208102356,
+              "rmse_kwh": 35.33776935813801,
+              "nmae_capacity_pct": 6.951895311183379,
+              "wape_pct": 21.36834833427267,
+              "bias_kwh": 2.5977017870163683
+            },
+            "pred_17": {
+              "rows": 151756,
+              "mae_kwh": 12.002769521492118,
+              "rmse_kwh": 35.487048171888034,
+              "nmae_capacity_pct": 6.96564965843666,
+              "wape_pct": 21.5268305180394,
+              "bias_kwh": 2.5837556916577897
+            },
+            "ensemble": {
+              "rows": 151756,
+              "mae_kwh": 11.882994157580566,
+              "rmse_kwh": 35.254555017406844,
+              "nmae_capacity_pct": 6.899181639921016,
+              "wape_pct": 21.312014766179498,
+              "bias_kwh": 2.5872422151519103
+            }
+          },
+          "monthly_common": [
+            {
+              "month": "2025-01",
+              "common_hours": 744,
+              "weighted_group_mae": 487.6346428375768
+            },
+            {
+              "month": "2025-02",
+              "common_hours": 672,
+              "weighted_group_mae": 677.9189203062926
+            }
+          ],
+          "by_group": {
+            "G1": 526.0411896005002,
+            "G2": 630.205208448335
+          },
+          "training": {
+            "10": {
+              "rows": 1257897,
+              "weights": {
+                "mode": "capacity",
+                "rows": 1257897,
+                "mean": 1.0000000000000002,
+                "min": 0.09681035269282622,
+                "max": 9.328350285801509,
+                "zero_rows": 0,
+                "raw_mean": 148.74441852536845,
+                "price_rows_used": 0
+              },
+              "fit_seconds": 177.65694387396798,
+              "weighted_training_mae": 0.07105964422225952,
+              "parameter_count": 45528,
+              "saved_model_reload": true
+            },
+            "17": {
+              "rows": 1257897,
+              "weights": {
+                "mode": "capacity",
+                "rows": 1257897,
+                "mean": 1.0000000000000002,
+                "min": 0.09681035269282622,
+                "max": 9.328350285801509,
+                "zero_rows": 0,
+                "raw_mean": 148.74441852536845,
+                "price_rows_used": 0
+              },
+              "fit_seconds": 173.93940858298447,
+              "weighted_training_mae": 0.07007984817028046,
+              "parameter_count": 45528,
+              "saved_model_reload": true
+            }
+          },
+          "peak_memory_mib": 2697.6,
+          "window_seconds_including_all_checkpoints": 374.4390385829902,
+          "evaluation_labels_seen_previously": true,
+          "sequence_context_hours": 0,
+          "preprocessing_fit": "training observed daytime rows only"
+        },
+        {
+          "status": "complete",
+          "window": "seasonal_diagnostic",
+          "variant": "tabm_e010",
+          "family": "tabm",
+          "epochs": 10,
+          "protocol": "p0-v1",
+          "feature_columns": [
+            "wa_cloud",
+            "wa_temp",
+            "wa_humidity",
+            "wa_rain",
+            "wa_wind_speed",
+            "wa_ground_press",
+            "wb_cloud",
+            "wb_temp",
+            "wb_rel_hum",
+            "wb_uv_idx",
+            "wb_precip_prob",
+            "wb_total_liq",
+            "wb_vis",
+            "wb_wind_speed",
+            "wb_dew_point",
+            "elev",
+            "azim",
+            "cosz",
+            "doy_sin",
+            "doy_cos",
+            "hour",
+            "cap",
+            "lat",
+            "lon",
+            "wa_dist",
+            "wb_dist"
+          ],
+          "weight_17": 0.75,
+          "weighting": "capacity",
+          "split": {
+            "train_start": "2023-06-01 01:00:00+09:00",
+            "train_end_exclusive": "2024-06-30 01:00:00+09:00",
+            "eval_start": "2024-07-01 01:00:00+09:00",
+            "eval_end_exclusive": "2025-01-01 01:00:00+09:00"
+          },
+          "train_rows": 1404530,
+          "eval_rows": 1100462,
+          "common_hours": 178,
+          "mask_sha256": "969e327c14af3bcb8e1f48dcabbbdd1e98583069442d1f0914696d1fb176bf78",
+          "weighted_group_mae": {
+            "pred_10": 414.2805784368268,
+            "pred_17": 389.6859191217139,
+            "ensemble": 394.0280347890011
+          },
+          "group_fixed": {
+            "pred_10": {
+              "rows": 356,
+              "mae_kwh": 219.39269896156736,
+              "rmse_kwh": 510.96616464282806,
+              "nmae_capacity_pct": 1.0254799193063986,
+              "wape_pct": 8.717673645787348,
+              "bias_kwh": -100.39545830441757
+            },
+            "pred_17": {
+              "rows": 356,
+              "mae_kwh": 206.08349906004656,
+              "rmse_kwh": 455.6819221044257,
+              "nmae_capacity_pct": 0.9617156697559665,
+              "wape_pct": 8.188826233010278,
+              "bias_kwh": -121.1772427049289
+            },
+            "ensemble": {
+              "rows": 356,
+              "mae_kwh": 207.69281064877111,
+              "rmse_kwh": 464.78473265735937,
+              "nmae_capacity_pct": 0.9696123894117583,
+              "wape_pct": 8.252772997379779,
+              "bias_kwh": -115.98178653228582
+            }
+          },
+          "site_daylight": {
+            "pred_10": {
+              "rows": 536844,
+              "mae_kwh": 12.544088989385465,
+              "rmse_kwh": 29.449795363507086,
+              "nmae_capacity_pct": 7.8798580805220135,
+              "wape_pct": 26.347405989256995,
+              "bias_kwh": -0.42454905193149367
+            },
+            "pred_17": {
+              "rows": 536844,
+              "mae_kwh": 12.387297669334409,
+              "rmse_kwh": 28.99084938069378,
+              "nmae_capacity_pct": 7.797776686327451,
+              "wape_pct": 26.01808398201738,
+              "bias_kwh": -1.073903617904983
+            },
+            "ensemble": {
+              "rows": 536844,
+              "mae_kwh": 12.297970985259008,
+              "rmse_kwh": 28.740845598486064,
+              "nmae_capacity_pct": 7.740516046074365,
+              "wape_pct": 25.83046362847874,
+              "bias_kwh": -0.9115649797908045
+            }
+          },
+          "monthly_common": [
+            {
+              "month": "2024-12",
+              "common_hours": 178,
+              "weighted_group_mae": 394.0280347890011
+            }
+          ],
+          "by_group": {
+            "G1": 333.1676765118817,
+            "G2": 454.88839306612056
+          },
+          "training": {
+            "10": {
+              "rows": 719970,
+              "weights": {
+                "mode": "capacity",
+                "rows": 719970,
+                "mean": 1.0000000000000004,
+                "min": 0.1045385914331259,
+                "max": 10.073019797445163,
+                "zero_rows": 0,
+                "raw_mean": 137.74816956226218,
+                "price_rows_used": 0
+              },
+              "fit_seconds": 49.12795445599477,
+              "weighted_training_mae": 0.07126113772392273,
+              "parameter_count": 45528,
+              "saved_model_reload": true
+            },
+            "17": {
+              "rows": 719970,
+              "weights": {
+                "mode": "capacity",
+                "rows": 719970,
+                "mean": 1.0000000000000004,
+                "min": 0.1045385914331259,
+                "max": 10.073019797445163,
+                "zero_rows": 0,
+                "raw_mean": 137.74816956226218,
+                "price_rows_used": 0
+              },
+              "fit_seconds": 52.31251116501517,
+              "weighted_training_mae": 0.07012540847063065,
+              "parameter_count": 45528,
+              "saved_model_reload": true
+            }
+          },
+          "peak_memory_mib": 2313.9,
+          "window_seconds_including_all_checkpoints": 128.9254562080023,
+          "evaluation_labels_seen_previously": true,
+          "sequence_context_hours": 0,
+          "preprocessing_fit": "training observed daytime rows only"
+        },
+        {
+          "status": "complete",
+          "window": "confirmation",
+          "variant": "tabm_e010",
+          "family": "tabm",
+          "epochs": 10,
+          "protocol": "p0-v1",
+          "feature_columns": [
+            "wa_cloud",
+            "wa_temp",
+            "wa_humidity",
+            "wa_rain",
+            "wa_wind_speed",
+            "wa_ground_press",
+            "wb_cloud",
+            "wb_temp",
+            "wb_rel_hum",
+            "wb_uv_idx",
+            "wb_precip_prob",
+            "wb_total_liq",
+            "wb_vis",
+            "wb_wind_speed",
+            "wb_dew_point",
+            "elev",
+            "azim",
+            "cosz",
+            "doy_sin",
+            "doy_cos",
+            "hour",
+            "cap",
+            "lat",
+            "lon",
+            "wa_dist",
+            "wb_dist"
+          ],
+          "weight_17": 0.75,
+          "weighting": "capacity",
+          "split": {
+            "train_start": "2023-06-01 01:00:00+09:00",
+            "train_end_exclusive": "2025-02-28 01:00:00+09:00",
+            "eval_start": "2025-03-01 01:00:00+09:00",
+            "eval_end_exclusive": "2025-06-01 01:00:00+09:00"
+          },
+          "train_rows": 2862544,
+          "eval_rows": 558624,
+          "common_hours": 2208,
+          "mask_sha256": "6cffbd4129ac8f471066bc65cf0d09aaa1bfb51acba1ef7562e691317445e45a",
+          "weighted_group_mae": {
+            "pred_10": 766.4302333274452,
+            "pred_17": 709.6869923015461,
+            "ensemble": 712.8554851353879
+          },
+          "group_fixed": {
+            "pred_10": {
+              "rows": 4416,
+              "mae_kwh": 486.862041382548,
+              "rmse_kwh": 1000.9815428575074,
+              "nmae_capacity_pct": 2.2801628868634913,
+              "wape_pct": 12.37487320383111,
+              "bias_kwh": 53.217289973046825
+            },
+            "pred_17": {
+              "rows": 4416,
+              "mae_kwh": 458.0056183238853,
+              "rmse_kwh": 964.172783390768,
+              "nmae_capacity_pct": 2.1466079031899414,
+              "wape_pct": 11.641411676510117,
+              "bias_kwh": 80.2222131118683
+            },
+            "ensemble": {
+              "rows": 4416,
+              "mae_kwh": 458.78172300965537,
+              "rmse_kwh": 956.3703604227868,
+              "nmae_capacity_pct": 2.149652542752539,
+              "wape_pct": 11.661138408649741,
+              "bias_kwh": 73.47097958389155
+            }
+          },
+          "site_daylight": {
+            "pred_10": {
+              "rows": 299028,
+              "mae_kwh": 12.224711043528503,
+              "rmse_kwh": 33.790608449669506,
+              "nmae_capacity_pct": 7.229414287866851,
+              "wape_pct": 21.058541061973617,
+              "bias_kwh": 0.8356563163675936
+            },
+            "pred_17": {
+              "rows": 299028,
+              "mae_kwh": 11.856973255369507,
+              "rmse_kwh": 33.43793778991192,
+              "nmae_capacity_pct": 7.005952808884973,
+              "wape_pct": 20.425068312850023,
+              "bias_kwh": 1.234460906186771
+            },
+            "ensemble": {
+              "rows": 299028,
+              "mae_kwh": 11.811284827668278,
+              "rmse_kwh": 33.13756275351953,
+              "nmae_capacity_pct": 6.9753160154982385,
+              "wape_pct": 20.346364478675333,
+              "bias_kwh": 1.1347597678981731
+            }
+          },
+          "monthly_common": [
+            {
+              "month": "2025-03",
+              "common_hours": 744,
+              "weighted_group_mae": 569.3226885690842
+            },
+            {
+              "month": "2025-04",
+              "common_hours": 720,
+              "weighted_group_mae": 704.0017084949454
+            },
+            {
+              "month": "2025-05",
+              "common_hours": 744,
+              "weighted_group_mae": 848.7849715695182
+            }
+          ],
+          "by_group": {
+            "G1": 670.2095962168819,
+            "G2": 755.5013740538942
+          },
+          "training": {
+            "10": {
+              "rows": 1409147,
+              "weights": {
+                "mode": "capacity",
+                "rows": 1409147,
+                "mean": 1.0,
+                "min": 0.09544253377083216,
+                "max": 9.196551426722943,
+                "zero_rows": 0,
+                "raw_mean": 150.8761246123896,
+                "price_rows_used": 0
+              },
+              "fit_seconds": 98.45619920798345,
+              "weighted_training_mae": 0.0727098137140274,
+              "parameter_count": 45528,
+              "saved_model_reload": true
+            },
+            "17": {
+              "rows": 1409147,
+              "weights": {
+                "mode": "capacity",
+                "rows": 1409147,
+                "mean": 1.0,
+                "min": 0.09544253377083216,
+                "max": 9.196551426722943,
+                "zero_rows": 0,
+                "raw_mean": 150.8761246123896,
+                "price_rows_used": 0
+              },
+              "fit_seconds": 102.3570135399932,
+              "weighted_training_mae": 0.07175350189208984,
+              "parameter_count": 45528,
+              "saved_model_reload": true
+            }
+          },
+          "peak_memory_mib": 3143.7,
+          "window_seconds_including_all_checkpoints": 228.6828420840029,
+          "evaluation_labels_seen_previously": true,
+          "sequence_context_hours": 0,
+          "preprocessing_fit": "training observed daytime rows only"
+        }
+      ]
+    },
+    "lstm": {
+      "run": {
+        "status": "complete",
+        "family": "lstm",
+        "config": {
+          "hidden_size": 64,
+          "layers": 1
+        },
+        "epochs": [
+          5,
+          10,
+          20
+        ],
+        "base_commit": "a9001d72ad718513ebd24107769ffe61822f4934",
+        "source_hashes": {
+          "confirm_p5.py": "03c342cf65f782595ff543de561774aec1a26a8c96542a5e1f359f5d75955957",
+          "evaluate_temporal.py": "2387c667c8cb725b70e0790e963c24c6ec202d4a6428bf85394af86b11e1e17b",
+          "features_p3.py": "0620732e57b4d2d4884d3c23ee9b4221aeaeb17c840d1a71666abac44d37c15e",
+          "neural_data.py": "63a4fea07dd7fe01be494ef185f3996279b1a63140b3ac459d90dd1fcb7d1eea",
+          "neural_models.py": "c2e83745f5a81e0016123dc589e102d74451711cfa39268237c19794d2b51758",
+          "run_catboost.py": "35465f4b23802b40bbd5e3a63a2ee0842864ae20602c5fda0ab5298f70199f70",
+          "run_neural.py": "d6268175c8e7b54bbfbd1f6392c21616e7b3b200110743e532778369a9532729",
+          "run_p1.py": "bddc2daa13f610e0b632162be2491d00e1b690fec3ba56a4f1a9dca483fc42e4",
+          "run_p2.py": "4537cfe41c308ad0470ed55a13db5dd9dd1f03908a20c8cb418d26d468fdfe20",
+          "run_p3.py": "f6e4199f4ed553fce830aa36b2d32c22495f4f9a7b52e6261f625eddb4c81d8d",
+          "run_p4.py": "c85d420ce9a831dab2303ff4d8b28bb037ca6a70722e093db245be0c2dea9cb6",
+          "run_p5.py": "7fedb90783930b95199818da4524024046dac42c8e512b39a041a8c890c5e531",
+          "run_xgboost.py": "56dfde269c33d4b7c6681a1268b8f09d8103a91c33e136c64820dbea5f2bbf38",
+          "team_assignment.py": "4c0aa9505f3e3f7be871e907895b4a04d1dcd901d50283dd34c7616684ec7c2c",
+          "test_catboost.py": "feed10d4bb8ed123a8caf52ac3b8549b630304a61c4d2f5cf89b3fdbcb7e7e90",
+          "test_neural.py": "5f41bb8347942e21b72fbde57151dd1e7678ed886945863971506c14255d03fa",
+          "test_p1.py": "0a8b08c102f9b13778e9c5442443beff428f6d04b9286ab3c5b069c1ddcc022c",
+          "test_p2.py": "e85a828d041a8348328439876c5dc089dcd34b44cbda8808d28d95451625f569",
+          "test_p3.py": "68a1df8c82e4b889c96f3fd4f4e3ca9a49c98bc06ec6634d182e6fe8632c2c81",
+          "test_p4.py": "ac046db753ce26f9134743aab7a9adc7cdccfd2146aa1b5ce7fe57a720347061",
+          "test_p5.py": "d6f447733cf629267c4755b0a3c4b11c5847bb33edbef78018ee84c95e8c892a",
+          "test_temporal.py": "ec49bab163b167c828d2a1165d1c4ebd348a86041c5780e67cfb38e5414a51f5",
+          "test_validation_protocol.py": "fa46b6151903f1d1771741b5b72214af75ed4b8e38322be1e4519f67edb6c038",
+          "test_xgboost.py": "fefab48d9aabc34f2940ab65a09b57a3535181c3ba3ce1ae2dcdc1d84a1448dc",
+          "train_smoke.py": "1b9cf67f279cebf8225cacc57f3e2d50afc0b47b08abd78c4bd2b5289c2bb605",
+          "training_weights.py": "66909735fa4a2881613b8b251f08fbf98444853773c3206b8f082e953f188be9",
+          "validation_protocol.py": "063d9092296658f9ba6f011349820d7f2ffafc7166f5dccfca403eadbf321983",
+          "requirements-neural.txt": "2e100b63b96edb874f58800d5859fce62d72ac870139abe41a73b75e56b6e21d",
+          "docs/experiments/neural-design.md": "6da63e1bd81babb090f816c955e257739b38d9cc5775a262f47cb57e835ea777"
+        },
+        "machine": {
+          "chip": "Apple M1 Pro",
+          "memory_bytes": 17179869184,
+          "macos": "27.0.1"
+        },
+        "device": "mps",
+        "threads": 8,
+        "versions": {
+          "torch": "2.15.0",
+          "tabm": "0.0.3",
+          "pytorch-forecasting": "1.8.0",
+          "numpy": "2.2.6",
+          "pandas": "2.2.3",
+          "lightgbm": "4.6.0"
+        },
+        "python": "3.12.13",
+        "results": [
+          {
+            "window": "tune",
+            "family": "lstm",
+            "epochs": 5,
+            "weighted_group_mae": 664.879777766057,
+            "fit_seconds": 29.11979329198948,
+            "output": "outputs/lstm_20261103_155606/tune/e005",
+            "peak_memory_mib": 624.4
+          },
+          {
+            "window": "tune",
+            "family": "lstm",
+            "epochs": 10,
+            "weighted_group_mae": 676.6359643907124,
+            "fit_seconds": 52.50952479094849,
+            "output": "outputs/lstm_20261103_155606/tune/e010",
+            "peak_memory_mib": 624.4
+          },
+          {
+            "window": "tune",
+            "family": "lstm",
+            "epochs": 20,
+            "weighted_group_mae": 693.4296735384753,
+            "fit_seconds": 96.25438428999041,
+            "output": "outputs/lstm_20261103_155606/tune/e020",
+            "peak_memory_mib": 624.4
+          },
+          {
+            "window": "seasonal_diagnostic",
+            "family": "lstm",
+            "epochs": 5,
+            "weighted_group_mae": 297.2441758476637,
+            "fit_seconds": 15.020594248984708,
+            "output": "outputs/lstm_20261103_155606/seasonal_diagnostic/e005",
+            "peak_memory_mib": 951.3
+          },
+          {
+            "window": "confirmation",
+            "family": "lstm",
+            "epochs": 5,
+            "weighted_group_mae": 768.2128881626028,
+            "fit_seconds": 37.199212084989995,
+            "output": "outputs/lstm_20261103_155606/confirmation/e005",
+            "peak_memory_mib": 892.6
+          }
+        ],
+        "selected_epochs": 5,
+        "selection_sha256": "81d05b99fc91d73d816790d1e1eeee110a970ef956f72d84e9bca7502b18764c",
+        "total_seconds": 176.36371183302253,
+        "git_status_at_launch": " M CONTEXT.md\n M EXPERIMENTS.md\n M EXPERIMENT_PLAN.md\n M MODEL_COMPARISON_PLAN.md\n M README.md\n M docs/experiments/2026-11-03-xgboost.md\n?? docs/experiments/neural-design.md\n?? neural_data.py\n?? neural_models.py\n?? requirements-neural.txt\n?? run_neural.py\n?? test_neural.py\n"
+      },
+      "selection": {
+        "family": "lstm",
+        "config": {
+          "hidden_size": 64,
+          "layers": 1
+        },
+        "selected_epochs": 5,
+        "selection_window": "tune",
+        "score": 664.879777766057,
+        "source_hashes": {
+          "confirm_p5.py": "03c342cf65f782595ff543de561774aec1a26a8c96542a5e1f359f5d75955957",
+          "evaluate_temporal.py": "2387c667c8cb725b70e0790e963c24c6ec202d4a6428bf85394af86b11e1e17b",
+          "features_p3.py": "0620732e57b4d2d4884d3c23ee9b4221aeaeb17c840d1a71666abac44d37c15e",
+          "neural_data.py": "63a4fea07dd7fe01be494ef185f3996279b1a63140b3ac459d90dd1fcb7d1eea",
+          "neural_models.py": "c2e83745f5a81e0016123dc589e102d74451711cfa39268237c19794d2b51758",
+          "run_catboost.py": "35465f4b23802b40bbd5e3a63a2ee0842864ae20602c5fda0ab5298f70199f70",
+          "run_neural.py": "d6268175c8e7b54bbfbd1f6392c21616e7b3b200110743e532778369a9532729",
+          "run_p1.py": "bddc2daa13f610e0b632162be2491d00e1b690fec3ba56a4f1a9dca483fc42e4",
+          "run_p2.py": "4537cfe41c308ad0470ed55a13db5dd9dd1f03908a20c8cb418d26d468fdfe20",
+          "run_p3.py": "f6e4199f4ed553fce830aa36b2d32c22495f4f9a7b52e6261f625eddb4c81d8d",
+          "run_p4.py": "c85d420ce9a831dab2303ff4d8b28bb037ca6a70722e093db245be0c2dea9cb6",
+          "run_p5.py": "7fedb90783930b95199818da4524024046dac42c8e512b39a041a8c890c5e531",
+          "run_xgboost.py": "56dfde269c33d4b7c6681a1268b8f09d8103a91c33e136c64820dbea5f2bbf38",
+          "team_assignment.py": "4c0aa9505f3e3f7be871e907895b4a04d1dcd901d50283dd34c7616684ec7c2c",
+          "test_catboost.py": "feed10d4bb8ed123a8caf52ac3b8549b630304a61c4d2f5cf89b3fdbcb7e7e90",
+          "test_neural.py": "5f41bb8347942e21b72fbde57151dd1e7678ed886945863971506c14255d03fa",
+          "test_p1.py": "0a8b08c102f9b13778e9c5442443beff428f6d04b9286ab3c5b069c1ddcc022c",
+          "test_p2.py": "e85a828d041a8348328439876c5dc089dcd34b44cbda8808d28d95451625f569",
+          "test_p3.py": "68a1df8c82e4b889c96f3fd4f4e3ca9a49c98bc06ec6634d182e6fe8632c2c81",
+          "test_p4.py": "ac046db753ce26f9134743aab7a9adc7cdccfd2146aa1b5ce7fe57a720347061",
+          "test_p5.py": "d6f447733cf629267c4755b0a3c4b11c5847bb33edbef78018ee84c95e8c892a",
+          "test_temporal.py": "ec49bab163b167c828d2a1165d1c4ebd348a86041c5780e67cfb38e5414a51f5",
+          "test_validation_protocol.py": "fa46b6151903f1d1771741b5b72214af75ed4b8e38322be1e4519f67edb6c038",
+          "test_xgboost.py": "fefab48d9aabc34f2940ab65a09b57a3535181c3ba3ce1ae2dcdc1d84a1448dc",
+          "train_smoke.py": "1b9cf67f279cebf8225cacc57f3e2d50afc0b47b08abd78c4bd2b5289c2bb605",
+          "training_weights.py": "66909735fa4a2881613b8b251f08fbf98444853773c3206b8f082e953f188be9",
+          "validation_protocol.py": "063d9092296658f9ba6f011349820d7f2ffafc7166f5dccfca403eadbf321983",
+          "requirements-neural.txt": "2e100b63b96edb874f58800d5859fce62d72ac870139abe41a73b75e56b6e21d",
+          "docs/experiments/neural-design.md": "6da63e1bd81babb090f816c955e257739b38d9cc5775a262f47cb57e835ea777"
+        },
+        "sites_sha256": "93d166fffd009c3643db748fc6d5a1d48851e5f70b314171130e6ab6b7997ea2"
+      },
+      "verification": {
+        "status": "passed",
+        "family": "lstm",
+        "checks": [
+          {
+            "window": "tune",
+            "epochs": 5,
+            "score": 664.879777766057,
+            "rows": 358248,
+            "common_hours": 1416
+          },
+          {
+            "window": "tune",
+            "epochs": 10,
+            "score": 676.6359643907124,
+            "rows": 358248,
+            "common_hours": 1416
+          },
+          {
+            "window": "tune",
+            "epochs": 20,
+            "score": 693.4296735384753,
+            "rows": 358248,
+            "common_hours": 1416
+          },
+          {
+            "window": "seasonal_diagnostic",
+            "epochs": 5,
+            "score": 297.2441758476637,
+            "rows": 1100462,
+            "common_hours": 178
+          },
+          {
+            "window": "confirmation",
+            "epochs": 5,
+            "score": 768.2128881626028,
+            "rows": 558624,
+            "common_hours": 2208
+          }
+        ],
+        "source_hashes_match": true,
+        "selection_frozen": true,
+        "original_labels_and_masks_match": true,
+        "training_targets_weights_verified": true,
+        "feature_samples_rebuilt_from_original": true,
+        "saved_models_reloaded": true
+      },
+      "details": [
+        {
+          "status": "complete",
+          "window": "tune",
+          "variant": "lstm_e005",
+          "family": "lstm",
+          "epochs": 5,
+          "protocol": "p0-v1",
+          "feature_columns": [
+            "wa_cloud",
+            "wa_temp",
+            "wa_humidity",
+            "wa_rain",
+            "wa_wind_speed",
+            "wa_ground_press",
+            "wb_cloud",
+            "wb_temp",
+            "wb_rel_hum",
+            "wb_uv_idx",
+            "wb_precip_prob",
+            "wb_total_liq",
+            "wb_vis",
+            "wb_wind_speed",
+            "wb_dew_point",
+            "elev",
+            "azim",
+            "cosz",
+            "doy_sin",
+            "doy_cos",
+            "hour",
+            "cap",
+            "lat",
+            "lon",
+            "wa_dist",
+            "wb_dist"
+          ],
+          "weight_17": 0.75,
+          "weighting": "capacity",
+          "split": {
+            "train_start": "2023-06-01 01:00:00+09:00",
+            "train_end_exclusive": "2024-12-31 01:00:00+09:00",
+            "eval_start": "2025-01-01 01:00:00+09:00",
+            "eval_end_exclusive": "2025-03-01 01:00:00+09:00"
+          },
+          "train_rows": 2504296,
+          "eval_rows": 358248,
+          "common_hours": 1416,
+          "mask_sha256": "9d2e7486aae0ef1f20b31bb46c6e0a83e9b7ce8ea66d2184b984665d7d2b85fe",
+          "weighted_group_mae": {
+            "pred_10": 660.8785994707688,
+            "pred_17": 671.2177113683194,
+            "ensemble": 664.879777766057
+          },
+          "group_fixed": {
+            "pred_10": {
+              "rows": 2832,
+              "mae_kwh": 369.0500486863795,
+              "rmse_kwh": 838.8171122009442,
+              "nmae_capacity_pct": 1.7279743930446794,
+              "wape_pct": 12.331609463326384,
+              "bias_kwh": 177.666754982863
+            },
+            "pred_17": {
+              "rows": 2832,
+              "mae_kwh": 369.3185229474483,
+              "rmse_kwh": 850.3791698989348,
+              "nmae_capacity_pct": 1.7276290653826458,
+              "wape_pct": 12.34058038678308,
+              "bias_kwh": 135.0203216282603
+            },
+            "ensemble": {
+              "rows": 2832,
+              "mae_kwh": 366.59818103121086,
+              "rmse_kwh": 839.38738658934,
+              "nmae_capacity_pct": 1.715219564403343,
+              "wape_pct": 12.249681620512316,
+              "bias_kwh": 145.68192558205484
+            }
+          },
+          "site_daylight": {
+            "pred_10": {
+              "rows": 151756,
+              "mae_kwh": 12.019986069339183,
+              "rmse_kwh": 34.61914107186382,
+              "nmae_capacity_pct": 7.1424780271909,
+              "wape_pct": 21.557708200639727,
+              "bias_kwh": 3.4069568013795064
+            },
+            "pred_17": {
+              "rows": 151756,
+              "mae_kwh": 12.143813889831744,
+              "rmse_kwh": 34.73704213171228,
+              "nmae_capacity_pct": 7.14838309192576,
+              "wape_pct": 21.77979198725152,
+              "bias_kwh": 2.6111089087025796
+            },
+            "ensemble": {
+              "rows": 151756,
+              "mae_kwh": 11.994953415890436,
+              "rmse_kwh": 34.47239706601169,
+              "nmae_capacity_pct": 7.073474330848001,
+              "wape_pct": 21.51281242160781,
+              "bias_kwh": 2.8100708793726934
+            }
+          },
+          "monthly_common": [
+            {
+              "month": "2025-01",
+              "common_hours": 744,
+              "weighted_group_mae": 592.5289472638261
+            },
+            {
+              "month": "2025-02",
+              "common_hours": 672,
+              "weighted_group_mae": 744.6722246739769
+            }
+          ],
+          "by_group": {
+            "G1": 603.0651700174756,
+            "G2": 726.6943855146386
+          },
+          "training": {
+            "10": {
+              "rows": 1257897,
+              "weights": {
+                "mode": "capacity",
+                "rows": 1257897,
+                "mean": 1.0000000000000002,
+                "min": 0.09681035269282622,
+                "max": 9.328350285801509,
+                "zero_rows": 0,
+                "raw_mean": 148.74441852536845,
+                "price_rows_used": 0
+              },
+              "fit_seconds": 17.198868832958397,
+              "weighted_training_mae": 0.06484946608543396,
+              "parameter_count": 47169,
+              "saved_model_reload": true
+            },
+            "17": {
+              "rows": 1257897,
+              "weights": {
+                "mode": "capacity",
+                "rows": 1257897,
+                "mean": 1.0000000000000002,
+                "min": 0.09681035269282622,
+                "max": 9.328350285801509,
+                "zero_rows": 0,
+                "raw_mean": 148.74441852536845,
+                "price_rows_used": 0
+              },
+              "fit_seconds": 11.920924459031085,
+              "weighted_training_mae": 0.06441626697778702,
+              "parameter_count": 47169,
+              "saved_model_reload": true
+            }
+          },
+          "peak_memory_mib": 624.4,
+          "window_seconds_including_all_checkpoints": 99.70477749998099,
+          "evaluation_labels_seen_previously": true,
+          "sequence_context_hours": 24,
+          "preprocessing_fit": "training observed daytime rows only"
+        },
+        {
+          "status": "complete",
+          "window": "tune",
+          "variant": "lstm_e010",
+          "family": "lstm",
+          "epochs": 10,
+          "protocol": "p0-v1",
+          "feature_columns": [
+            "wa_cloud",
+            "wa_temp",
+            "wa_humidity",
+            "wa_rain",
+            "wa_wind_speed",
+            "wa_ground_press",
+            "wb_cloud",
+            "wb_temp",
+            "wb_rel_hum",
+            "wb_uv_idx",
+            "wb_precip_prob",
+            "wb_total_liq",
+            "wb_vis",
+            "wb_wind_speed",
+            "wb_dew_point",
+            "elev",
+            "azim",
+            "cosz",
+            "doy_sin",
+            "doy_cos",
+            "hour",
+            "cap",
+            "lat",
+            "lon",
+            "wa_dist",
+            "wb_dist"
+          ],
+          "weight_17": 0.75,
+          "weighting": "capacity",
+          "split": {
+            "train_start": "2023-06-01 01:00:00+09:00",
+            "train_end_exclusive": "2024-12-31 01:00:00+09:00",
+            "eval_start": "2025-01-01 01:00:00+09:00",
+            "eval_end_exclusive": "2025-03-01 01:00:00+09:00"
+          },
+          "train_rows": 2504296,
+          "eval_rows": 358248,
+          "common_hours": 1416,
+          "mask_sha256": "9d2e7486aae0ef1f20b31bb46c6e0a83e9b7ce8ea66d2184b984665d7d2b85fe",
+          "weighted_group_mae": {
+            "pred_10": 709.104333014084,
+            "pred_17": 673.4453621905354,
+            "ensemble": 676.6359643907124
+          },
+          "group_fixed": {
+            "pred_10": {
+              "rows": 2832,
+              "mae_kwh": 408.7450491873843,
+              "rmse_kwh": 920.4378914734342,
+              "nmae_capacity_pct": 1.9120686620400178,
+              "wape_pct": 13.657996617500476,
+              "bias_kwh": 201.33201521256467
+            },
+            "pred_17": {
+              "rows": 2832,
+              "mae_kwh": 378.4160634659625,
+              "rmse_kwh": 862.6360400369896,
+              "nmae_capacity_pct": 1.7703849331293569,
+              "wape_pct": 12.64456982439576,
+              "bias_kwh": 154.2239146806815
+            },
+            "ensemble": {
+              "rows": 2832,
+              "mae_kwh": 382.25706200632743,
+              "rmse_kwh": 865.2734175343078,
+              "nmae_capacity_pct": 1.7881871127177602,
+              "wape_pct": 12.772914730777925,
+              "bias_kwh": 166.00094045389775
+            }
+          },
+          "site_daylight": {
+            "pred_10": {
+              "rows": 151756,
+              "mae_kwh": 12.462944742997689,
+              "rmse_kwh": 35.91052383373529,
+              "nmae_capacity_pct": 7.3048018623516535,
+              "wape_pct": 22.352149539971283,
+              "bias_kwh": 3.848586938824814
+            },
+            "pred_17": {
+              "rows": 151756,
+              "mae_kwh": 12.08316553649873,
+              "rmse_kwh": 35.30032108830744,
+              "nmae_capacity_pct": 7.069279435469568,
+              "wape_pct": 21.671019855864653,
+              "bias_kwh": 2.9694774698531945
+            },
+            "ensemble": {
+              "rows": 151756,
+              "mae_kwh": 12.022425352729163,
+              "rmse_kwh": 35.11983118477875,
+              "nmae_capacity_pct": 7.034862639783068,
+              "wape_pct": 21.562083027635076,
+              "bias_kwh": 3.1892548435486607
+            }
+          },
+          "monthly_common": [
+            {
+              "month": "2025-01",
+              "common_hours": 744,
+              "weighted_group_mae": 639.819050690461
+            },
+            {
+              "month": "2025-02",
+              "common_hours": 672,
+              "weighted_group_mae": 717.2396673661768
+            }
+          ],
+          "by_group": {
+            "G1": 613.2563711169844,
+            "G2": 740.0155576644405
+          },
+          "training": {
+            "10": {
+              "rows": 1257897,
+              "weights": {
+                "mode": "capacity",
+                "rows": 1257897,
+                "mean": 1.0000000000000002,
+                "min": 0.09681035269282622,
+                "max": 9.328350285801509,
+                "zero_rows": 0,
+                "raw_mean": 148.74441852536845,
+                "price_rows_used": 0
+              },
+              "fit_seconds": 30.156784540915396,
+              "weighted_training_mae": 0.05958253890275955,
+              "parameter_count": 47169,
+              "saved_model_reload": true
+            },
+            "17": {
+              "rows": 1257897,
+              "weights": {
+                "mode": "capacity",
+                "rows": 1257897,
+                "mean": 1.0000000000000002,
+                "min": 0.09681035269282622,
+                "max": 9.328350285801509,
+                "zero_rows": 0,
+                "raw_mean": 148.74441852536845,
+                "price_rows_used": 0
+              },
+              "fit_seconds": 22.352740250033094,
+              "weighted_training_mae": 0.05899132415652275,
+              "parameter_count": 47169,
+              "saved_model_reload": true
+            }
+          },
+          "peak_memory_mib": 624.4,
+          "window_seconds_including_all_checkpoints": 101.34418324998114,
+          "evaluation_labels_seen_previously": true,
+          "sequence_context_hours": 24,
+          "preprocessing_fit": "training observed daytime rows only"
+        },
+        {
+          "status": "complete",
+          "window": "tune",
+          "variant": "lstm_e020",
+          "family": "lstm",
+          "epochs": 20,
+          "protocol": "p0-v1",
+          "feature_columns": [
+            "wa_cloud",
+            "wa_temp",
+            "wa_humidity",
+            "wa_rain",
+            "wa_wind_speed",
+            "wa_ground_press",
+            "wb_cloud",
+            "wb_temp",
+            "wb_rel_hum",
+            "wb_uv_idx",
+            "wb_precip_prob",
+            "wb_total_liq",
+            "wb_vis",
+            "wb_wind_speed",
+            "wb_dew_point",
+            "elev",
+            "azim",
+            "cosz",
+            "doy_sin",
+            "doy_cos",
+            "hour",
+            "cap",
+            "lat",
+            "lon",
+            "wa_dist",
+            "wb_dist"
+          ],
+          "weight_17": 0.75,
+          "weighting": "capacity",
+          "split": {
+            "train_start": "2023-06-01 01:00:00+09:00",
+            "train_end_exclusive": "2024-12-31 01:00:00+09:00",
+            "eval_start": "2025-01-01 01:00:00+09:00",
+            "eval_end_exclusive": "2025-03-01 01:00:00+09:00"
+          },
+          "train_rows": 2504296,
+          "eval_rows": 358248,
+          "common_hours": 1416,
+          "mask_sha256": "9d2e7486aae0ef1f20b31bb46c6e0a83e9b7ce8ea66d2184b984665d7d2b85fe",
+          "weighted_group_mae": {
+            "pred_10": 772.8066344374324,
+            "pred_17": 680.35545901484,
+            "ensemble": 693.4296735384753
+          },
+          "group_fixed": {
+            "pred_10": {
+              "rows": 2832,
+              "mae_kwh": 428.0806826256257,
+              "rmse_kwh": 997.3392317380964,
+              "nmae_capacity_pct": 2.0021872001364587,
+              "wape_pct": 14.304086439558878,
+              "bias_kwh": 236.68328193884787
+            },
+            "pred_17": {
+              "rows": 2832,
+              "mae_kwh": 373.80201213647473,
+              "rmse_kwh": 903.4511134621102,
+              "nmae_capacity_pct": 1.7494212666614408,
+              "wape_pct": 12.490393773636482,
+              "bias_kwh": 133.32127794238477
+            },
+            "ensemble": {
+              "rows": 2832,
+              "mae_kwh": 380.33741338991814,
+              "rmse_kwh": 911.1471655987838,
+              "nmae_capacity_pct": 1.7793324709830545,
+              "wape_pct": 12.708770701726484,
+              "bias_kwh": 159.161780048238
+            }
+          },
+          "site_daylight": {
+            "pred_10": {
+              "rows": 151756,
+              "mae_kwh": 12.622276381702832,
+              "rmse_kwh": 36.82843945267701,
+              "nmae_capacity_pct": 7.3466006053922035,
+              "wape_pct": 22.637909020433312,
+              "bias_kwh": 4.50829592135087
+            },
+            "pred_17": {
+              "rows": 151756,
+              "mae_kwh": 12.202644665874994,
+              "rmse_kwh": 36.02747490039381,
+              "nmae_capacity_pct": 7.145039352863354,
+              "wape_pct": 21.885304314457343,
+              "bias_kwh": 2.57940218642586
+            },
+            "ensemble": {
+              "rows": 151756,
+              "mae_kwh": 12.035055047686804,
+              "rmse_kwh": 35.653691339013974,
+              "nmae_capacity_pct": 7.043990672897936,
+              "wape_pct": 21.58473424178701,
+              "bias_kwh": 3.0616256288402037
+            }
+          },
+          "monthly_common": [
+            {
+              "month": "2025-01",
+              "common_hours": 744,
+              "weighted_group_mae": 713.9469484884933
+            },
+            {
+              "month": "2025-02",
+              "common_hours": 672,
+              "weighted_group_mae": 670.8021022890471
+            }
+          ],
+          "by_group": {
+            "G1": 629.7959000947519,
+            "G2": 757.0634469821983
+          },
+          "training": {
+            "10": {
+              "rows": 1257897,
+              "weights": {
+                "mode": "capacity",
+                "rows": 1257897,
+                "mean": 1.0000000000000002,
+                "min": 0.09681035269282622,
+                "max": 9.328350285801509,
+                "zero_rows": 0,
+                "raw_mean": 148.74441852536845,
+                "price_rows_used": 0
+              },
+              "fit_seconds": 52.24798824888421,
+              "weighted_training_mae": 0.05361650884151459,
+              "parameter_count": 47169,
+              "saved_model_reload": true
+            },
+            "17": {
+              "rows": 1257897,
+              "weights": {
+                "mode": "capacity",
+                "rows": 1257897,
+                "mean": 1.0000000000000002,
+                "min": 0.09681035269282622,
+                "max": 9.328350285801509,
+                "zero_rows": 0,
+                "raw_mean": 148.74441852536845,
+                "price_rows_used": 0
+              },
+              "fit_seconds": 44.0063960411062,
+              "weighted_training_mae": 0.05327978357672691,
+              "parameter_count": 47169,
+              "saved_model_reload": true
+            }
+          },
+          "peak_memory_mib": 624.4,
+          "window_seconds_including_all_checkpoints": 102.83792558297864,
+          "evaluation_labels_seen_previously": true,
+          "sequence_context_hours": 24,
+          "preprocessing_fit": "training observed daytime rows only"
+        },
+        {
+          "status": "complete",
+          "window": "seasonal_diagnostic",
+          "variant": "lstm_e005",
+          "family": "lstm",
+          "epochs": 5,
+          "protocol": "p0-v1",
+          "feature_columns": [
+            "wa_cloud",
+            "wa_temp",
+            "wa_humidity",
+            "wa_rain",
+            "wa_wind_speed",
+            "wa_ground_press",
+            "wb_cloud",
+            "wb_temp",
+            "wb_rel_hum",
+            "wb_uv_idx",
+            "wb_precip_prob",
+            "wb_total_liq",
+            "wb_vis",
+            "wb_wind_speed",
+            "wb_dew_point",
+            "elev",
+            "azim",
+            "cosz",
+            "doy_sin",
+            "doy_cos",
+            "hour",
+            "cap",
+            "lat",
+            "lon",
+            "wa_dist",
+            "wb_dist"
+          ],
+          "weight_17": 0.75,
+          "weighting": "capacity",
+          "split": {
+            "train_start": "2023-06-01 01:00:00+09:00",
+            "train_end_exclusive": "2024-06-30 01:00:00+09:00",
+            "eval_start": "2024-07-01 01:00:00+09:00",
+            "eval_end_exclusive": "2025-01-01 01:00:00+09:00"
+          },
+          "train_rows": 1404530,
+          "eval_rows": 1100462,
+          "common_hours": 178,
+          "mask_sha256": "969e327c14af3bcb8e1f48dcabbbdd1e98583069442d1f0914696d1fb176bf78",
+          "weighted_group_mae": {
+            "pred_10": 386.79208971676405,
+            "pred_17": 281.086714942198,
+            "ensemble": 297.2441758476637
+          },
+          "group_fixed": {
+            "pred_10": {
+              "rows": 356,
+              "mae_kwh": 213.25050258466905,
+              "rmse_kwh": 518.0119522615292,
+              "nmae_capacity_pct": 1.0007867916702837,
+              "wape_pct": 8.473610540061495,
+              "bias_kwh": -96.34337354235868
+            },
+            "pred_17": {
+              "rows": 356,
+              "mae_kwh": 160.87441565266633,
+              "rmse_kwh": 356.53611252367494,
+              "nmae_capacity_pct": 0.7521423802088786,
+              "wape_pct": 6.392421718018822,
+              "bias_kwh": -104.69851122807012
+            },
+            "ensemble": {
+              "rows": 356,
+              "mae_kwh": 167.2549265536824,
+              "rmse_kwh": 387.52709502445913,
+              "nmae_capacity_pct": 0.7826903313246272,
+              "wape_pct": 6.6459543651475705,
+              "bias_kwh": -102.60973165002193
+            }
+          },
+          "site_daylight": {
+            "pred_10": {
+              "rows": 536844,
+              "mae_kwh": 12.998981377256047,
+              "rmse_kwh": 30.178592595232786,
+              "nmae_capacity_pct": 8.191887368253122,
+              "wape_pct": 27.302854761566444,
+              "bias_kwh": -1.2739813193144864
+            },
+            "pred_17": {
+              "rows": 536844,
+              "mae_kwh": 12.557094624512997,
+              "rmse_kwh": 29.058012585319354,
+              "nmae_capacity_pct": 7.9134659814040536,
+              "wape_pct": 26.374722819450337,
+              "bias_kwh": -0.9238361651818507
+            },
+            "ensemble": {
+              "rows": 536844,
+              "mae_kwh": 12.497815815642653,
+              "rmse_kwh": 28.910232482153592,
+              "nmae_capacity_pct": 7.877744418329824,
+              "wape_pct": 26.250214547451616,
+              "bias_kwh": -1.01137245079707
+            }
+          },
+          "monthly_common": [
+            {
+              "month": "2024-12",
+              "common_hours": 178,
+              "weighted_group_mae": 297.2441758476637
+            }
+          ],
+          "by_group": {
+            "G1": 266.0472928504045,
+            "G2": 328.4410588449229
+          },
+          "training": {
+            "10": {
+              "rows": 719970,
+              "weights": {
+                "mode": "capacity",
+                "rows": 719970,
+                "mean": 1.0000000000000004,
+                "min": 0.1045385914331259,
+                "max": 10.073019797445163,
+                "zero_rows": 0,
+                "raw_mean": 137.74816956226218,
+                "price_rows_used": 0
+              },
+              "fit_seconds": 7.872741458995733,
+              "weighted_training_mae": 0.06349049508571625,
+              "parameter_count": 47169,
+              "saved_model_reload": true
+            },
+            "17": {
+              "rows": 719970,
+              "weights": {
+                "mode": "capacity",
+                "rows": 719970,
+                "mean": 1.0000000000000004,
+                "min": 0.1045385914331259,
+                "max": 10.073019797445163,
+                "zero_rows": 0,
+                "raw_mean": 137.74816956226218,
+                "price_rows_used": 0
+              },
+              "fit_seconds": 7.147852789988974,
+              "weighted_training_mae": 0.06319741904735565,
+              "parameter_count": 47169,
+              "saved_model_reload": true
+            }
+          },
+          "peak_memory_mib": 951.3,
+          "window_seconds_including_all_checkpoints": 18.256218666007044,
+          "evaluation_labels_seen_previously": true,
+          "sequence_context_hours": 24,
+          "preprocessing_fit": "training observed daytime rows only"
+        },
+        {
+          "status": "complete",
+          "window": "confirmation",
+          "variant": "lstm_e005",
+          "family": "lstm",
+          "epochs": 5,
+          "protocol": "p0-v1",
+          "feature_columns": [
+            "wa_cloud",
+            "wa_temp",
+            "wa_humidity",
+            "wa_rain",
+            "wa_wind_speed",
+            "wa_ground_press",
+            "wb_cloud",
+            "wb_temp",
+            "wb_rel_hum",
+            "wb_uv_idx",
+            "wb_precip_prob",
+            "wb_total_liq",
+            "wb_vis",
+            "wb_wind_speed",
+            "wb_dew_point",
+            "elev",
+            "azim",
+            "cosz",
+            "doy_sin",
+            "doy_cos",
+            "hour",
+            "cap",
+            "lat",
+            "lon",
+            "wa_dist",
+            "wb_dist"
+          ],
+          "weight_17": 0.75,
+          "weighting": "capacity",
+          "split": {
+            "train_start": "2023-06-01 01:00:00+09:00",
+            "train_end_exclusive": "2025-02-28 01:00:00+09:00",
+            "eval_start": "2025-03-01 01:00:00+09:00",
+            "eval_end_exclusive": "2025-06-01 01:00:00+09:00"
+          },
+          "train_rows": 2862544,
+          "eval_rows": 558624,
+          "common_hours": 2208,
+          "mask_sha256": "6cffbd4129ac8f471066bc65cf0d09aaa1bfb51acba1ef7562e691317445e45a",
+          "weighted_group_mae": {
+            "pred_10": 810.9798685996469,
+            "pred_17": 778.7261837046384,
+            "ensemble": 768.2128881626028
+          },
+          "group_fixed": {
+            "pred_10": {
+              "rows": 4416,
+              "mae_kwh": 518.1445355390349,
+              "rmse_kwh": 1064.6411044995116,
+              "nmae_capacity_pct": 2.427674770430255,
+              "wape_pct": 13.169999678646874,
+              "bias_kwh": 10.147638037405827
+            },
+            "pred_17": {
+              "rows": 4416,
+              "mae_kwh": 502.8636228297778,
+              "rmse_kwh": 1071.6578123079055,
+              "nmae_capacity_pct": 2.3576652075027513,
+              "wape_pct": 12.781595282446917,
+              "bias_kwh": -58.29801544387321
+            },
+            "ensemble": {
+              "rows": 4416,
+              "mae_kwh": 496.0673987171149,
+              "rmse_kwh": 1045.6097183580898,
+              "nmae_capacity_pct": 2.3255103904762175,
+              "wape_pct": 12.608851456659643,
+              "bias_kwh": -41.18660567850953
+            }
+          },
+          "site_daylight": {
+            "pred_10": {
+              "rows": 299028,
+              "mae_kwh": 12.693577030012532,
+              "rmse_kwh": 34.431605038590085,
+              "nmae_capacity_pct": 7.501728785703936,
+              "wape_pct": 21.86621934522953,
+              "bias_kwh": 0.19961032495589426
+            },
+            "pred_17": {
+              "rows": 299028,
+              "mae_kwh": 12.395061436451376,
+              "rmse_kwh": 34.209566812339865,
+              "nmae_capacity_pct": 7.321125798186149,
+              "wape_pct": 21.351990185762006,
+              "bias_kwh": -0.8111847060153279
+            },
+            "ensemble": {
+              "rows": 299028,
+              "mae_kwh": 12.254269292348704,
+              "rmse_kwh": 33.7848441195619,
+              "nmae_capacity_pct": 7.234994605567782,
+              "wape_pct": 21.109458715101276,
+              "bias_kwh": -0.5584859403779112
+            }
+          },
+          "monthly_common": [
+            {
+              "month": "2025-03",
+              "common_hours": 744,
+              "weighted_group_mae": 744.3206274597478
+            },
+            {
+              "month": "2025-04",
+              "common_hours": 720,
+              "weighted_group_mae": 735.6910037782366
+            },
+            {
+              "month": "2025-05",
+              "common_hours": 744,
+              "weighted_group_mae": 820.6750526645595
+            }
+          ],
+          "by_group": {
+            "G1": 731.1947297933899,
+            "G2": 805.2310465318158
+          },
+          "training": {
+            "10": {
+              "rows": 1409147,
+              "weights": {
+                "mode": "capacity",
+                "rows": 1409147,
+                "mean": 1.0,
+                "min": 0.09544253377083216,
+                "max": 9.196551426722943,
+                "zero_rows": 0,
+                "raw_mean": 150.8761246123896,
+                "price_rows_used": 0
+              },
+              "fit_seconds": 23.1446054999833,
+              "weighted_training_mae": 0.06495792418718338,
+              "parameter_count": 47169,
+              "saved_model_reload": true
+            },
+            "17": {
+              "rows": 1409147,
+              "weights": {
+                "mode": "capacity",
+                "rows": 1409147,
+                "mean": 1.0,
+                "min": 0.09544253377083216,
+                "max": 9.196551426722943,
+                "zero_rows": 0,
+                "raw_mean": 150.8761246123896,
+                "price_rows_used": 0
+              },
+              "fit_seconds": 14.054606585006695,
+              "weighted_training_mae": 0.06452149897813797,
+              "parameter_count": 47169,
+              "saved_model_reload": true
+            }
+          },
+          "peak_memory_mib": 892.6,
+          "window_seconds_including_all_checkpoints": 39.4578280839778,
+          "evaluation_labels_seen_previously": true,
+          "sequence_context_hours": 24,
+          "preprocessing_fit": "training observed daytime rows only"
+        }
+      ]
+    },
+    "tft": {
+      "run": {
+        "status": "complete",
+        "family": "tft",
+        "config": {
+          "hidden_size": 16,
+          "hidden_continuous_size": 8,
+          "attention_head_size": 4,
+          "lstm_layers": 1,
+          "dropout": 0.1
+        },
+        "epochs": [
+          5,
+          10,
+          20
+        ],
+        "base_commit": "a9001d72ad718513ebd24107769ffe61822f4934",
+        "source_hashes": {
+          "confirm_p5.py": "03c342cf65f782595ff543de561774aec1a26a8c96542a5e1f359f5d75955957",
+          "evaluate_temporal.py": "2387c667c8cb725b70e0790e963c24c6ec202d4a6428bf85394af86b11e1e17b",
+          "features_p3.py": "0620732e57b4d2d4884d3c23ee9b4221aeaeb17c840d1a71666abac44d37c15e",
+          "neural_data.py": "63a4fea07dd7fe01be494ef185f3996279b1a63140b3ac459d90dd1fcb7d1eea",
+          "neural_models.py": "c2e83745f5a81e0016123dc589e102d74451711cfa39268237c19794d2b51758",
+          "run_catboost.py": "35465f4b23802b40bbd5e3a63a2ee0842864ae20602c5fda0ab5298f70199f70",
+          "run_neural.py": "d6268175c8e7b54bbfbd1f6392c21616e7b3b200110743e532778369a9532729",
+          "run_p1.py": "bddc2daa13f610e0b632162be2491d00e1b690fec3ba56a4f1a9dca483fc42e4",
+          "run_p2.py": "4537cfe41c308ad0470ed55a13db5dd9dd1f03908a20c8cb418d26d468fdfe20",
+          "run_p3.py": "f6e4199f4ed553fce830aa36b2d32c22495f4f9a7b52e6261f625eddb4c81d8d",
+          "run_p4.py": "c85d420ce9a831dab2303ff4d8b28bb037ca6a70722e093db245be0c2dea9cb6",
+          "run_p5.py": "7fedb90783930b95199818da4524024046dac42c8e512b39a041a8c890c5e531",
+          "run_xgboost.py": "56dfde269c33d4b7c6681a1268b8f09d8103a91c33e136c64820dbea5f2bbf38",
+          "team_assignment.py": "4c0aa9505f3e3f7be871e907895b4a04d1dcd901d50283dd34c7616684ec7c2c",
+          "test_catboost.py": "feed10d4bb8ed123a8caf52ac3b8549b630304a61c4d2f5cf89b3fdbcb7e7e90",
+          "test_neural.py": "5f41bb8347942e21b72fbde57151dd1e7678ed886945863971506c14255d03fa",
+          "test_p1.py": "0a8b08c102f9b13778e9c5442443beff428f6d04b9286ab3c5b069c1ddcc022c",
+          "test_p2.py": "e85a828d041a8348328439876c5dc089dcd34b44cbda8808d28d95451625f569",
+          "test_p3.py": "68a1df8c82e4b889c96f3fd4f4e3ca9a49c98bc06ec6634d182e6fe8632c2c81",
+          "test_p4.py": "ac046db753ce26f9134743aab7a9adc7cdccfd2146aa1b5ce7fe57a720347061",
+          "test_p5.py": "d6f447733cf629267c4755b0a3c4b11c5847bb33edbef78018ee84c95e8c892a",
+          "test_temporal.py": "ec49bab163b167c828d2a1165d1c4ebd348a86041c5780e67cfb38e5414a51f5",
+          "test_validation_protocol.py": "fa46b6151903f1d1771741b5b72214af75ed4b8e38322be1e4519f67edb6c038",
+          "test_xgboost.py": "fefab48d9aabc34f2940ab65a09b57a3535181c3ba3ce1ae2dcdc1d84a1448dc",
+          "train_smoke.py": "1b9cf67f279cebf8225cacc57f3e2d50afc0b47b08abd78c4bd2b5289c2bb605",
+          "training_weights.py": "66909735fa4a2881613b8b251f08fbf98444853773c3206b8f082e953f188be9",
+          "validation_protocol.py": "063d9092296658f9ba6f011349820d7f2ffafc7166f5dccfca403eadbf321983",
+          "requirements-neural.txt": "2e100b63b96edb874f58800d5859fce62d72ac870139abe41a73b75e56b6e21d",
+          "docs/experiments/neural-design.md": "6da63e1bd81babb090f816c955e257739b38d9cc5775a262f47cb57e835ea777"
+        },
+        "machine": {
+          "chip": "Apple M6",
+          "memory_bytes": 34359738368,
+          "macos": "27.0.1"
+        },
+        "device": "mps",
+        "threads": 8,
+        "versions": {
+          "torch": "2.15.0",
+          "tabm": "0.0.3",
+          "pytorch-forecasting": "1.8.0",
+          "numpy": "2.2.6",
+          "pandas": "2.2.3",
+          "lightgbm": "4.6.0"
+        },
+        "python": "3.12.16",
+        "results": [
+          {
+            "window": "tune",
+            "family": "tft",
+            "epochs": 5,
+            "weighted_group_mae": 638.5000176784405,
+            "fit_seconds": 205.1636291249597,
+            "output": "outputs/tft_20261103_155606/tune/e005",
+            "peak_memory_mib": 4085.0
+          },
+          {
+            "window": "tune",
+            "family": "tft",
+            "epochs": 10,
+            "weighted_group_mae": 647.4359148540683,
+            "fit_seconds": 409.0040170829452,
+            "output": "outputs/tft_20261103_155606/tune/e010",
+            "peak_memory_mib": 4085.0
+          },
+          {
+            "window": "tune",
+            "family": "tft",
+            "epochs": 20,
+            "weighted_group_mae": 608.6879665873906,
+            "fit_seconds": 816.9514153309283,
+            "output": "outputs/tft_20261103_155606/tune/e020",
+            "peak_memory_mib": 4085.0
+          },
+          {
+            "window": "seasonal_diagnostic",
+            "family": "tft",
+            "epochs": 20,
+            "weighted_group_mae": 404.4582101795535,
+            "fit_seconds": 458.4825584180653,
+            "output": "outputs/tft_20261103_155606/seasonal_diagnostic/e020",
+            "peak_memory_mib": 3800.5
+          },
+          {
+            "window": "confirmation",
+            "family": "tft",
+            "epochs": 20,
+            "weighted_group_mae": 709.6099711601145,
+            "fit_seconds": 935.3452805001289,
+            "output": "outputs/tft_20261103_155606/confirmation/e020",
+            "peak_memory_mib": 4200.2
+          }
+        ],
+        "selected_epochs": 20,
+        "selection_sha256": "4234af6e0dce425cfa151dcd0e2e50b9e9e327c64c16dee4c8d9e3a287cd1086",
+        "total_seconds": 2274.228304874996,
+        "git_status_at_launch": " M CONTEXT.md\n M EXPERIMENTS.md\n M EXPERIMENT_PLAN.md\n M README.md\n M docs/experiments/2026-11-03-xgboost.md\n?? docs/experiments/neural-design.md\n?? neural_data.py\n?? neural_models.py\n?? requirements-neural.txt\n?? run_neural.py\n?? test_neural.py\n"
+      },
+      "selection": {
+        "family": "tft",
+        "config": {
+          "hidden_size": 16,
+          "hidden_continuous_size": 8,
+          "attention_head_size": 4,
+          "lstm_layers": 1,
+          "dropout": 0.1
+        },
+        "selected_epochs": 20,
+        "selection_window": "tune",
+        "score": 608.6879665873906,
+        "source_hashes": {
+          "confirm_p5.py": "03c342cf65f782595ff543de561774aec1a26a8c96542a5e1f359f5d75955957",
+          "evaluate_temporal.py": "2387c667c8cb725b70e0790e963c24c6ec202d4a6428bf85394af86b11e1e17b",
+          "features_p3.py": "0620732e57b4d2d4884d3c23ee9b4221aeaeb17c840d1a71666abac44d37c15e",
+          "neural_data.py": "63a4fea07dd7fe01be494ef185f3996279b1a63140b3ac459d90dd1fcb7d1eea",
+          "neural_models.py": "c2e83745f5a81e0016123dc589e102d74451711cfa39268237c19794d2b51758",
+          "run_catboost.py": "35465f4b23802b40bbd5e3a63a2ee0842864ae20602c5fda0ab5298f70199f70",
+          "run_neural.py": "d6268175c8e7b54bbfbd1f6392c21616e7b3b200110743e532778369a9532729",
+          "run_p1.py": "bddc2daa13f610e0b632162be2491d00e1b690fec3ba56a4f1a9dca483fc42e4",
+          "run_p2.py": "4537cfe41c308ad0470ed55a13db5dd9dd1f03908a20c8cb418d26d468fdfe20",
+          "run_p3.py": "f6e4199f4ed553fce830aa36b2d32c22495f4f9a7b52e6261f625eddb4c81d8d",
+          "run_p4.py": "c85d420ce9a831dab2303ff4d8b28bb037ca6a70722e093db245be0c2dea9cb6",
+          "run_p5.py": "7fedb90783930b95199818da4524024046dac42c8e512b39a041a8c890c5e531",
+          "run_xgboost.py": "56dfde269c33d4b7c6681a1268b8f09d8103a91c33e136c64820dbea5f2bbf38",
+          "team_assignment.py": "4c0aa9505f3e3f7be871e907895b4a04d1dcd901d50283dd34c7616684ec7c2c",
+          "test_catboost.py": "feed10d4bb8ed123a8caf52ac3b8549b630304a61c4d2f5cf89b3fdbcb7e7e90",
+          "test_neural.py": "5f41bb8347942e21b72fbde57151dd1e7678ed886945863971506c14255d03fa",
+          "test_p1.py": "0a8b08c102f9b13778e9c5442443beff428f6d04b9286ab3c5b069c1ddcc022c",
+          "test_p2.py": "e85a828d041a8348328439876c5dc089dcd34b44cbda8808d28d95451625f569",
+          "test_p3.py": "68a1df8c82e4b889c96f3fd4f4e3ca9a49c98bc06ec6634d182e6fe8632c2c81",
+          "test_p4.py": "ac046db753ce26f9134743aab7a9adc7cdccfd2146aa1b5ce7fe57a720347061",
+          "test_p5.py": "d6f447733cf629267c4755b0a3c4b11c5847bb33edbef78018ee84c95e8c892a",
+          "test_temporal.py": "ec49bab163b167c828d2a1165d1c4ebd348a86041c5780e67cfb38e5414a51f5",
+          "test_validation_protocol.py": "fa46b6151903f1d1771741b5b72214af75ed4b8e38322be1e4519f67edb6c038",
+          "test_xgboost.py": "fefab48d9aabc34f2940ab65a09b57a3535181c3ba3ce1ae2dcdc1d84a1448dc",
+          "train_smoke.py": "1b9cf67f279cebf8225cacc57f3e2d50afc0b47b08abd78c4bd2b5289c2bb605",
+          "training_weights.py": "66909735fa4a2881613b8b251f08fbf98444853773c3206b8f082e953f188be9",
+          "validation_protocol.py": "063d9092296658f9ba6f011349820d7f2ffafc7166f5dccfca403eadbf321983",
+          "requirements-neural.txt": "2e100b63b96edb874f58800d5859fce62d72ac870139abe41a73b75e56b6e21d",
+          "docs/experiments/neural-design.md": "6da63e1bd81babb090f816c955e257739b38d9cc5775a262f47cb57e835ea777"
+        },
+        "sites_sha256": "93d166fffd009c3643db748fc6d5a1d48851e5f70b314171130e6ab6b7997ea2"
+      },
+      "verification": {
+        "status": "passed",
+        "family": "tft",
+        "checks": [
+          {
+            "window": "tune",
+            "epochs": 5,
+            "score": 638.5000176784405,
+            "rows": 358248,
+            "common_hours": 1416
+          },
+          {
+            "window": "tune",
+            "epochs": 10,
+            "score": 647.4359148540683,
+            "rows": 358248,
+            "common_hours": 1416
+          },
+          {
+            "window": "tune",
+            "epochs": 20,
+            "score": 608.6879665873906,
+            "rows": 358248,
+            "common_hours": 1416
+          },
+          {
+            "window": "seasonal_diagnostic",
+            "epochs": 20,
+            "score": 404.4582101795535,
+            "rows": 1100462,
+            "common_hours": 178
+          },
+          {
+            "window": "confirmation",
+            "epochs": 20,
+            "score": 709.6099711601145,
+            "rows": 558624,
+            "common_hours": 2208
+          }
+        ],
+        "source_hashes_match": true,
+        "selection_frozen": true,
+        "original_labels_and_masks_match": true,
+        "training_targets_weights_verified": true,
+        "feature_samples_rebuilt_from_original": true,
+        "saved_models_reloaded": true
+      },
+      "details": [
+        {
+          "status": "complete",
+          "window": "tune",
+          "variant": "tft_e005",
+          "family": "tft",
+          "epochs": 5,
+          "protocol": "p0-v1",
+          "feature_columns": [
+            "wa_cloud",
+            "wa_temp",
+            "wa_humidity",
+            "wa_rain",
+            "wa_wind_speed",
+            "wa_ground_press",
+            "wb_cloud",
+            "wb_temp",
+            "wb_rel_hum",
+            "wb_uv_idx",
+            "wb_precip_prob",
+            "wb_total_liq",
+            "wb_vis",
+            "wb_wind_speed",
+            "wb_dew_point",
+            "elev",
+            "azim",
+            "cosz",
+            "doy_sin",
+            "doy_cos",
+            "hour",
+            "cap",
+            "lat",
+            "lon",
+            "wa_dist",
+            "wb_dist"
+          ],
+          "weight_17": 0.75,
+          "weighting": "capacity",
+          "split": {
+            "train_start": "2023-06-01 01:00:00+09:00",
+            "train_end_exclusive": "2024-12-31 01:00:00+09:00",
+            "eval_start": "2025-01-01 01:00:00+09:00",
+            "eval_end_exclusive": "2025-03-01 01:00:00+09:00"
+          },
+          "train_rows": 2504296,
+          "eval_rows": 358248,
+          "common_hours": 1416,
+          "mask_sha256": "9d2e7486aae0ef1f20b31bb46c6e0a83e9b7ce8ea66d2184b984665d7d2b85fe",
+          "weighted_group_mae": {
+            "pred_10": 703.7006465483316,
+            "pred_17": 631.3857955201395,
+            "ensemble": 638.5000176784405
+          },
+          "group_fixed": {
+            "pred_10": {
+              "rows": 2832,
+              "mae_kwh": 394.52342054327244,
+              "rmse_kwh": 860.7848026506088,
+              "nmae_capacity_pct": 1.847409488174259,
+              "wape_pct": 13.182788523108163,
+              "bias_kwh": 180.1437750145566
+            },
+            "pred_17": {
+              "rows": 2832,
+              "mae_kwh": 357.396898433638,
+              "rmse_kwh": 805.4016528675944,
+              "nmae_capacity_pct": 1.6731299996854325,
+              "wape_pct": 11.942225696962517,
+              "bias_kwh": 110.31407272813858
+            },
+            "ensemble": {
+              "rows": 2832,
+              "mae_kwh": 361.2886358569024,
+              "rmse_kwh": 808.4014526435864,
+              "nmae_capacity_pct": 1.6914823769908698,
+              "wape_pct": 12.072266015906607,
+              "bias_kwh": 127.77149820043883
+            }
+          },
+          "site_daylight": {
+            "pred_10": {
+              "rows": 151756,
+              "mae_kwh": 12.54750960896588,
+              "rmse_kwh": 36.13964453038513,
+              "nmae_capacity_pct": 7.2846943107740465,
+              "wape_pct": 22.503815664545147,
+              "bias_kwh": 3.453181807105733
+            },
+            "pred_17": {
+              "rows": 151756,
+              "mae_kwh": 12.338002062638688,
+              "rmse_kwh": 35.602055523986316,
+              "nmae_capacity_pct": 7.161437010113454,
+              "wape_pct": 22.12806626487867,
+              "bias_kwh": 2.150052326825644
+            },
+            "ensemble": {
+              "rows": 151756,
+              "mae_kwh": 12.276149192377137,
+              "rmse_kwh": 35.50549900516244,
+              "nmae_capacity_pct": 7.119605141282967,
+              "wape_pct": 22.017133846090612,
+              "bias_kwh": 2.4758346850264
+            }
+          },
+          "monthly_common": [
+            {
+              "month": "2025-01",
+              "common_hours": 744,
+              "weighted_group_mae": 583.0188041144787
+            },
+            {
+              "month": "2025-02",
+              "common_hours": 672,
+              "weighted_group_mae": 699.6877297884331
+            }
+          ],
+          "by_group": {
+            "G1": 589.7506413739746,
+            "G2": 687.2493939829063
+          },
+          "training": {
+            "10": {
+              "rows": 1257897,
+              "weights": {
+                "mode": "capacity",
+                "rows": 1257897,
+                "mean": 1.0000000000000002,
+                "min": 0.09681035269282622,
+                "max": 9.328350285801509,
+                "zero_rows": 0,
+                "raw_mean": 148.74441852536845,
+                "price_rows_used": 0
+              },
+              "fit_seconds": 103.14900691801449,
+              "weighted_training_mae": 0.07493607699871063,
+              "parameter_count": 46651,
+              "saved_model_reload": true
+            },
+            "17": {
+              "rows": 1257897,
+              "weights": {
+                "mode": "capacity",
+                "rows": 1257897,
+                "mean": 1.0000000000000002,
+                "min": 0.09681035269282622,
+                "max": 9.328350285801509,
+                "zero_rows": 0,
+                "raw_mean": 148.74441852536845,
+                "price_rows_used": 0
+              },
+              "fit_seconds": 102.0146222069452,
+              "weighted_training_mae": 0.0741138830780983,
+              "parameter_count": 46651,
+              "saved_model_reload": true
+            }
+          },
+          "peak_memory_mib": 4085.0,
+          "window_seconds_including_all_checkpoints": 838.2107372079918,
+          "evaluation_labels_seen_previously": true,
+          "sequence_context_hours": 24,
+          "preprocessing_fit": "training observed daytime rows only"
+        },
+        {
+          "status": "complete",
+          "window": "tune",
+          "variant": "tft_e010",
+          "family": "tft",
+          "epochs": 10,
+          "protocol": "p0-v1",
+          "feature_columns": [
+            "wa_cloud",
+            "wa_temp",
+            "wa_humidity",
+            "wa_rain",
+            "wa_wind_speed",
+            "wa_ground_press",
+            "wb_cloud",
+            "wb_temp",
+            "wb_rel_hum",
+            "wb_uv_idx",
+            "wb_precip_prob",
+            "wb_total_liq",
+            "wb_vis",
+            "wb_wind_speed",
+            "wb_dew_point",
+            "elev",
+            "azim",
+            "cosz",
+            "doy_sin",
+            "doy_cos",
+            "hour",
+            "cap",
+            "lat",
+            "lon",
+            "wa_dist",
+            "wb_dist"
+          ],
+          "weight_17": 0.75,
+          "weighting": "capacity",
+          "split": {
+            "train_start": "2023-06-01 01:00:00+09:00",
+            "train_end_exclusive": "2024-12-31 01:00:00+09:00",
+            "eval_start": "2025-01-01 01:00:00+09:00",
+            "eval_end_exclusive": "2025-03-01 01:00:00+09:00"
+          },
+          "train_rows": 2504296,
+          "eval_rows": 358248,
+          "common_hours": 1416,
+          "mask_sha256": "9d2e7486aae0ef1f20b31bb46c6e0a83e9b7ce8ea66d2184b984665d7d2b85fe",
+          "weighted_group_mae": {
+            "pred_10": 665.9310271250939,
+            "pred_17": 646.6632517506827,
+            "ensemble": 647.4359148540683
+          },
+          "group_fixed": {
+            "pred_10": {
+              "rows": 2832,
+              "mae_kwh": 372.04394696912186,
+              "rmse_kwh": 881.242398146323,
+              "nmae_capacity_pct": 1.7412492521738403,
+              "wape_pct": 12.431648968881568,
+              "bias_kwh": 144.30318288631616
+            },
+            "pred_17": {
+              "rows": 2832,
+              "mae_kwh": 362.3246284728749,
+              "rmse_kwh": 887.9620872533814,
+              "nmae_capacity_pct": 1.6959190567169526,
+              "wape_pct": 12.10688315358898,
+              "bias_kwh": 120.08501782601084
+            },
+            "ensemble": {
+              "rows": 2832,
+              "mae_kwh": 362.14717734709706,
+              "rmse_kwh": 878.7299008233446,
+              "nmae_capacity_pct": 1.694982461657887,
+              "wape_pct": 12.100953719384297,
+              "bias_kwh": 126.13956189686218
+            }
+          },
+          "site_daylight": {
+            "pred_10": {
+              "rows": 151756,
+              "mae_kwh": 12.232638686597184,
+              "rmse_kwh": 36.05778824927776,
+              "nmae_capacity_pct": 7.139711875259314,
+              "wape_pct": 21.939098249222567,
+              "bias_kwh": 2.784341293505685
+            },
+            "pred_17": {
+              "rows": 151756,
+              "mae_kwh": 12.235317508528015,
+              "rmse_kwh": 36.14906835348698,
+              "nmae_capacity_pct": 7.093213903109631,
+              "wape_pct": 21.943902685864437,
+              "bias_kwh": 2.3323932548509743
+            },
+            "ensemble": {
+              "rows": 151756,
+              "mae_kwh": 12.137598155400822,
+              "rmse_kwh": 35.87169702896554,
+              "nmae_capacity_pct": 7.046888707943862,
+              "wape_pct": 21.768644138298825,
+              "bias_kwh": 2.4453802632648047
+            }
+          },
+          "monthly_common": [
+            {
+              "month": "2025-01",
+              "common_hours": 744,
+              "weighted_group_mae": 579.8710834347357
+            },
+            {
+              "month": "2025-02",
+              "common_hours": 672,
+              "weighted_group_mae": 721.9501006131854
+            }
+          ],
+          "by_group": {
+            "G1": 592.6273740951286,
+            "G2": 702.244455613008
+          },
+          "training": {
+            "10": {
+              "rows": 1257897,
+              "weights": {
+                "mode": "capacity",
+                "rows": 1257897,
+                "mean": 1.0000000000000002,
+                "min": 0.09681035269282622,
+                "max": 9.328350285801509,
+                "zero_rows": 0,
+                "raw_mean": 148.74441852536845,
+                "price_rows_used": 0
+              },
+              "fit_seconds": 204.5653270430048,
+              "weighted_training_mae": 0.06982721388339996,
+              "parameter_count": 46651,
+              "saved_model_reload": true
+            },
+            "17": {
+              "rows": 1257897,
+              "weights": {
+                "mode": "capacity",
+                "rows": 1257897,
+                "mean": 1.0000000000000002,
+                "min": 0.09681035269282622,
+                "max": 9.328350285801509,
+                "zero_rows": 0,
+                "raw_mean": 148.74441852536845,
+                "price_rows_used": 0
+              },
+              "fit_seconds": 204.4386900399404,
+              "weighted_training_mae": 0.06957045942544937,
+              "parameter_count": 46651,
+              "saved_model_reload": true
+            }
+          },
+          "peak_memory_mib": 4085.0,
+          "window_seconds_including_all_checkpoints": 838.8879564579984,
+          "evaluation_labels_seen_previously": true,
+          "sequence_context_hours": 24,
+          "preprocessing_fit": "training observed daytime rows only"
+        },
+        {
+          "status": "complete",
+          "window": "tune",
+          "variant": "tft_e020",
+          "family": "tft",
+          "epochs": 20,
+          "protocol": "p0-v1",
+          "feature_columns": [
+            "wa_cloud",
+            "wa_temp",
+            "wa_humidity",
+            "wa_rain",
+            "wa_wind_speed",
+            "wa_ground_press",
+            "wb_cloud",
+            "wb_temp",
+            "wb_rel_hum",
+            "wb_uv_idx",
+            "wb_precip_prob",
+            "wb_total_liq",
+            "wb_vis",
+            "wb_wind_speed",
+            "wb_dew_point",
+            "elev",
+            "azim",
+            "cosz",
+            "doy_sin",
+            "doy_cos",
+            "hour",
+            "cap",
+            "lat",
+            "lon",
+            "wa_dist",
+            "wb_dist"
+          ],
+          "weight_17": 0.75,
+          "weighting": "capacity",
+          "split": {
+            "train_start": "2023-06-01 01:00:00+09:00",
+            "train_end_exclusive": "2024-12-31 01:00:00+09:00",
+            "eval_start": "2025-01-01 01:00:00+09:00",
+            "eval_end_exclusive": "2025-03-01 01:00:00+09:00"
+          },
+          "train_rows": 2504296,
+          "eval_rows": 358248,
+          "common_hours": 1416,
+          "mask_sha256": "9d2e7486aae0ef1f20b31bb46c6e0a83e9b7ce8ea66d2184b984665d7d2b85fe",
+          "weighted_group_mae": {
+            "pred_10": 632.62897950291,
+            "pred_17": 608.6122485317499,
+            "ensemble": 608.6879665873906
+          },
+          "group_fixed": {
+            "pred_10": {
+              "rows": 2832,
+              "mae_kwh": 350.7024583016492,
+              "rmse_kwh": 869.9787652507741,
+              "nmae_capacity_pct": 1.6401232919486048,
+              "wape_pct": 11.718534570035017,
+              "bias_kwh": 99.10054266116296
+            },
+            "pred_17": {
+              "rows": 2832,
+              "mae_kwh": 341.71998021878625,
+              "rmse_kwh": 877.1514076727399,
+              "nmae_capacity_pct": 1.5982962880552292,
+              "wape_pct": 11.418389882004135,
+              "bias_kwh": 23.929254361912346
+            },
+            "ensemble": {
+              "rows": 2832,
+              "mae_kwh": 339.4643643467125,
+              "rmse_kwh": 867.0208730302465,
+              "nmae_capacity_pct": 1.5875638331143576,
+              "wape_pct": 11.343019687276614,
+              "bias_kwh": 42.72207237137667
+            }
+          },
+          "site_daylight": {
+            "pred_10": {
+              "rows": 151756,
+              "mae_kwh": 11.881382814420075,
+              "rmse_kwh": 35.586113157543025,
+              "nmae_capacity_pct": 6.962254604444882,
+              "wape_pct": 21.309124840561903,
+              "bias_kwh": 1.9407906672965114
+            },
+            "pred_17": {
+              "rows": 151756,
+              "mae_kwh": 11.860072614794184,
+              "rmse_kwh": 35.735889676311714,
+              "nmae_capacity_pct": 6.916045653165373,
+              "wape_pct": 21.2709052400913,
+              "bias_kwh": 0.5379790168993127
+            },
+            "ensemble": {
+              "rows": 151756,
+              "mae_kwh": 11.73868535046978,
+              "rmse_kwh": 35.392806442261595,
+              "nmae_capacity_pct": 6.855352249005977,
+              "wape_pct": 21.05319856318803,
+              "bias_kwh": 0.8886819291574923
+            }
+          },
+          "monthly_common": [
+            {
+              "month": "2025-01",
+              "common_hours": 744,
+              "weighted_group_mae": 540.8899156040742
+            },
+            {
+              "month": "2025-02",
+              "common_hours": 672,
+              "weighted_group_mae": 683.4593596176326
+            }
+          ],
+          "by_group": {
+            "G1": 541.4736793891515,
+            "G2": 675.90225378563
+          },
+          "training": {
+            "10": {
+              "rows": 1257897,
+              "weights": {
+                "mode": "capacity",
+                "rows": 1257897,
+                "mean": 1.0000000000000002,
+                "min": 0.09681035269282622,
+                "max": 9.328350285801509,
+                "zero_rows": 0,
+                "raw_mean": 148.74441852536845,
+                "price_rows_used": 0
+              },
+              "fit_seconds": 407.65284158400027,
+              "weighted_training_mae": 0.0654245987534523,
+              "parameter_count": 46651,
+              "saved_model_reload": true
+            },
+            "17": {
+              "rows": 1257897,
+              "weights": {
+                "mode": "capacity",
+                "rows": 1257897,
+                "mean": 1.0000000000000002,
+                "min": 0.09681035269282622,
+                "max": 9.328350285801509,
+                "zero_rows": 0,
+                "raw_mean": 148.74441852536845,
+                "price_rows_used": 0
+              },
+              "fit_seconds": 409.298573746928,
+              "weighted_training_mae": 0.06460119783878326,
+              "parameter_count": 46651,
+              "saved_model_reload": true
+            }
+          },
+          "peak_memory_mib": 4085.0,
+          "window_seconds_including_all_checkpoints": 839.5553204999887,
+          "evaluation_labels_seen_previously": true,
+          "sequence_context_hours": 24,
+          "preprocessing_fit": "training observed daytime rows only"
+        },
+        {
+          "status": "complete",
+          "window": "seasonal_diagnostic",
+          "variant": "tft_e020",
+          "family": "tft",
+          "epochs": 20,
+          "protocol": "p0-v1",
+          "feature_columns": [
+            "wa_cloud",
+            "wa_temp",
+            "wa_humidity",
+            "wa_rain",
+            "wa_wind_speed",
+            "wa_ground_press",
+            "wb_cloud",
+            "wb_temp",
+            "wb_rel_hum",
+            "wb_uv_idx",
+            "wb_precip_prob",
+            "wb_total_liq",
+            "wb_vis",
+            "wb_wind_speed",
+            "wb_dew_point",
+            "elev",
+            "azim",
+            "cosz",
+            "doy_sin",
+            "doy_cos",
+            "hour",
+            "cap",
+            "lat",
+            "lon",
+            "wa_dist",
+            "wb_dist"
+          ],
+          "weight_17": 0.75,
+          "weighting": "capacity",
+          "split": {
+            "train_start": "2023-06-01 01:00:00+09:00",
+            "train_end_exclusive": "2024-06-30 01:00:00+09:00",
+            "eval_start": "2024-07-01 01:00:00+09:00",
+            "eval_end_exclusive": "2025-01-01 01:00:00+09:00"
+          },
+          "train_rows": 1404530,
+          "eval_rows": 1100462,
+          "common_hours": 178,
+          "mask_sha256": "969e327c14af3bcb8e1f48dcabbbdd1e98583069442d1f0914696d1fb176bf78",
+          "weighted_group_mae": {
+            "pred_10": 416.53907319587995,
+            "pred_17": 407.3013005406043,
+            "ensemble": 404.4582101795535
+          },
+          "group_fixed": {
+            "pred_10": {
+              "rows": 356,
+              "mae_kwh": 219.63428811530463,
+              "rmse_kwh": 521.7160354889699,
+              "nmae_capacity_pct": 1.0306259526088124,
+              "wape_pct": 8.727273306161699,
+              "bias_kwh": -67.52831006579618
+            },
+            "pred_17": {
+              "rows": 356,
+              "mae_kwh": 210.2203742294088,
+              "rmse_kwh": 466.68759071656575,
+              "nmae_capacity_pct": 0.9889620477537386,
+              "wape_pct": 8.353206943082034,
+              "bias_kwh": -23.011093179768686
+            },
+            "ensemble": {
+              "rows": 356,
+              "mae_kwh": 210.1635293352945,
+              "rmse_kwh": 475.0280292901371,
+              "nmae_capacity_pct": 0.9881299060157321,
+              "wape_pct": 8.350948184072898,
+              "bias_kwh": -34.14040507353186
+            }
+          },
+          "site_daylight": {
+            "pred_10": {
+              "rows": 536844,
+              "mae_kwh": 12.645535514278977,
+              "rmse_kwh": 30.072775583070374,
+              "nmae_capacity_pct": 7.945531292136698,
+              "wape_pct": 26.560482664640144,
+              "bias_kwh": 0.6447364493601171
+            },
+            "pred_17": {
+              "rows": 536844,
+              "mae_kwh": 12.44323735954792,
+              "rmse_kwh": 29.56870579826931,
+              "nmae_capacity_pct": 7.80094189008692,
+              "wape_pct": 26.135578822034528,
+              "bias_kwh": 1.150016720868643
+            },
+            "ensemble": {
+              "rows": 536844,
+              "mae_kwh": 12.324352474831072,
+              "rmse_kwh": 29.226220510369345,
+              "nmae_capacity_pct": 7.733313976983578,
+              "wape_pct": 25.88587489165972,
+              "bias_kwh": 1.0236966486806236
+            }
+          },
+          "monthly_common": [
+            {
+              "month": "2024-12",
+              "common_hours": 178,
+              "weighted_group_mae": 404.4582101795535
+            }
+          ],
+          "by_group": {
+            "G1": 421.1976006795787,
+            "G2": 387.7188196795283
+          },
+          "training": {
+            "10": {
+              "rows": 719970,
+              "weights": {
+                "mode": "capacity",
+                "rows": 719970,
+                "mean": 1.0000000000000004,
+                "min": 0.1045385914331259,
+                "max": 10.073019797445163,
+                "zero_rows": 0,
+                "raw_mean": 137.74816956226218,
+                "price_rows_used": 0
+              },
+              "fit_seconds": 229.28166841797065,
+              "weighted_training_mae": 0.06408724933862686,
+              "parameter_count": 46651,
+              "saved_model_reload": true
+            },
+            "17": {
+              "rows": 719970,
+              "weights": {
+                "mode": "capacity",
+                "rows": 719970,
+                "mean": 1.0000000000000004,
+                "min": 0.1045385914331259,
+                "max": 10.073019797445163,
+                "zero_rows": 0,
+                "raw_mean": 137.74816956226218,
+                "price_rows_used": 0
+              },
+              "fit_seconds": 229.20089000009466,
+              "weighted_training_mae": 0.06356360018253326,
+              "parameter_count": 46651,
+              "saved_model_reload": true
+            }
+          },
+          "peak_memory_mib": 3800.5,
+          "window_seconds_including_all_checkpoints": 476.0392040000006,
+          "evaluation_labels_seen_previously": true,
+          "sequence_context_hours": 24,
+          "preprocessing_fit": "training observed daytime rows only"
+        },
+        {
+          "status": "complete",
+          "window": "confirmation",
+          "variant": "tft_e020",
+          "family": "tft",
+          "epochs": 20,
+          "protocol": "p0-v1",
+          "feature_columns": [
+            "wa_cloud",
+            "wa_temp",
+            "wa_humidity",
+            "wa_rain",
+            "wa_wind_speed",
+            "wa_ground_press",
+            "wb_cloud",
+            "wb_temp",
+            "wb_rel_hum",
+            "wb_uv_idx",
+            "wb_precip_prob",
+            "wb_total_liq",
+            "wb_vis",
+            "wb_wind_speed",
+            "wb_dew_point",
+            "elev",
+            "azim",
+            "cosz",
+            "doy_sin",
+            "doy_cos",
+            "hour",
+            "cap",
+            "lat",
+            "lon",
+            "wa_dist",
+            "wb_dist"
+          ],
+          "weight_17": 0.75,
+          "weighting": "capacity",
+          "split": {
+            "train_start": "2023-06-01 01:00:00+09:00",
+            "train_end_exclusive": "2025-02-28 01:00:00+09:00",
+            "eval_start": "2025-03-01 01:00:00+09:00",
+            "eval_end_exclusive": "2025-06-01 01:00:00+09:00"
+          },
+          "train_rows": 2862544,
+          "eval_rows": 558624,
+          "common_hours": 2208,
+          "mask_sha256": "6cffbd4129ac8f471066bc65cf0d09aaa1bfb51acba1ef7562e691317445e45a",
+          "weighted_group_mae": {
+            "pred_10": 762.7598037719873,
+            "pred_17": 719.5432127586538,
+            "ensemble": 709.6099711601145
+          },
+          "group_fixed": {
+            "pred_10": {
+              "rows": 4416,
+              "mae_kwh": 487.1027231483802,
+              "rmse_kwh": 1015.6559350781351,
+              "nmae_capacity_pct": 2.2807774210904035,
+              "wape_pct": 12.380990760924265,
+              "bias_kwh": -21.59194050886873
+            },
+            "pred_17": {
+              "rows": 4416,
+              "mae_kwh": 467.73692839140614,
+              "rmse_kwh": 1001.0399378406794,
+              "nmae_capacity_pct": 2.1912126557453857,
+              "wape_pct": 11.888758394793529,
+              "bias_kwh": -18.485276287526347
+            },
+            "ensemble": {
+              "rows": 4416,
+              "mae_kwh": 460.5260556780751,
+              "rmse_kwh": 982.2490589961701,
+              "nmae_capacity_pct": 2.157297104039935,
+              "wape_pct": 11.705475189425867,
+              "bias_kwh": -19.261939777132365
+            }
+          },
+          "site_daylight": {
+            "pred_10": {
+              "rows": 299028,
+              "mae_kwh": 12.117310778154216,
+              "rmse_kwh": 34.43235270207968,
+              "nmae_capacity_pct": 7.14503625563183,
+              "wape_pct": 20.873531134917013,
+              "bias_kwh": -0.2691149782077605
+            },
+            "pred_17": {
+              "rows": 299028,
+              "mae_kwh": 11.765233946632652,
+              "rmse_kwh": 34.12544083502098,
+              "nmae_capacity_pct": 6.908054180212288,
+              "wape_pct": 20.26703627486129,
+              "bias_kwh": -0.22323619662921115
+            },
+            "ensemble": {
+              "rows": 299028,
+              "mae_kwh": 11.601582618641931,
+              "rmse_kwh": 33.59076213397104,
+              "nmae_capacity_pct": 6.81473773946464,
+              "wape_pct": 19.985127099415916,
+              "bias_kwh": -0.23470589933965672
+            }
+          },
+          "monthly_common": [
+            {
+              "month": "2025-03",
+              "common_hours": 744,
+              "weighted_group_mae": 682.7916135199245
+            },
+            {
+              "month": "2025-04",
+              "common_hours": 720,
+              "weighted_group_mae": 646.4690283593862
+            },
+            {
+              "month": "2025-05",
+              "common_hours": 744,
+              "weighted_group_mae": 794.0930395924688
+            }
+          ],
+          "by_group": {
+            "G1": 666.10248617396,
+            "G2": 753.1174561462691
+          },
+          "training": {
+            "10": {
+              "rows": 1409147,
+              "weights": {
+                "mode": "capacity",
+                "rows": 1409147,
+                "mean": 1.0,
+                "min": 0.09544253377083216,
+                "max": 9.196551426722943,
+                "zero_rows": 0,
+                "raw_mean": 150.8761246123896,
+                "price_rows_used": 0
+              },
+              "fit_seconds": 467.66429012609296,
+              "weighted_training_mae": 0.06461925059556961,
+              "parameter_count": 46651,
+              "saved_model_reload": true
+            },
+            "17": {
+              "rows": 1409147,
+              "weights": {
+                "mode": "capacity",
+                "rows": 1409147,
+                "mean": 1.0,
+                "min": 0.09544253377083216,
+                "max": 9.196551426722943,
+                "zero_rows": 0,
+                "raw_mean": 150.8761246123896,
+                "price_rows_used": 0
+              },
+              "fit_seconds": 467.6809903740359,
+              "weighted_training_mae": 0.06389545649290085,
+              "parameter_count": 46651,
+              "saved_model_reload": true
+            }
+          },
+          "peak_memory_mib": 4200.2,
+          "window_seconds_including_all_checkpoints": 951.5528472079895,
+          "evaluation_labels_seen_previously": true,
+          "sequence_context_hours": 24,
+          "preprocessing_fit": "training observed daytime rows only"
+        }
+      ]
+    }
+  },
+  "comparison_scope": {
+    "raw_evaluation_rows_and_labels": "same",
+    "features": "same 26 variables; LSTM/TFT add forecast time context",
+    "preprocessing": "neural training-only median imputation, standardization and clipping at 10 standard deviations",
+    "tuning_budget_equal": false,
+    "same_compute_device": false,
+    "pretrained_weights": false,
+    "actual_generation_as_input": false
+  }
+}

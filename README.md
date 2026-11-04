@@ -9,8 +9,9 @@
 - 실험 기록: [EXPERIMENTS.md](EXPERIMENTS.md)
 - 확정 평가 기준: [P0 프로토콜](docs/experiments/validation-protocol.md) — 설정 비교·확인 기간, 공통 관측 시각, 가중 오차
 - 다음 실험과 세션 인수인계: [EXPERIMENT_PLAN.md](EXPERIMENT_PLAN.md)
-- 다른 모델 비교 계획: [MODEL_COMPARISON_PLAN.md](MODEL_COMPARISON_PLAN.md) — CatBoost·XGBoost 1차 완료, 누적 튜닝 차이 명시
+- 다른 모델 비교 계획: [MODEL_COMPARISON_PLAN.md](MODEL_COMPARISON_PLAN.md) — 여섯 모델 1차 완료, 입력·누적 튜닝 차이 명시
 - 실행·환경 검증: [VERIFICATION.md](VERIFICATION.md)
+- TabM·LSTM·TFT 비교: [2026-11-03 결과](docs/experiments/2026-11-03-neural.md) — 두 Mac의 MPS GPU로 실행·검증 완료, 현재 LightGBM 기준 유지
 - XGBoost·세 모델 비교: [2026-11-03 결과](docs/experiments/2026-11-03-xgboost.md) — 같은 맥북에서 재학습·검증, 현재 LightGBM 유지
 - CatBoost 비교 결과: [2026-11-03 결과](docs/experiments/2026-11-03-catboost.md) — 세 설정 비교·역사적 확인 완료, 교체 보류
 - P5 팀 배정 결과: [2026-11-03 결과](docs/experiments/2026-11-03-p5-assignment.md) — tune 개선·확인 악화로 새 배정 채택 보류
@@ -165,6 +166,8 @@ GitHub는 대화나 실행 프로세스를 자동으로 동기화하지 않습�
 맥 미니의 Tailscale, 본인 계정만 허용한 macOS 원격 로그인, 노트북 공개키 인증,
 로그인 시 Tailscale 실행, tmux 3.8 설치를 완료했습니다. 사용자가 외부망 SSH 접속 성공을 확인했습니다.
 접속 주소·공개키·계정 인증 정보는 이 공개 저장소에 기록하지 않습니다.
+
+2026-11-03 SSH 인증을 복구하고, 사용자 승인으로 맥북의 `macmini` 항목에만 `ControlMaster auto`, `ControlPersist yes`, `ControlPath ~/.ssh/cm-%C`를 추가했습니다. 정상 연결은 유휴 시간 제한 없이 재사용합니다. 키 암호 저장·서버 설정 변경은 하지 않았습니다. 공유 연결을 직접 종료할 때는 `ssh -O exit macmini`를 실행합니다. 전원·네트워크 단절 뒤 자동 재접속을 보장하는 설정은 아닙니다. [OpenSSH 설명](https://man.openbsd.org/ssh_config#ControlPersist).
 
 긴 학습은 맥 미니의 프로젝트 폴더에서 다음처럼 실행합니다.
 
