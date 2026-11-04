@@ -1,0 +1,42 @@
+{
+  "protocol": "peer-annual-w-causal-v1",
+  "historical_comparison_not_independent_final_test": true,
+  "feature_bundle": "station_distance_26_no_GEFS",
+  "context_rows": 8192,
+  "context_sampling": "capacity-proportional without replacement over training-only daylight rows; same indices for both rounds and models",
+  "seed": 0,
+  "cpu_threads": 4,
+  "device": "mps",
+  "batch_rows": 1024,
+  "n_estimators": 1,
+  "prediction": "median",
+  "target": "clip(energy/capacity,0,1.2)",
+  "imputation": "per-round full daylight training median, all-missing feature ->0; no evaluation fit",
+  "capacity_weights": "approximated by context sampling; not the exact P4 weighted-L1 fit",
+  "network": "OS sandbox denies network; explicit local checkpoints; HF offline",
+  "tabpfn": {
+    "package": "tabpfn==9.2.0",
+    "weights": "outputs/b23_models/tabpfn-v2-regressor-v2_default.ckpt",
+    "sha256": "2ab5a07d5c41dfe6db9aa7ae106fc6de898326c2765be66505a07e2868c10736",
+    "repo": "Prior-Labs/TabPFN-v2-reg",
+    "revision": "02a44705ff7790b50cded404bc59adb94da456a1",
+    "fit_mode": "fit_with_cache",
+    "precision": "float32",
+    "license": "Prior Labs License1.1 (Apache2.0 derivative with attribution)",
+    "attribution": "Built with PriorLabs-TabPFN"
+  },
+  "tabicl": {
+    "package": "tabicl==2.2.0",
+    "weights": "outputs/b23_models/tabicl-regressor-v2-20260212.ckpt",
+    "sha256": "0db9cb538f114e79026bf08f45f41ad8dd7ad2de2aaca9a5ca8cd3bd9748ae7a",
+    "repo": "jingang/TabICL",
+    "revision": "4dcd344ece2c00be9e831fdd35bed57b5ad83e19",
+    "kv_cache": true,
+    "norm_methods": "none",
+    "feat_shuffle_method": "none",
+    "precision": "float32",
+    "license": "BSD3-Clause",
+    "attribution": "TabICLv2; Copyright(c)2025 Soda team@Inria"
+  },
+  "publication_caveat": "TabPFN v2 model repo created2025-01-04; TabICLv2 repo created2026-02-12; many historical evaluation dates predate weights. This is retrospective technical comparison; competition eligibility of pretrained model publication dates unconfirmed."
+}

@@ -1,0 +1,24 @@
+{
+  "experiment": "B1-P4-GEFS-area-v1",
+  "dataset": "noaa-gefs-forecast-35-day",
+  "version": "0.2.0",
+  "icechunk_https": "https://dynamical-noaa-gefs.s3.us-west-2.amazonaws.com/noaa-gefs-forecast-35-day/v0.2.0.icechunk",
+  "snapshot_id": "AYAYGEGVKDXAD3DE94PG",
+  "latitude_min": 32.0,
+  "latitude_max": 40.0,
+  "longitude_min": 124.0,
+  "longitude_max": 132.0,
+  "area_weight": "cos(latitude); include land and sea; no site coordinates",
+  "ensemble_members": 31,
+  "availability_lag_hours": 24,
+  "initialization_rule": "target energy day D uses D-2 00UTC (32 hours before D-1 17KST deadline)",
+  "lead_hours": [39,42,45,48,51,54,57,60,63],
+  "variables": {
+    "downward_short_wave_radiation_flux_surface": "gefs_sw",
+    "total_cloud_cover_atmosphere": "gefs_cloud"
+  },
+  "feature_columns": ["gefs_sw_mean", "gefs_sw_std", "gefs_cloud_mean", "gefs_cloud_std"],
+  "hourly_rule": "energy hour ending t uses ceil(UTC lead/3)*3 interval mean; deaverage six-hour products as 2*mean6 - preceding_mean3 before aggregation; cloud clamp 0..100 and SW clamp >=0 for rounding",
+  "ensemble_std_ddof": 0,
+  "missing_policy": "stop on missing grid/member/day; never use observed weather or shrink evaluation universe"
+}

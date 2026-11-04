@@ -1,0 +1,1070 @@
+{
+  "status": "complete",
+  "generated_at_utc": "2026-11-04T15:05:48.188163+00:00",
+  "results": [
+    {
+      "experiment": "B1",
+      "name": "P4+GEFS",
+      "fold": "F2",
+      "W": 1039175004.309877,
+      "P4_W": 1121486496.8502982,
+      "P4_change_percent": -7.3394992067754234,
+      "process_seconds": 48.612056332989596,
+      "peak_process_memory_mib": 2271.0,
+      "evaluation_key_mask_sha256": "71519b852411118de1e596f5ed61135dca04ea082b3457d36b89f4c420cd7d6c"
+    },
+    {
+      "experiment": "B1",
+      "name": "P4+GEFS",
+      "fold": "F3",
+      "W": 1998466851.6364853,
+      "P4_W": 2063719840.541735,
+      "P4_change_percent": -3.161911206325385,
+      "process_seconds": 78.00424933401519,
+      "peak_process_memory_mib": 2884.3,
+      "evaluation_key_mask_sha256": "07a36b58f8d8d78a6e6c0fdd3a5cc1c4ed97c1bb41e4fc0e53646b2a73bb6a7e"
+    },
+    {
+      "experiment": "B2",
+      "name": "TabPFN v2 (8192 context)",
+      "fold": "F2",
+      "W": 1168621543.4768848,
+      "P4_W": 1121486496.8502982,
+      "P4_change_percent": 4.202908083063472,
+      "process_seconds": 1810.885174459021,
+      "peak_process_memory_mib": 3276.8,
+      "evaluation_key_mask_sha256": "71519b852411118de1e596f5ed61135dca04ea082b3457d36b89f4c420cd7d6c"
+    },
+    {
+      "experiment": "B2",
+      "name": "TabPFN v2 (8192 context)",
+      "fold": "F3",
+      "W": 2084775339.7484052,
+      "P4_W": 2063719840.541735,
+      "P4_change_percent": 1.0202692629607713,
+      "process_seconds": 4820.13381941602,
+      "peak_process_memory_mib": 4700.9,
+      "evaluation_key_mask_sha256": "07a36b58f8d8d78a6e6c0fdd3a5cc1c4ed97c1bb41e4fc0e53646b2a73bb6a7e"
+    },
+    {
+      "experiment": "B3",
+      "name": "TabICLv2 (8192 context)",
+      "fold": "F2",
+      "W": 1182359161.3957937,
+      "P4_W": 1121486496.8502982,
+      "P4_change_percent": 5.427855325628683,
+      "process_seconds": 331.2381334580132,
+      "peak_process_memory_mib": 3546.9,
+      "evaluation_key_mask_sha256": "71519b852411118de1e596f5ed61135dca04ea082b3457d36b89f4c420cd7d6c"
+    },
+    {
+      "experiment": "B3",
+      "name": "TabICLv2 (8192 context)",
+      "fold": "F3",
+      "W": 2166110322.4294977,
+      "P4_W": 2063719840.541735,
+      "P4_change_percent": 4.961452609811845,
+      "process_seconds": 562.9800034160144,
+      "peak_process_memory_mib": 4694.2,
+      "evaluation_key_mask_sha256": "07a36b58f8d8d78a6e6c0fdd3a5cc1c4ed97c1bb41e4fc0e53646b2a73bb6a7e"
+    }
+  ],
+  "power_interruption": {
+    "reason": "AC connected but battery2percent discharging, OS estimate5minutes",
+    "pid": 52919,
+    "checkpoint": 770048,
+    "expected_rows": 1083299,
+    "pause_recorded_at_utc": "2026-11-04T12:31:05.675661+00:00",
+    "recorded_monotonic": 168011.72300625,
+    "state": "resumed after battery87percent AC confirmed; model unchanged",
+    "runtime_caveat": "Raw predict_active_seconds may include SIGSTOP waiting if signal landed inside timed prediction; report pause separately",
+    "guard_source_sha256": "f7a789ea81c7c1b2e7402183cd4d06640e55c8ba476945ad261eead4125d0ebd",
+    "resumed_at_utc": "2026-11-04T14:40:37.489181+00:00",
+    "guard_failure": "ps PermissionError under guard sandbox; manual validated resume",
+    "events": [
+      {
+        "event": "paused",
+        "pid": 52919,
+        "at_utc": "2026-11-04T12:31:05.675661+00:00"
+      },
+      {
+        "event": "resumed",
+        "pid": 52919,
+        "at_utc": "2026-11-04T14:40:37.489181+00:00"
+      }
+    ],
+    "pause_wall_seconds": 7771.81352
+  },
+  "verifications": {
+    "B1": {
+      "status": "passed",
+      "folds": {
+        "F2": {
+          "status": "passed",
+          "evaluation_key_mask_sha256": "71519b852411118de1e596f5ed61135dca04ea082b3457d36b89f4c420cd7d6c",
+          "independent_W": 1039175004.309877,
+          "baseline_W": 1121486496.8502982,
+          "change_percent": -7.3394992067754234,
+          "model_replay_rows": {
+            "10": 1024,
+            "17": 1024
+          },
+          "eval_rows": 1256595,
+          "observed_site_hours": 1256595,
+          "evaluation_hours": 8784
+        },
+        "F3": {
+          "status": "passed",
+          "evaluation_key_mask_sha256": "07a36b58f8d8d78a6e6c0fdd3a5cc1c4ed97c1bb41e4fc0e53646b2a73bb6a7e",
+          "independent_W": 1998466851.6364853,
+          "baseline_W": 2063719840.541735,
+          "change_percent": -3.161911206325385,
+          "model_replay_rows": {
+            "10": 1024,
+            "17": 1024
+          },
+          "eval_rows": 2170645,
+          "observed_site_hours": 2170645,
+          "evaluation_hours": 8760
+        }
+      },
+      "all_cached_days_verified": 1461,
+      "gefs_hours": 35064,
+      "seconds": 41.29506050000782,
+      "publication_evidence": "3-day837-file sample plus conservative24h lag; not all historical publication times audited"
+    },
+    "B2": {
+      "status": "passed",
+      "model": "tabpfn",
+      "network_policy": "OS network deny verified",
+      "folds": {
+        "F2": {
+          "status": "passed",
+          "evaluation_key_mask_sha256": "71519b852411118de1e596f5ed61135dca04ea082b3457d36b89f4c420cd7d6c",
+          "eval_rows": 1256595,
+          "independent_W": 1168621543.4768848,
+          "baseline_W": 1121486496.8502982,
+          "B1_W": 1039175004.309877,
+          "P4_change_percent": 4.202908083063472,
+          "B1_change_percent": 12.456664048898492,
+          "replay": {
+            "10": {
+              "rows": 1024,
+              "max_abs_normalized_diff": 1.1102230246251565e-16
+            },
+            "17": {
+              "rows": 1024,
+              "max_abs_normalized_diff": 1.1102230246251565e-16
+            }
+          }
+        },
+        "F3": {
+          "status": "passed",
+          "evaluation_key_mask_sha256": "07a36b58f8d8d78a6e6c0fdd3a5cc1c4ed97c1bb41e4fc0e53646b2a73bb6a7e",
+          "eval_rows": 2170645,
+          "independent_W": 2084775339.7484052,
+          "baseline_W": 2063719840.541735,
+          "B1_W": 1998466851.6364853,
+          "P4_change_percent": 1.0202692629607713,
+          "B1_change_percent": 4.318735036372723,
+          "replay": {
+            "10": {
+              "rows": 1024,
+              "max_abs_normalized_diff": 1.1102230246251565e-16
+            },
+            "17": {
+              "rows": 1024,
+              "max_abs_normalized_diff": 1.1102230246251565e-16
+            }
+          }
+        }
+      },
+      "seconds": 92.97760912499507,
+      "context_rows_per_model": 8192,
+      "historical_publication_caveat": "TabPFN v2 model repo created2025-01-04; TabICLv2 repo created2026-02-12; many historical evaluation dates predate weights. This is retrospective technical comparison; competition eligibility of pretrained model publication dates unconfirmed."
+    },
+    "B3": {
+      "status": "passed",
+      "model": "tabicl",
+      "network_policy": "OS network deny verified",
+      "folds": {
+        "F2": {
+          "status": "passed",
+          "evaluation_key_mask_sha256": "71519b852411118de1e596f5ed61135dca04ea082b3457d36b89f4c420cd7d6c",
+          "eval_rows": 1256595,
+          "independent_W": 1182359161.3957937,
+          "baseline_W": 1121486496.8502982,
+          "B1_W": 1039175004.309877,
+          "P4_change_percent": 5.427855325628683,
+          "B1_change_percent": 13.778637524197013,
+          "replay": {
+            "10": {
+              "rows": 1024,
+              "max_abs_normalized_diff": 4.217380522586467e-08
+            },
+            "17": {
+              "rows": 1024,
+              "max_abs_normalized_diff": 4.401226927353008e-08
+            }
+          }
+        },
+        "F3": {
+          "status": "passed",
+          "evaluation_key_mask_sha256": "07a36b58f8d8d78a6e6c0fdd3a5cc1c4ed97c1bb41e4fc0e53646b2a73bb6a7e",
+          "eval_rows": 2170645,
+          "independent_W": 2166110322.4294977,
+          "baseline_W": 2063719840.541735,
+          "B1_W": 1998466851.6364853,
+          "P4_change_percent": 4.961452609811845,
+          "B1_change_percent": 8.388604026918633,
+          "replay": {
+            "10": {
+              "rows": 1024,
+              "max_abs_normalized_diff": 4.426491395648213e-08
+            },
+            "17": {
+              "rows": 1024,
+              "max_abs_normalized_diff": 3.937856374314208e-08
+            }
+          }
+        }
+      },
+      "seconds": 51.93342924999888,
+      "context_rows_per_model": 8192,
+      "historical_publication_caveat": "TabPFN v2 model repo created2025-01-04; TabICLv2 repo created2026-02-12; many historical evaluation dates predate weights. This is retrospective technical comparison; competition eligibility of pretrained model publication dates unconfirmed."
+    }
+  },
+  "report_source_sha256": "64df0e98c83a412dc7efa09435dfc4e4ea348e29da9f67f0a5bffd551a698f63",
+  "monthly_group_comparison": [
+    {
+      "experiment": "B1",
+      "fold": "F2",
+      "level": "W_by_group",
+      "key": "G1",
+      "P4_W": 843489435.7970266,
+      "W": 786495821.81434,
+      "P4_change_percent": -6.756885334175222
+    },
+    {
+      "experiment": "B1",
+      "fold": "F2",
+      "level": "W_by_group",
+      "key": "G2",
+      "P4_W": 277997061.0532715,
+      "W": 252679182.49553704,
+      "P4_change_percent": -9.10724683988039
+    },
+    {
+      "experiment": "B1",
+      "fold": "F2",
+      "level": "W_by_month",
+      "key": "2023-06",
+      "P4_W": 50268038.96736477,
+      "W": 46764283.15071751,
+      "P4_change_percent": -6.970146217404627
+    },
+    {
+      "experiment": "B1",
+      "fold": "F2",
+      "level": "W_by_month",
+      "key": "2023-07",
+      "P4_W": 74733812.05949733,
+      "W": 69752507.40820089,
+      "P4_change_percent": -6.665396176138727
+    },
+    {
+      "experiment": "B1",
+      "fold": "F2",
+      "level": "W_by_month",
+      "key": "2023-08",
+      "P4_W": 61792862.90080312,
+      "W": 62702508.451466754,
+      "P4_change_percent": 1.472088373901537
+    },
+    {
+      "experiment": "B1",
+      "fold": "F2",
+      "level": "W_by_month",
+      "key": "2023-09",
+      "P4_W": 67733166.65681048,
+      "W": 65134644.63780693,
+      "P4_change_percent": -3.8364100591512407
+    },
+    {
+      "experiment": "B1",
+      "fold": "F2",
+      "level": "W_by_month",
+      "key": "2023-10",
+      "P4_W": 84173048.74299379,
+      "W": 78280397.54318967,
+      "P4_change_percent": -7.000638907349299
+    },
+    {
+      "experiment": "B1",
+      "fold": "F2",
+      "level": "W_by_month",
+      "key": "2023-11",
+      "P4_W": 77561551.32715029,
+      "W": 71119067.99879172,
+      "P4_change_percent": -8.306284773991335
+    },
+    {
+      "experiment": "B1",
+      "fold": "F2",
+      "level": "W_by_month",
+      "key": "2023-12",
+      "P4_W": 64258940.082444355,
+      "W": 62878195.59391181,
+      "P4_change_percent": -2.148719675053856
+    },
+    {
+      "experiment": "B1",
+      "fold": "F2",
+      "level": "W_by_month",
+      "key": "2024-01",
+      "P4_W": 89287410.03671017,
+      "W": 91241959.55299374,
+      "P4_change_percent": 2.1890538828262196
+    },
+    {
+      "experiment": "B1",
+      "fold": "F2",
+      "level": "W_by_month",
+      "key": "2024-02",
+      "P4_W": 125201990.5952494,
+      "W": 104200436.56777276,
+      "P4_change_percent": -16.774137477869722
+    },
+    {
+      "experiment": "B1",
+      "fold": "F2",
+      "level": "W_by_month",
+      "key": "2024-03",
+      "P4_W": 147625217.99899423,
+      "W": 126626635.73575369,
+      "P4_change_percent": -14.224251484853768
+    },
+    {
+      "experiment": "B1",
+      "fold": "F2",
+      "level": "W_by_month",
+      "key": "2024-04",
+      "P4_W": 105585080.32508472,
+      "W": 95822447.62502496,
+      "P4_change_percent": -9.246223680468567
+    },
+    {
+      "experiment": "B1",
+      "fold": "F2",
+      "level": "W_by_month",
+      "key": "2024-05",
+      "P4_W": 173265377.15719545,
+      "W": 164651920.04424667,
+      "P4_change_percent": -4.9712511837458395
+    },
+    {
+      "experiment": "B1",
+      "fold": "F3",
+      "level": "W_by_group",
+      "key": "G1",
+      "P4_W": 973403869.5066028,
+      "W": 955555694.4493046,
+      "P4_change_percent": -1.833583738098865
+    },
+    {
+      "experiment": "B1",
+      "fold": "F3",
+      "level": "W_by_group",
+      "key": "G2",
+      "P4_W": 1090315971.0351322,
+      "W": 1042911157.1871808,
+      "P4_change_percent": -4.34780514156331
+    },
+    {
+      "experiment": "B1",
+      "fold": "F3",
+      "level": "W_by_month",
+      "key": "2024-06",
+      "P4_W": 155289781.4258545,
+      "W": 150843665.83455756,
+      "P4_change_percent": -2.8631089247941333
+    },
+    {
+      "experiment": "B1",
+      "fold": "F3",
+      "level": "W_by_month",
+      "key": "2024-07",
+      "P4_W": 246265900.45871347,
+      "W": 230638306.7325347,
+      "P4_change_percent": -6.3458212026389464
+    },
+    {
+      "experiment": "B1",
+      "fold": "F3",
+      "level": "W_by_month",
+      "key": "2024-08",
+      "P4_W": 164369346.93887293,
+      "W": 167603629.15878683,
+      "P4_change_percent": 1.9676918355809423
+    },
+    {
+      "experiment": "B1",
+      "fold": "F3",
+      "level": "W_by_month",
+      "key": "2024-09",
+      "P4_W": 245583326.6047745,
+      "W": 234398941.00120327,
+      "P4_change_percent": -4.554212111301292
+    },
+    {
+      "experiment": "B1",
+      "fold": "F3",
+      "level": "W_by_month",
+      "key": "2024-10",
+      "P4_W": 187248329.35914817,
+      "W": 182808803.8227619,
+      "P4_change_percent": -2.3709293170093404
+    },
+    {
+      "experiment": "B1",
+      "fold": "F3",
+      "level": "W_by_month",
+      "key": "2024-11",
+      "P4_W": 141866568.31164703,
+      "W": 132289114.06817244,
+      "P4_change_percent": -6.751029758071814
+    },
+    {
+      "experiment": "B1",
+      "fold": "F3",
+      "level": "W_by_month",
+      "key": "2024-12",
+      "P4_W": 120280272.61912848,
+      "W": 117987182.1073555,
+      "P4_change_percent": -1.906456031267989
+    },
+    {
+      "experiment": "B1",
+      "fold": "F3",
+      "level": "W_by_month",
+      "key": "2025-01",
+      "P4_W": 127925794.75238456,
+      "W": 133238732.6082148,
+      "P4_change_percent": 4.153140393705623
+    },
+    {
+      "experiment": "B1",
+      "fold": "F3",
+      "level": "W_by_month",
+      "key": "2025-02",
+      "P4_W": 150837648.8481412,
+      "W": 141429781.6353709,
+      "P4_change_percent": -6.237081580502391
+    },
+    {
+      "experiment": "B1",
+      "fold": "F3",
+      "level": "W_by_month",
+      "key": "2025-03",
+      "P4_W": 133735551.5835785,
+      "W": 146212872.10610598,
+      "P4_change_percent": 9.329845635496367
+    },
+    {
+      "experiment": "B1",
+      "fold": "F3",
+      "level": "W_by_month",
+      "key": "2025-04",
+      "P4_W": 169123609.331169,
+      "W": 168129599.51422578,
+      "P4_change_percent": -0.5877416056068285
+    },
+    {
+      "experiment": "B1",
+      "fold": "F3",
+      "level": "W_by_month",
+      "key": "2025-05",
+      "P4_W": 221193710.30832264,
+      "W": 192886223.04719567,
+      "P4_change_percent": -12.797600447892066
+    },
+    {
+      "experiment": "B2",
+      "fold": "F2",
+      "level": "W_by_group",
+      "key": "G1",
+      "P4_W": 843489435.7970266,
+      "W": 902677567.757313,
+      "P4_change_percent": 7.017056699039581
+    },
+    {
+      "experiment": "B2",
+      "fold": "F2",
+      "level": "W_by_group",
+      "key": "G2",
+      "P4_W": 277997061.0532715,
+      "W": 265943975.71957195,
+      "P4_change_percent": -4.335688042180363
+    },
+    {
+      "experiment": "B2",
+      "fold": "F2",
+      "level": "W_by_month",
+      "key": "2023-06",
+      "P4_W": 50268038.96736477,
+      "W": 55346134.629883304,
+      "P4_change_percent": 10.102036536208136
+    },
+    {
+      "experiment": "B2",
+      "fold": "F2",
+      "level": "W_by_month",
+      "key": "2023-07",
+      "P4_W": 74733812.05949733,
+      "W": 76631520.59995875,
+      "P4_change_percent": 2.539290433827479
+    },
+    {
+      "experiment": "B2",
+      "fold": "F2",
+      "level": "W_by_month",
+      "key": "2023-08",
+      "P4_W": 61792862.90080312,
+      "W": 71286431.3549003,
+      "P4_change_percent": 15.36353554185914
+    },
+    {
+      "experiment": "B2",
+      "fold": "F2",
+      "level": "W_by_month",
+      "key": "2023-09",
+      "P4_W": 67733166.65681048,
+      "W": 63403780.09823376,
+      "P4_change_percent": -6.391826592890304
+    },
+    {
+      "experiment": "B2",
+      "fold": "F2",
+      "level": "W_by_month",
+      "key": "2023-10",
+      "P4_W": 84173048.74299379,
+      "W": 83706767.78607862,
+      "P4_change_percent": -0.5539551719682456
+    },
+    {
+      "experiment": "B2",
+      "fold": "F2",
+      "level": "W_by_month",
+      "key": "2023-11",
+      "P4_W": 77561551.32715029,
+      "W": 71973555.34649971,
+      "P4_change_percent": -7.204595427805094
+    },
+    {
+      "experiment": "B2",
+      "fold": "F2",
+      "level": "W_by_month",
+      "key": "2023-12",
+      "P4_W": 64258940.082444355,
+      "W": 69351418.04689127,
+      "P4_change_percent": 7.924933025526504
+    },
+    {
+      "experiment": "B2",
+      "fold": "F2",
+      "level": "W_by_month",
+      "key": "2024-01",
+      "P4_W": 89287410.03671017,
+      "W": 96805561.62495902,
+      "P4_change_percent": 8.42016985951075
+    },
+    {
+      "experiment": "B2",
+      "fold": "F2",
+      "level": "W_by_month",
+      "key": "2024-02",
+      "P4_W": 125201990.5952494,
+      "W": 134921896.4945796,
+      "P4_change_percent": 7.7633796819992495
+    },
+    {
+      "experiment": "B2",
+      "fold": "F2",
+      "level": "W_by_month",
+      "key": "2024-03",
+      "P4_W": 147625217.99899423,
+      "W": 149738935.10004088,
+      "P4_change_percent": 1.4318130260515982
+    },
+    {
+      "experiment": "B2",
+      "fold": "F2",
+      "level": "W_by_month",
+      "key": "2024-04",
+      "P4_W": 105585080.32508472,
+      "W": 125971483.57106791,
+      "P4_change_percent": 19.30803403588437
+    },
+    {
+      "experiment": "B2",
+      "fold": "F2",
+      "level": "W_by_month",
+      "key": "2024-05",
+      "P4_W": 173265377.15719545,
+      "W": 169484058.8237918,
+      "P4_change_percent": -2.182385422549271
+    },
+    {
+      "experiment": "B2",
+      "fold": "F3",
+      "level": "W_by_group",
+      "key": "G1",
+      "P4_W": 973403869.5066028,
+      "W": 1017875170.0782672,
+      "P4_change_percent": 4.5686381536787835
+    },
+    {
+      "experiment": "B2",
+      "fold": "F3",
+      "level": "W_by_group",
+      "key": "G2",
+      "P4_W": 1090315971.0351322,
+      "W": 1066900169.670138,
+      "P4_change_percent": -2.1476161027672913
+    },
+    {
+      "experiment": "B2",
+      "fold": "F3",
+      "level": "W_by_month",
+      "key": "2024-06",
+      "P4_W": 155289781.4258545,
+      "W": 169232204.54194716,
+      "P4_change_percent": 8.97832618996226
+    },
+    {
+      "experiment": "B2",
+      "fold": "F3",
+      "level": "W_by_month",
+      "key": "2024-07",
+      "P4_W": 246265900.45871347,
+      "W": 230471572.0390117,
+      "P4_change_percent": -6.41352635110346
+    },
+    {
+      "experiment": "B2",
+      "fold": "F3",
+      "level": "W_by_month",
+      "key": "2024-08",
+      "P4_W": 164369346.93887293,
+      "W": 182154723.95530355,
+      "P4_change_percent": 10.820373352851975
+    },
+    {
+      "experiment": "B2",
+      "fold": "F3",
+      "level": "W_by_month",
+      "key": "2024-09",
+      "P4_W": 245583326.6047745,
+      "W": 247657129.3604493,
+      "P4_change_percent": 0.8444395571741037
+    },
+    {
+      "experiment": "B2",
+      "fold": "F3",
+      "level": "W_by_month",
+      "key": "2024-10",
+      "P4_W": 187248329.35914817,
+      "W": 171728306.07206082,
+      "P4_change_percent": -8.28847089862117
+    },
+    {
+      "experiment": "B2",
+      "fold": "F3",
+      "level": "W_by_month",
+      "key": "2024-11",
+      "P4_W": 141866568.31164703,
+      "W": 136550272.73722255,
+      "P4_change_percent": -3.74739139579795
+    },
+    {
+      "experiment": "B2",
+      "fold": "F3",
+      "level": "W_by_month",
+      "key": "2024-12",
+      "P4_W": 120280272.61912848,
+      "W": 124810878.17812228,
+      "P4_change_percent": 3.766707091976862
+    },
+    {
+      "experiment": "B2",
+      "fold": "F3",
+      "level": "W_by_month",
+      "key": "2025-01",
+      "P4_W": 127925794.75238456,
+      "W": 140624580.6040051,
+      "P4_change_percent": 9.92668122656617
+    },
+    {
+      "experiment": "B2",
+      "fold": "F3",
+      "level": "W_by_month",
+      "key": "2025-02",
+      "P4_W": 150837648.8481412,
+      "W": 167837031.2278158,
+      "P4_change_percent": 11.269986312760082
+    },
+    {
+      "experiment": "B2",
+      "fold": "F3",
+      "level": "W_by_month",
+      "key": "2025-03",
+      "P4_W": 133735551.5835785,
+      "W": 133134604.523808,
+      "P4_change_percent": -0.4493547547040455
+    },
+    {
+      "experiment": "B2",
+      "fold": "F3",
+      "level": "W_by_month",
+      "key": "2025-04",
+      "P4_W": 169123609.331169,
+      "W": 164871718.7411548,
+      "P4_change_percent": -2.5140727582796507
+    },
+    {
+      "experiment": "B2",
+      "fold": "F3",
+      "level": "W_by_month",
+      "key": "2025-05",
+      "P4_W": 221193710.30832264,
+      "W": 215702317.7675042,
+      "P4_change_percent": -2.482616948358962
+    },
+    {
+      "experiment": "B3",
+      "fold": "F2",
+      "level": "W_by_group",
+      "key": "G1",
+      "P4_W": 843489435.7970266,
+      "W": 909755065.5275764,
+      "P4_change_percent": 7.856130369663039
+    },
+    {
+      "experiment": "B3",
+      "fold": "F2",
+      "level": "W_by_group",
+      "key": "G2",
+      "P4_W": 277997061.0532715,
+      "W": 272604095.8682174,
+      "P4_change_percent": -1.9399360427125645
+    },
+    {
+      "experiment": "B3",
+      "fold": "F2",
+      "level": "W_by_month",
+      "key": "2023-06",
+      "P4_W": 50268038.96736477,
+      "W": 57135441.09663741,
+      "P4_change_percent": 13.66156760905497
+    },
+    {
+      "experiment": "B3",
+      "fold": "F2",
+      "level": "W_by_month",
+      "key": "2023-07",
+      "P4_W": 74733812.05949733,
+      "W": 76776772.87846014,
+      "P4_change_percent": 2.733649953967765
+    },
+    {
+      "experiment": "B3",
+      "fold": "F2",
+      "level": "W_by_month",
+      "key": "2023-08",
+      "P4_W": 61792862.90080312,
+      "W": 80500792.62960719,
+      "P4_change_percent": 30.275227349210464
+    },
+    {
+      "experiment": "B3",
+      "fold": "F2",
+      "level": "W_by_month",
+      "key": "2023-09",
+      "P4_W": 67733166.65681048,
+      "W": 65535121.17386007,
+      "P4_change_percent": -3.245153875777629
+    },
+    {
+      "experiment": "B3",
+      "fold": "F2",
+      "level": "W_by_month",
+      "key": "2023-10",
+      "P4_W": 84173048.74299379,
+      "W": 86394029.74217808,
+      "P4_change_percent": 2.6385892305809566
+    },
+    {
+      "experiment": "B3",
+      "fold": "F2",
+      "level": "W_by_month",
+      "key": "2023-11",
+      "P4_W": 77561551.32715029,
+      "W": 80363737.53517908,
+      "P4_change_percent": 3.6128547715727377
+    },
+    {
+      "experiment": "B3",
+      "fold": "F2",
+      "level": "W_by_month",
+      "key": "2023-12",
+      "P4_W": 64258940.082444355,
+      "W": 69492942.39703494,
+      "P4_change_percent": 8.145173742167788
+    },
+    {
+      "experiment": "B3",
+      "fold": "F2",
+      "level": "W_by_month",
+      "key": "2024-01",
+      "P4_W": 89287410.03671017,
+      "W": 99572526.5624788,
+      "P4_change_percent": 11.519111733154697
+    },
+    {
+      "experiment": "B3",
+      "fold": "F2",
+      "level": "W_by_month",
+      "key": "2024-02",
+      "P4_W": 125201990.5952494,
+      "W": 117767985.6983196,
+      "P4_change_percent": -5.9376091878301835
+    },
+    {
+      "experiment": "B3",
+      "fold": "F2",
+      "level": "W_by_month",
+      "key": "2024-03",
+      "P4_W": 147625217.99899423,
+      "W": 139101362.7132249,
+      "P4_change_percent": -5.773983199691135
+    },
+    {
+      "experiment": "B3",
+      "fold": "F2",
+      "level": "W_by_month",
+      "key": "2024-04",
+      "P4_W": 105585080.32508472,
+      "W": 124626988.55511424,
+      "P4_change_percent": 18.034658089383093
+    },
+    {
+      "experiment": "B3",
+      "fold": "F2",
+      "level": "W_by_month",
+      "key": "2024-05",
+      "P4_W": 173265377.15719545,
+      "W": 185091460.41369915,
+      "P4_change_percent": 6.825416277929808
+    },
+    {
+      "experiment": "B3",
+      "fold": "F3",
+      "level": "W_by_group",
+      "key": "G1",
+      "P4_W": 973403869.5066028,
+      "W": 1046787908.0769372,
+      "P4_change_percent": 7.5389096827333635
+    },
+    {
+      "experiment": "B3",
+      "fold": "F3",
+      "level": "W_by_group",
+      "key": "G2",
+      "P4_W": 1090315971.0351322,
+      "W": 1119322414.3525603,
+      "P4_change_percent": 2.660370396105427
+    },
+    {
+      "experiment": "B3",
+      "fold": "F3",
+      "level": "W_by_month",
+      "key": "2024-06",
+      "P4_W": 155289781.4258545,
+      "W": 186070809.72338623,
+      "P4_change_percent": 19.821670180036023
+    },
+    {
+      "experiment": "B3",
+      "fold": "F3",
+      "level": "W_by_month",
+      "key": "2024-07",
+      "P4_W": 246265900.45871347,
+      "W": 255325601.59240216,
+      "P4_change_percent": 3.6788289068090174
+    },
+    {
+      "experiment": "B3",
+      "fold": "F3",
+      "level": "W_by_month",
+      "key": "2024-08",
+      "P4_W": 164369346.93887293,
+      "W": 161254090.875261,
+      "P4_change_percent": -1.895277995337208
+    },
+    {
+      "experiment": "B3",
+      "fold": "F3",
+      "level": "W_by_month",
+      "key": "2024-09",
+      "P4_W": 245583326.6047745,
+      "W": 256759043.18449545,
+      "P4_change_percent": 4.550682138818973
+    },
+    {
+      "experiment": "B3",
+      "fold": "F3",
+      "level": "W_by_month",
+      "key": "2024-10",
+      "P4_W": 187248329.35914817,
+      "W": 183560498.1623517,
+      "P4_change_percent": -1.9694868356999184
+    },
+    {
+      "experiment": "B3",
+      "fold": "F3",
+      "level": "W_by_month",
+      "key": "2024-11",
+      "P4_W": 141866568.31164703,
+      "W": 147509405.0389489,
+      "P4_change_percent": 3.9775662402053102
+    },
+    {
+      "experiment": "B3",
+      "fold": "F3",
+      "level": "W_by_month",
+      "key": "2024-12",
+      "P4_W": 120280272.61912848,
+      "W": 132683510.93924484,
+      "P4_change_percent": 10.311947296121993
+    },
+    {
+      "experiment": "B3",
+      "fold": "F3",
+      "level": "W_by_month",
+      "key": "2025-01",
+      "P4_W": 127925794.75238456,
+      "W": 138073485.67794472,
+      "P4_change_percent": 7.932482221589643
+    },
+    {
+      "experiment": "B3",
+      "fold": "F3",
+      "level": "W_by_month",
+      "key": "2025-02",
+      "P4_W": 150837648.8481412,
+      "W": 173385567.03194332,
+      "P4_change_percent": 14.948468340621446
+    },
+    {
+      "experiment": "B3",
+      "fold": "F3",
+      "level": "W_by_month",
+      "key": "2025-03",
+      "P4_W": 133735551.5835785,
+      "W": 133003722.53880297,
+      "P4_change_percent": -0.5472210164835567
+    },
+    {
+      "experiment": "B3",
+      "fold": "F3",
+      "level": "W_by_month",
+      "key": "2025-04",
+      "P4_W": 169123609.331169,
+      "W": 182533239.31705785,
+      "P4_change_percent": 7.928892978880797
+    },
+    {
+      "experiment": "B3",
+      "fold": "F3",
+      "level": "W_by_month",
+      "key": "2025-05",
+      "P4_W": 221193710.30832264,
+      "W": 215951348.34765857,
+      "P4_change_percent": -2.3700321104776156
+    }
+  ],
+  "source_sha256": {
+    "B1": {
+      "run_gefs_b1.py": "ae37ef1071bb1540abde00881dced8c5f6fe8f7acb122201e3b19da10978463d",
+      "verify_gefs_b1.py": "1f202bf43621ddada6b75484eb8b358e0a0b85615d9eadcf7c80048678457e23",
+      "features_gefs_b1.py": "dd6797bbdf1ed4b9b7773d99c867bb388a0051bb8f3371f72fc58ceb9d4849dd",
+      "collect_gefs_b1.py": "67151f01cec9487ff013d27ee1cc0201ce262931f6c754293e8d8cca87c0e035",
+      "test_gefs_b1.py": "cd8fa66d35d6454021be707df7a5dce208cf117c8a8bb596a02674841897b749",
+      "b1_gefs_config.json": "5e7374fbc8db23b8c83b5aab838d5dd878dd322d44092bb640a8c6a9e452f77b",
+      "requirements-gefs.txt": "224ec1190e5ab705f9e25c08a5d2e0482a2c915a00574af886b32f85b7c2b168",
+      "run_peer_w.py": "f6718aeaec3ed8dd5605cb3db9919cb255ada2dfffa3cf8b369054c4c6ae8604",
+      "features_p3.py": "0620732e57b4d2d4884d3c23ee9b4221aeaeb17c840d1a71666abac44d37c15e",
+      "training_weights.py": "66909735fa4a2881613b8b251f08fbf98444853773c3206b8f082e953f188be9",
+      "train_smoke.py": "1b9cf67f279cebf8225cacc57f3e2d50afc0b47b08abd78c4bd2b5289c2bb605",
+      "AB_EVALUATION_CONTRACT.json": "d65965390a3027d6b3267c352d7222cdfd76a9dca128e7d319bab3c77465b1ec"
+    },
+    "B2": {
+      "run_foundation_b23.py": "d4f9b0c21adb6ac263b8c001972fc4d9cf2635199a33b835d266c3c7162f7681",
+      "foundation_b23.py": "c23014c688988bb601da1ea87794282aaa9540e832dfcf5f402b6d3b4f9bacb7",
+      "verify_foundation_b23.py": "b2933ead9287ec2130dbf1ca79b314f7195aee3890a6fbbd004f387a749e5b9b",
+      "test_foundation_b23.py": "8d9a18bb915d9aa5e3bf08fcbac84817f3f0db7311439d41843ebe0b4bf9a005",
+      "b23_foundation_config.json": "c3fd5e263e1690a54254aca5ce2d4f629fb94a0ecad03f1a838a47c10a74b353",
+      "requirements-foundation.txt": "c3b0a3ea6127c650bb315934de29f940197c7eb496c3b5e5ba429202d71ba0dd",
+      "run_peer_w.py": "f6718aeaec3ed8dd5605cb3db9919cb255ada2dfffa3cf8b369054c4c6ae8604",
+      "features_p3.py": "0620732e57b4d2d4884d3c23ee9b4221aeaeb17c840d1a71666abac44d37c15e",
+      "training_weights.py": "66909735fa4a2881613b8b251f08fbf98444853773c3206b8f082e953f188be9",
+      "train_smoke.py": "1b9cf67f279cebf8225cacc57f3e2d50afc0b47b08abd78c4bd2b5289c2bb605",
+      "AB_EVALUATION_CONTRACT.json": "d65965390a3027d6b3267c352d7222cdfd76a9dca128e7d319bab3c77465b1ec"
+    },
+    "B3": {
+      "run_foundation_b23.py": "d4f9b0c21adb6ac263b8c001972fc4d9cf2635199a33b835d266c3c7162f7681",
+      "foundation_b23.py": "c23014c688988bb601da1ea87794282aaa9540e832dfcf5f402b6d3b4f9bacb7",
+      "verify_foundation_b23.py": "b2933ead9287ec2130dbf1ca79b314f7195aee3890a6fbbd004f387a749e5b9b",
+      "test_foundation_b23.py": "8d9a18bb915d9aa5e3bf08fcbac84817f3f0db7311439d41843ebe0b4bf9a005",
+      "b23_foundation_config.json": "c3fd5e263e1690a54254aca5ce2d4f629fb94a0ecad03f1a838a47c10a74b353",
+      "requirements-foundation.txt": "c3b0a3ea6127c650bb315934de29f940197c7eb496c3b5e5ba429202d71ba0dd",
+      "run_peer_w.py": "f6718aeaec3ed8dd5605cb3db9919cb255ada2dfffa3cf8b369054c4c6ae8604",
+      "features_p3.py": "0620732e57b4d2d4884d3c23ee9b4221aeaeb17c840d1a71666abac44d37c15e",
+      "training_weights.py": "66909735fa4a2881613b8b251f08fbf98444853773c3206b8f082e953f188be9",
+      "train_smoke.py": "1b9cf67f279cebf8225cacc57f3e2d50afc0b47b08abd78c4bd2b5289c2bb605",
+      "AB_EVALUATION_CONTRACT.json": "d65965390a3027d6b3267c352d7222cdfd76a9dca128e7d319bab3c77465b1ec"
+    }
+  },
+  "versions": {
+    "B1": {
+      "python": "3.12.13",
+      "lightgbm": "4.6.0",
+      "numpy": "2.2.6",
+      "pandas": "2.2.3",
+      "pyarrow": "19.0.1"
+    },
+    "B2": {
+      "numpy": "2.2.6",
+      "pandas": "2.2.3",
+      "pyarrow": "19.0.1",
+      "lightgbm": "4.6.0",
+      "torch": "2.15.0",
+      "tabpfn": "9.2.0",
+      "tabicl": "2.2.0"
+    },
+    "B3": {
+      "numpy": "2.2.6",
+      "pandas": "2.2.3",
+      "pyarrow": "19.0.1",
+      "lightgbm": "4.6.0",
+      "torch": "2.15.0",
+      "tabpfn": "9.2.0",
+      "tabicl": "2.2.0"
+    }
+  },
+  "final_test_counts": {
+    "foundation_and_common": 24,
+    "gefs": 4
+  },
+  "verified_source_notes": "Original predictions/contexts stay local; no official submission eligibility claim"
+}

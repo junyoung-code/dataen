@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "artifact_root": "outputs",
+  "legacy_aliases": {
+    "b1_annual": "runs/b1_gefs",
+    "b23_tabpfn": "runs/b2_tabpfn",
+    "b23_tabicl": "runs/b3_tabicl",
+    "b1_gefs_full": "datasets/gefs/full",
+    "b1_gefs_trial": "datasets/gefs/trial",
+    "b23_models": "models/foundation",
+    "b1_research": "research/gefs",
+    "b23_research": "research/foundation",
+    "b1_annual.log": "logs/b1/train.log",
+    "b1_annual.verify.log": "logs/b1/verify.log",
+    "b1_annual.reverify.log": "logs/b1/reverify.log",
+    "b23_tabpfn.log": "logs/b2/run.log",
+    "b23_tabpfn.verify.log": "logs/b2/verify.log",
+    "b23_tabicl.log": "logs/b3/run.log",
+    "b23_tabicl.verify.log": "logs/b3/verify.log"
+  }
+}

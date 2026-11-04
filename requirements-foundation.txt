@@ -1,0 +1,10 @@
+-r requirements.txt
+torch==2.15.0
+tabpfn==9.2.0
+tabicl==2.2.0
+skrub==0.10.1
+scipy==1.18.1
+huggingface-hub==2.4.0
+pydantic==2.14.2
+einops==0.8.2
+safetensors==0.8.0
