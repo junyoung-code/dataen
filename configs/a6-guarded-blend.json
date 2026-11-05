@@ -1,0 +1,29 @@
+{
+  "name": "A6 guarded historical candidate",
+  "model_order": [
+    "p4",
+    "tabm10",
+    "tft20"
+  ],
+  "default_weights": [
+    0.5,
+    0.2,
+    0.3
+  ],
+  "override": {
+    "group": "G2",
+    "condition": "zero supervised daylight rows inside the models training period, ending no later than forecast issuance",
+    "weights": [
+      0.625,
+      0.0,
+      0.375
+    ]
+  },
+  "allocation": "original sites current_group A->G1/B->G2",
+  "internal_round_weights": {
+    "10": 0.25,
+    "17": 0.75
+  },
+  "status": "validated historical policy specification; final training/serving runner not executed",
+  "selection_sha256": "c7cbacb6a0e2a8e36ccfc8a2bc676de000631c8bd749e6bca237cae814ed67a4"
+}

@@ -23,3 +23,12 @@ model_round_*.txt
 !.env.example
 *.pem
 *.key
+
+# Model/cache/transfer artifacts must stay out of source publication
+*.pt
+*.pth
+*.npy
+*.npz
+*.bundle
+*.tar
+*.tar.gz
