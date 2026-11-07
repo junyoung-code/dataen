@@ -1,0 +1,6 @@
+-r weather.txt
+blosc2==2.7.1
+msgpack==1.2.4
+ndindex==1.10.1
+numexpr==2.14.2
+py-cpuinfo==9.0.0

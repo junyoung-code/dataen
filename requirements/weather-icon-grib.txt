@@ -1,0 +1,8 @@
+-r weather.txt
+eccodes==2.50.0
+eccodeslib==2.50.0.34
+eckitlib==2.5.0.34
+attrs==26.1.0
+cffi==2.1.1
+findlibs==0.1.5
+pycparser==3.12

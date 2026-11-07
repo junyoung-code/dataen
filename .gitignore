@@ -3,6 +3,9 @@
 /data
 /handover 2/
 /private/
+/archive/
+/workspaces/*
+!/workspaces/README.md
 *.zip
 *.parquet
 

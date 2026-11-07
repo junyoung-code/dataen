@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "region": {"latitude_min": 30.0, "latitude_max": 42.0, "longitude_min": 120.0, "longitude_max": 134.0},
+  "region_reason": "Fixed East Asia rectangle including Korea and upstream seas; independent of competition sites/capacities.",
+  "initialization_rule": "target energy day D minus 2 calendar days at 00 UTC",
+  "availability_lag_hours_assumed": 24,
+  "availability_status": "archive acquisition only; not a per-file historical publication certification",
+  "sources": {
+    "gfs": {
+      "metadata_file": "noaa-gfs-forecast.metadata.json",
+      "start": "2021-05-03", "end": "2026-05-31",
+      "lead_hours": [39,42,45,48,51,54,57,60,63],
+      "variables": ["downward_short_wave_radiation_flux_surface", "total_cloud_cover_atmosphere", "precipitable_water_atmosphere", "relative_humidity_2m", "temperature_2m", "wind_u_10m", "wind_v_10m", "precipitation_surface"]
+    },
+    "gefs": {
+      "metadata_file": "noaa-gefs-forecast-35-day.metadata.json",
+      "start": "2021-01-01", "end": "2026-05-31",
+      "lead_hours": [39,42,45,48,51,54,57,60,63],
+      "variables": ["downward_short_wave_radiation_flux_surface", "total_cloud_cover_atmosphere"]
+    },
+    "icon": {
+      "metadata_file": "icon_global.metadata.json",
+      "start": "2023-03-20", "end": "2026-02-02",
+      "lead_hours": [36,42,48,54,60,66],
+      "variables": ["mean_surface_direct_short_wave_radiation_flux", "mean_surface_diffuse_short_wave_radiation_flux", "total_cloud_cover"],
+      "notes": "Unstructured native grid. Preserve original values; radiation accumulation/averaging metadata requires original DWD documentation before feature use. Public mirror currently ends at 2026-01-31 initialization."
+    }
+  }
+}

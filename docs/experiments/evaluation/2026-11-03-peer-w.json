@@ -1,0 +1,786 @@
+{
+  "date": "2026-11-03",
+  "status": "complete",
+  "protocol": "peer-annual-w-causal-v1",
+  "code_commit": "a9001d72ad718513ebd24107769ffe61822f4934",
+  "source_sha256": {
+    "run_peer_w.py": "f6718aeaec3ed8dd5605cb3db9919cb255ada2dfffa3cf8b369054c4c6ae8604",
+    "features_p3.py": "0620732e57b4d2d4884d3c23ee9b4221aeaeb17c840d1a71666abac44d37c15e",
+    "training_weights.py": "66909735fa4a2881613b8b251f08fbf98444853773c3206b8f082e953f188be9",
+    "train_smoke.py": "1b9cf67f279cebf8225cacc57f3e2d50afc0b47b08abd78c4bd2b5289c2bb605",
+    "test_peer_w.py": "df48e623466aa6472054087a5d29c80d03bc7455eaa5ba80babb39ed27ca86bb"
+  },
+  "training_source_sha256": {
+    "run_peer_w.py": "c83593e8b0850a70bea003b5ca00c06e6c7defe7656ce14e79b1ad8a3054f25c",
+    "features_p3.py": "0620732e57b4d2d4884d3c23ee9b4221aeaeb17c840d1a71666abac44d37c15e",
+    "training_weights.py": "66909735fa4a2881613b8b251f08fbf98444853773c3206b8f082e953f188be9",
+    "train_smoke.py": "1b9cf67f279cebf8225cacc57f3e2d50afc0b47b08abd78c4bd2b5289c2bb605",
+    "test_peer_w.py": "4cd17a6731b0b01030534b4e1506218ea2ae9f34ee934ab6187c196daee53ac9"
+  },
+  "run_directory": "outputs/peer_w_20261103_163512_rescore",
+  "original_run_directory": "outputs/peer_w_20261103_163512",
+  "peer_reference": {
+    "repository": "aiswody/oibc2026",
+    "commit": "871d972c2b47bb07ef93ce51d186a1513f7e4ff7",
+    "files": [
+      "src/oibc/config.py",
+      "src/oibc/scoring.py",
+      "src/oibc/fcst.py",
+      "src/oibc/data.py",
+      "src/oibc/features.py",
+      "experiments/T701_teammate_p4.py",
+      "notes/teammate_compare.md",
+      "notes/experiments.md"
+    ],
+    "source_sha256": {
+      "src/oibc/config.py": "bdf23b21cb58b761b0e7f9c1c5550bc5c8378a83350a47ba11dac41aef802b12",
+      "src/oibc/scoring.py": "76db1520f872ecff45067e38aedb0d84fce46724d7ad1474b37c426d2b6df26a",
+      "src/oibc/fcst.py": "b9a9e27b2e275e7cecec72b686401cd5a248ca8e897e28b34c36a116532b96ca",
+      "src/oibc/data.py": "a3b09b98ac9d93c2e959c74a7c2eb2253c3f6817169d6700d90bb0dad9f818ef",
+      "src/oibc/features.py": "5543309df3a3b55bbc342ee347b7bd427d44fc89b021cad600d65c6bf92e2f3e",
+      "experiments/T701_teammate_p4.py": "1d8afd28bb714f0717d5566025ed5ed736d2a08c78a38fd6625c1cc725a9fb8a",
+      "notes/teammate_compare.md": "9527967f4251b23bcdf9973167a5e931d96ce84de8487df9f4b2f382c4cd319d",
+      "notes/experiments.md": "49d19bc4c53acfa91ed13802e2e725a607f7854775242c0db26262d07f6c2b80"
+    }
+  },
+  "comparison_note": "Our model locally trained; peer numbers transcribed from pinned repository records, not locally rerun. Same validation and W; our training cutoff is 7 hours earlier. Historical evaluation, not an untouched test.",
+  "versions": {
+    "python": "3.12.13",
+    "lightgbm": "4.6.0",
+    "numpy": "2.2.6",
+    "pandas": "2.2.3",
+    "pyarrow": "19.0.1"
+  },
+  "machine": {
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "architecture": "arm64",
+    "chip": "Apple M1 Pro",
+    "memory_bytes": 17179869184,
+    "logical_cpus": 10,
+    "macos": "27.0.1",
+    "threads_requested": 4,
+    "hardware_source": "outputs/xgboost_env_20261103/hardware.json (same local machine; this run uses 4 threads)"
+  },
+  "folds": {
+    "F2": {
+      "status": "complete",
+      "fold": "F2",
+      "train_start": "2021-06-01 01:00:00+09:00",
+      "train_end_inclusive": "2023-05-31 17:00:00+09:00",
+      "peer_train_end_inclusive": "2023-06-01 00:00:00+09:00",
+      "eval_start": "2023-06-01 01:00:00+09:00",
+      "eval_end_exclusive": "2024-06-01 01:00:00+09:00",
+      "removed_after_issuance_rows": 742,
+      "removed_after_issuance_daylight_rows": 258,
+      "parameters": {
+        "objective": "regression_l1",
+        "n_estimators": 200,
+        "learning_rate": 0.03,
+        "num_leaves": 127,
+        "min_child_samples": 200,
+        "subsample": 0.8,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.8,
+        "verbosity": -1,
+        "n_jobs": 4,
+        "random_state": 0
+      },
+      "feature_columns": [
+        "wa_cloud",
+        "wa_temp",
+        "wa_humidity",
+        "wa_rain",
+        "wa_wind_speed",
+        "wa_ground_press",
+        "wb_cloud",
+        "wb_temp",
+        "wb_rel_hum",
+        "wb_uv_idx",
+        "wb_precip_prob",
+        "wb_total_liq",
+        "wb_vis",
+        "wb_wind_speed",
+        "wb_dew_point",
+        "elev",
+        "azim",
+        "cosz",
+        "doy_sin",
+        "doy_cos",
+        "hour",
+        "cap",
+        "lat",
+        "lon",
+        "wa_dist",
+        "wb_dist"
+      ],
+      "weight_17": 0.75,
+      "models": {
+        "10": {
+          "train_rows": 476693,
+          "fit_seconds": 9.91663387499284,
+          "train_min": "2021-06-01 06:00:00+09:00",
+          "train_max": "2023-05-31 17:00:00+09:00",
+          "weights": {
+            "mode": "capacity",
+            "rows": 476693,
+            "mean": 1.0,
+            "min": 0.18415426484570105,
+            "max": 1.2768028899210682,
+            "zero_rows": 0,
+            "raw_mean": 78.19530886561725,
+            "price_rows_used": 0
+          },
+          "missing_fraction": {
+            "wa_cloud": 0.0036648325022603646,
+            "wa_temp": 0.0036648325022603646,
+            "wa_humidity": 0.0036648325022603646,
+            "wa_rain": 0.0036648325022603646,
+            "wa_wind_speed": 0.0036648325022603646,
+            "wa_ground_press": 0.0036648325022603646,
+            "wb_cloud": 0.006773751659873335,
+            "wb_temp": 0.006773751659873335,
+            "wb_rel_hum": 0.006773751659873335,
+            "wb_uv_idx": 0.006773751659873335,
+            "wb_precip_prob": 0.006773751659873335,
+            "wb_total_liq": 0.006773751659873335,
+            "wb_vis": 0.006773751659873335,
+            "wb_wind_speed": 0.006773751659873335,
+            "wb_dew_point": 0.006773751659873335,
+            "elev": 0.0,
+            "azim": 0.0,
+            "cosz": 0.0,
+            "doy_sin": 0.0,
+            "doy_cos": 0.0,
+            "hour": 0.0,
+            "cap": 0.0,
+            "lat": 0.0,
+            "lon": 0.0,
+            "wa_dist": 0.0,
+            "wb_dist": 0.0
+          }
+        },
+        "17": {
+          "train_rows": 476693,
+          "fit_seconds": 9.89704779200838,
+          "train_min": "2021-06-01 06:00:00+09:00",
+          "train_max": "2023-05-31 17:00:00+09:00",
+          "weights": {
+            "mode": "capacity",
+            "rows": 476693,
+            "mean": 1.0,
+            "min": 0.18415426484570105,
+            "max": 1.2768028899210682,
+            "zero_rows": 0,
+            "raw_mean": 78.19530886561725,
+            "price_rows_used": 0
+          },
+          "missing_fraction": {
+            "wa_cloud": 0.002420845281973933,
+            "wa_temp": 0.002420845281973933,
+            "wa_humidity": 0.002420845281973933,
+            "wa_rain": 0.002420845281973933,
+            "wa_wind_speed": 0.002420845281973933,
+            "wa_ground_press": 0.002420845281973933,
+            "wb_cloud": 0.003975304860780418,
+            "wb_temp": 0.003975304860780418,
+            "wb_rel_hum": 0.003975304860780418,
+            "wb_uv_idx": 0.003975304860780418,
+            "wb_precip_prob": 0.004623520798501341,
+            "wb_total_liq": 0.004623520798501341,
+            "wb_vis": 0.003975304860780418,
+            "wb_wind_speed": 0.003975304860780418,
+            "wb_dew_point": 0.003975304860780418,
+            "elev": 0.0,
+            "azim": 0.0,
+            "cosz": 0.0,
+            "doy_sin": 0.0,
+            "doy_cos": 0.0,
+            "hour": 0.0,
+            "cap": 0.0,
+            "lat": 0.0,
+            "lon": 0.0,
+            "wa_dist": 0.0,
+            "wb_dist": 0.0
+          }
+        }
+      },
+      "train_raw_rows": 960373,
+      "eval_raw_rows": 1256595,
+      "peer_invalid_eval_rows": 0,
+      "metrics": {
+        "pred_10": {
+          "W": 1172174682.569932,
+          "W_1e8_won": 11.72174682569932,
+          "score_deduction": 117217468.2569932,
+          "weight_sum": 3378502.4400000004,
+          "weighted_mae_kwh": 346.95096522408664,
+          "evaluation_hours": 8784,
+          "observed_site_hours": 1256595,
+          "active_sites": 205,
+          "complete_group_hours": 0,
+          "W_by_group": {
+            "G1": 882160167.2589028,
+            "G2": 290014515.3110292
+          },
+          "W_by_month": {
+            "2023-06": 56302646.023626074,
+            "2023-07": 77680541.77638361,
+            "2023-08": 67034139.998879865,
+            "2023-09": 74444023.70146935,
+            "2023-10": 80049928.42835288,
+            "2023-11": 78144413.63596575,
+            "2023-12": 69532350.25184917,
+            "2024-01": 89437692.81715484,
+            "2024-02": 135572271.91335747,
+            "2024-03": 148635348.89249092,
+            "2024-04": 116488194.52841051,
+            "2024-05": 178853130.6019915
+          }
+        },
+        "pred_17": {
+          "W": 1122729034.3588572,
+          "W_1e8_won": 11.227290343588571,
+          "score_deduction": 112272903.43588573,
+          "weight_sum": 3378502.4400000004,
+          "weighted_mae_kwh": 332.3155907973407,
+          "evaluation_hours": 8784,
+          "observed_site_hours": 1256595,
+          "active_sites": 205,
+          "complete_group_hours": 0,
+          "W_by_group": {
+            "G1": 844694267.9004632,
+            "G2": 278034766.458394
+          },
+          "W_by_month": {
+            "2023-06": 49700165.612561986,
+            "2023-07": 75389365.73258135,
+            "2023-08": 62030272.63437988,
+            "2023-09": 66166553.81851235,
+            "2023-10": 86586062.83400713,
+            "2023-11": 77845085.64320502,
+            "2023-12": 63495237.94357746,
+            "2024-01": 89511489.67837223,
+            "2024-02": 123918522.54170236,
+            "2024-03": 148434483.044586,
+            "2024-04": 106836827.12472859,
+            "2024-05": 172814967.7506429
+          }
+        },
+        "ensemble": {
+          "W": 1121486496.8502982,
+          "W_1e8_won": 11.214864968502981,
+          "score_deduction": 112148649.68502982,
+          "weight_sum": 3378502.4400000004,
+          "weighted_mae_kwh": 331.9478132004244,
+          "evaluation_hours": 8784,
+          "observed_site_hours": 1256595,
+          "active_sites": 205,
+          "complete_group_hours": 0,
+          "W_by_group": {
+            "G1": 843489435.7970266,
+            "G2": 277997061.0532715
+          },
+          "W_by_month": {
+            "2023-06": 50268038.96736477,
+            "2023-07": 74733812.05949734,
+            "2023-08": 61792862.90080311,
+            "2023-09": 67733166.65681048,
+            "2023-10": 84173048.7429938,
+            "2023-11": 77561551.32715029,
+            "2023-12": 64258940.082444355,
+            "2024-01": 89287410.03671017,
+            "2024-02": 125201990.59524943,
+            "2024-03": 147625217.9989942,
+            "2024-04": 105585080.32508472,
+            "2024-05": 173265377.15719545
+          }
+        }
+      },
+      "seen_metrics": {
+        "W": 524282066.96259093,
+        "W_1e8_won": 5.242820669625909,
+        "score_deduction": 52428206.696259096,
+        "weight_sum": 3378502.4400000004,
+        "weighted_mae_kwh": 155.18179319787345,
+        "evaluation_hours": 8784,
+        "observed_site_hours": 931104,
+        "active_sites": 106,
+        "complete_group_hours": 0,
+        "W_by_group": {
+          "G1": 485894991.9833748,
+          "G2": 38387074.97921622
+        },
+        "W_by_month": {
+          "2023-06": 50120969.89652965,
+          "2023-07": 62616676.783143006,
+          "2023-08": 47151677.9690021,
+          "2023-09": 52363233.98547582,
+          "2023-10": 40184749.57852288,
+          "2023-11": 31231192.58903663,
+          "2023-12": 27301957.25850533,
+          "2024-01": 32413538.763123624,
+          "2024-02": 45196372.30570312,
+          "2024-03": 49135185.39856954,
+          "2024-04": 36639458.546057515,
+          "2024-05": 49927053.888921745
+        }
+      },
+      "raw_label_metrics": {
+        "W": 1121486496.1250255,
+        "W_1e8_won": 11.214864961250255,
+        "score_deduction": 112148649.61250256,
+        "weight_sum": 3378502.4400000004,
+        "weighted_mae_kwh": 331.94781298575157,
+        "evaluation_hours": 8784,
+        "observed_site_hours": 1256595,
+        "active_sites": 205,
+        "complete_group_hours": 0,
+        "W_by_group": {
+          "G1": 843489435.4214311,
+          "G2": 277997060.7035943
+        },
+        "W_by_month": {
+          "2023-06": 50268038.98176819,
+          "2023-07": 74733812.03404072,
+          "2023-08": 61792862.74733349,
+          "2023-09": 67733166.56392103,
+          "2023-10": 84173048.76235186,
+          "2023-11": 77561551.21704543,
+          "2023-12": 64258940.05030179,
+          "2024-01": 89287410.26319456,
+          "2024-02": 125201990.60308419,
+          "2024-03": 147625217.6236931,
+          "2024-04": 105585080.3454523,
+          "2024-05": 173265376.93283874
+        }
+      },
+      "total_seconds": 43.102400208008476,
+      "peak_process_memory_mib": 2542.1,
+      "model_sha256": {
+        "10": "eb75c6e6121d49bd3cc30cf5019493d8f324f56835813a3f51e6c3cf3277a7bf",
+        "17": "e39725102065408b7e087883b2ac8f9b066c331255c7764f7271da2390e0f22e"
+      }
+    },
+    "F3": {
+      "status": "complete",
+      "fold": "F3",
+      "train_start": "2022-06-01 01:00:00+09:00",
+      "train_end_inclusive": "2024-05-31 17:00:00+09:00",
+      "peer_train_end_inclusive": "2024-06-01 00:00:00+09:00",
+      "eval_start": "2024-06-01 01:00:00+09:00",
+      "eval_end_exclusive": "2025-06-01 01:00:00+09:00",
+      "removed_after_issuance_rows": 1435,
+      "removed_after_issuance_daylight_rows": 547,
+      "parameters": {
+        "objective": "regression_l1",
+        "n_estimators": 200,
+        "learning_rate": 0.03,
+        "num_leaves": 127,
+        "min_child_samples": 200,
+        "subsample": 0.8,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.8,
+        "verbosity": -1,
+        "n_jobs": 4,
+        "random_state": 0
+      },
+      "feature_columns": [
+        "wa_cloud",
+        "wa_temp",
+        "wa_humidity",
+        "wa_rain",
+        "wa_wind_speed",
+        "wa_ground_press",
+        "wb_cloud",
+        "wb_temp",
+        "wb_rel_hum",
+        "wb_uv_idx",
+        "wb_precip_prob",
+        "wb_total_liq",
+        "wb_vis",
+        "wb_wind_speed",
+        "wb_dew_point",
+        "elev",
+        "azim",
+        "cosz",
+        "doy_sin",
+        "doy_cos",
+        "hour",
+        "cap",
+        "lat",
+        "lon",
+        "wa_dist",
+        "wb_dist"
+      ],
+      "weight_17": 0.75,
+      "models": {
+        "10": {
+          "train_rows": 962913,
+          "fit_seconds": 18.789728500007186,
+          "train_min": "2022-06-01 06:00:00+09:00",
+          "train_max": "2024-05-31 17:00:00+09:00",
+          "weights": {
+            "mode": "capacity",
+            "rows": 962913,
+            "mean": 0.9999999999999998,
+            "min": 0.12434574484041272,
+            "max": 11.981576682203523,
+            "zero_rows": 0,
+            "raw_mean": 115.80613101808557,
+            "price_rows_used": 0
+          },
+          "missing_fraction": {
+            "wa_cloud": 0.0,
+            "wa_temp": 0.0,
+            "wa_humidity": 0.0,
+            "wa_rain": 0.0,
+            "wa_wind_speed": 0.0,
+            "wa_ground_press": 0.0,
+            "wb_cloud": 0.0029306905192888664,
+            "wb_temp": 0.0029306905192888664,
+            "wb_rel_hum": 0.0029306905192888664,
+            "wb_uv_idx": 0.0029306905192888664,
+            "wb_precip_prob": 0.0029306905192888664,
+            "wb_total_liq": 0.0029306905192888664,
+            "wb_vis": 0.0029306905192888664,
+            "wb_wind_speed": 0.0029306905192888664,
+            "wb_dew_point": 0.0029306905192888664,
+            "elev": 0.0,
+            "azim": 0.0,
+            "cosz": 0.0,
+            "doy_sin": 0.0,
+            "doy_cos": 0.0,
+            "hour": 0.0,
+            "cap": 0.0,
+            "lat": 0.0,
+            "lon": 0.0,
+            "wa_dist": 0.0,
+            "wb_dist": 0.0
+          }
+        },
+        "17": {
+          "train_rows": 962913,
+          "fit_seconds": 19.38400833401829,
+          "train_min": "2022-06-01 06:00:00+09:00",
+          "train_max": "2024-05-31 17:00:00+09:00",
+          "weights": {
+            "mode": "capacity",
+            "rows": 962913,
+            "mean": 0.9999999999999998,
+            "min": 0.12434574484041272,
+            "max": 11.981576682203523,
+            "zero_rows": 0,
+            "raw_mean": 115.80613101808557,
+            "price_rows_used": 0
+          },
+          "missing_fraction": {
+            "wa_cloud": 4.361764770025953e-05,
+            "wa_temp": 4.361764770025953e-05,
+            "wa_humidity": 4.361764770025953e-05,
+            "wa_rain": 4.361764770025953e-05,
+            "wa_wind_speed": 4.361764770025953e-05,
+            "wa_ground_press": 4.361764770025953e-05,
+            "wb_cloud": 0.0007695399272831502,
+            "wb_temp": 0.0007695399272831502,
+            "wb_rel_hum": 0.0007695399272831502,
+            "wb_uv_idx": 0.0007695399272831502,
+            "wb_precip_prob": 0.0007695399272831502,
+            "wb_total_liq": 0.0007695399272831502,
+            "wb_vis": 0.0007695399272831502,
+            "wb_wind_speed": 0.0007695399272831502,
+            "wb_dew_point": 0.0007695399272831502,
+            "elev": 0.0,
+            "azim": 0.0,
+            "cosz": 0.0,
+            "doy_sin": 0.0,
+            "doy_cos": 0.0,
+            "hour": 0.0,
+            "cap": 0.0,
+            "lat": 0.0,
+            "lon": 0.0,
+            "wa_dist": 0.0,
+            "wb_dist": 0.0
+          }
+        }
+      },
+      "train_raw_rows": 1932487,
+      "eval_raw_rows": 2170645,
+      "peer_invalid_eval_rows": 0,
+      "metrics": {
+        "pred_10": {
+          "W": 2165694719.7972493,
+          "W_1e8_won": 21.656947197972492,
+          "score_deduction": 216569471.97972494,
+          "weight_sum": 3106254.56,
+          "weighted_mae_kwh": 697.2045200948531,
+          "evaluation_hours": 8760,
+          "observed_site_hours": 2170645,
+          "active_sites": 253,
+          "complete_group_hours": 11592,
+          "W_by_group": {
+            "G1": 1015424003.3320308,
+            "G2": 1150270716.4652188
+          },
+          "W_by_month": {
+            "2024-06": 165527016.97554916,
+            "2024-07": 263196619.58391088,
+            "2024-08": 176401558.98781407,
+            "2024-09": 240463245.78317797,
+            "2024-10": 202959795.68086588,
+            "2024-11": 140759574.06947663,
+            "2024-12": 119441372.3265256,
+            "2025-01": 139520386.03371403,
+            "2025-02": 156325912.6374092,
+            "2025-03": 150358881.4885084,
+            "2025-04": 172251602.02002952,
+            "2025-05": 238488754.21026808
+          }
+        },
+        "pred_17": {
+          "W": 2068855056.502735,
+          "W_1e8_won": 20.68855056502735,
+          "score_deduction": 206885505.6502735,
+          "weight_sum": 3106254.56,
+          "weighted_mae_kwh": 666.0288191263805,
+          "evaluation_hours": 8760,
+          "observed_site_hours": 2170645,
+          "active_sites": 253,
+          "complete_group_hours": 11592,
+          "W_by_group": {
+            "G1": 978425524.5628396,
+            "G2": 1090429531.9398952
+          },
+          "W_by_month": {
+            "2024-06": 154601759.46062955,
+            "2024-07": 243955708.34317142,
+            "2024-08": 167479566.39221653,
+            "2024-09": 249492729.03294605,
+            "2024-10": 183754025.17770103,
+            "2024-11": 144998466.69542614,
+            "2024-12": 121465981.8575938,
+            "2025-01": 130212942.88503028,
+            "2025-02": 150145243.65491602,
+            "2025-03": 130739657.0911881,
+            "2025-04": 173720665.71288985,
+            "2025-05": 218288310.19902608
+          }
+        },
+        "ensemble": {
+          "W": 2063719840.541735,
+          "W_1e8_won": 20.63719840541735,
+          "score_deduction": 206371984.0541735,
+          "weight_sum": 3106254.56,
+          "weighted_mae_kwh": 664.375633316329,
+          "evaluation_hours": 8760,
+          "observed_site_hours": 2170645,
+          "active_sites": 253,
+          "complete_group_hours": 11592,
+          "W_by_group": {
+            "G1": 973403869.5066028,
+            "G2": 1090315971.0351322
+          },
+          "W_by_month": {
+            "2024-06": 155289781.4258545,
+            "2024-07": 246265900.4587135,
+            "2024-08": 164369346.93887293,
+            "2024-09": 245583326.60477453,
+            "2024-10": 187248329.35914814,
+            "2024-11": 141866568.311647,
+            "2024-12": 120280272.61912847,
+            "2025-01": 127925794.75238456,
+            "2025-02": 150837648.8481412,
+            "2025-03": 133735551.58357851,
+            "2025-04": 169123609.33116904,
+            "2025-05": 221193710.30832264
+          }
+        }
+      },
+      "seen_metrics": {
+        "W": 1676243649.3606157,
+        "W_1e8_won": 16.762436493606156,
+        "score_deduction": 167624364.9360616,
+        "weight_sum": 3106254.56,
+        "weighted_mae_kwh": 539.6349903018302,
+        "evaluation_hours": 8760,
+        "observed_site_hours": 1795800,
+        "active_sites": 205,
+        "complete_group_hours": 0,
+        "W_by_group": {
+          "G1": 928388832.9643953,
+          "G2": 747854816.3962204
+        },
+        "W_by_month": {
+          "2024-06": 146829133.48388264,
+          "2024-07": 211626425.68956965,
+          "2024-08": 133197759.0192901,
+          "2024-09": 197340590.0639217,
+          "2024-10": 150070276.87836668,
+          "2024-11": 115371634.86917047,
+          "2024-12": 94929731.48953545,
+          "2025-01": 104630144.21474326,
+          "2025-02": 109623260.2663932,
+          "2025-03": 107780660.06040677,
+          "2025-04": 131596075.1026134,
+          "2025-05": 173247958.22272235
+        }
+      },
+      "raw_label_metrics": {
+        "W": 2063719838.1566553,
+        "W_1e8_won": 20.637198381566552,
+        "score_deduction": 206371983.81566554,
+        "weight_sum": 3106254.56,
+        "weighted_mae_kwh": 664.3756325484976,
+        "evaluation_hours": 8760,
+        "observed_site_hours": 2170645,
+        "active_sites": 253,
+        "complete_group_hours": 11592,
+        "W_by_group": {
+          "G1": 973403868.1386199,
+          "G2": 1090315970.0180354
+        },
+        "W_by_month": {
+          "2024-06": 155289780.93091193,
+          "2024-07": 246265900.52834904,
+          "2024-08": 164369346.44769594,
+          "2024-09": 245583326.85390908,
+          "2024-10": 187248328.95819625,
+          "2024-11": 141866567.91602674,
+          "2024-12": 120280272.14838278,
+          "2025-01": 127925794.86268055,
+          "2025-02": 150837648.9042806,
+          "2025-03": 133735551.54753505,
+          "2025-04": 169123609.0593296,
+          "2025-05": 221193709.99935767
+        }
+      },
+      "total_seconds": 72.08909679099452,
+      "peak_process_memory_mib": 2610.0,
+      "model_sha256": {
+        "10": "2e88331bdcce95d088f4c1a2052526a12b0675c398f86c738cc8bc7a7e027dfd",
+        "17": "eb46560ef626ab2c5b2e701e9613d77eaab5f0b8eefa009f477d92f20024c49c"
+      }
+    }
+  },
+  "peer_recorded_scores": {
+    "E000b": {
+      "W_F2": 1211068963,
+      "W_F3": 2280564772,
+      "our_excess_percent_F2": -7.396974812053026,
+      "our_excess_percent_F3": -9.508387313555556
+    },
+    "F102_det": {
+      "W_F2": 1112646526,
+      "W_F3": 2129748191,
+      "our_excess_percent_F2": 0.7944994788307236,
+      "our_excess_percent_F3": -3.100289073482543
+    },
+    "F105": {
+      "W_F2": 1065242199,
+      "W_F3": 2017305364,
+      "our_excess_percent_F2": 5.27995397695451,
+      "our_excess_percent_F3": 2.30081560134765
+    },
+    "T701_approx_P4": {
+      "W_F2": 1121106112,
+      "W_F3": 2065665481,
+      "our_excess_percent_F2": 0.033929424362844074,
+      "our_excess_percent_F3": -0.09418952275482839
+    },
+    "S905": {
+      "W_F2": 1053968383,
+      "W_F3": 1995426474,
+      "our_excess_percent_F2": 6.406085319003174,
+      "our_excess_percent_F3": 3.422494761474981
+    },
+    "S906_NN_held": {
+      "W_F2": 1018865366,
+      "W_F3": 1920333143,
+      "our_excess_percent_F2": 10.072099246358924,
+      "our_excess_percent_F3": 7.466761591050397
+    },
+    "S907a": {
+      "W_F2": 1016517349,
+      "W_F3": 1902759706,
+      "our_excess_percent_F2": 10.326350844239073,
+      "our_excess_percent_F3": 8.459299092480087
+    },
+    "X603c_s05": {
+      "W_F2": 1011173218,
+      "W_F3": 1893152229,
+      "our_excess_percent_F2": 10.909434396263663,
+      "our_excess_percent_F3": 9.009714534780544
+    }
+  },
+  "training_pipeline_seconds": 118.56149541700142,
+  "rescore_seconds": 18.430547958007082,
+  "verification": {
+    "status": "passed",
+    "peer_reference": {
+      "repository": "aiswody/oibc2026",
+      "commit": "871d972c2b47bb07ef93ce51d186a1513f7e4ff7",
+      "files": [
+        "src/oibc/config.py",
+        "src/oibc/scoring.py",
+        "src/oibc/fcst.py",
+        "src/oibc/data.py",
+        "src/oibc/features.py",
+        "experiments/T701_teammate_p4.py",
+        "notes/teammate_compare.md",
+        "notes/experiments.md"
+      ],
+      "source_sha256": {
+        "src/oibc/config.py": "bdf23b21cb58b761b0e7f9c1c5550bc5c8378a83350a47ba11dac41aef802b12",
+        "src/oibc/scoring.py": "76db1520f872ecff45067e38aedb0d84fce46724d7ad1474b37c426d2b6df26a",
+        "src/oibc/fcst.py": "b9a9e27b2e275e7cecec72b686401cd5a248ca8e897e28b34c36a116532b96ca",
+        "src/oibc/data.py": "a3b09b98ac9d93c2e959c74a7c2eb2253c3f6817169d6700d90bb0dad9f818ef",
+        "src/oibc/features.py": "5543309df3a3b55bbc342ee347b7bd427d44fc89b021cad600d65c6bf92e2f3e",
+        "experiments/T701_teammate_p4.py": "1d8afd28bb714f0717d5566025ed5ed736d2a08c78a38fd6625c1cc725a9fb8a",
+        "notes/teammate_compare.md": "9527967f4251b23bcdf9973167a5e931d96ce84de8487df9f4b2f382c4cd319d",
+        "notes/experiments.md": "49d19bc4c53acfa91ed13802e2e725a607f7854775242c0db26262d07f6c2b80"
+      }
+    },
+    "folds": {
+      "F2": {
+        "status": "passed",
+        "evaluated_site_hours": 1256595,
+        "excluded_invalid": 0,
+        "replayed_rows_per_model": 544,
+        "scores": {
+          "pred_10": {
+            "numpy_W": 1172174682.569932,
+            "peer_function_W": 1172174682.569932
+          },
+          "pred_17": {
+            "numpy_W": 1122729034.3588572,
+            "peer_function_W": 1122729034.3588572
+          },
+          "ensemble": {
+            "numpy_W": 1121486496.8502982,
+            "peer_function_W": 1121486496.8502982
+          }
+        }
+      },
+      "F3": {
+        "status": "passed",
+        "evaluated_site_hours": 2170645,
+        "excluded_invalid": 0,
+        "replayed_rows_per_model": 544,
+        "scores": {
+          "pred_10": {
+            "numpy_W": 2165694719.7972493,
+            "peer_function_W": 2165694719.7972493
+          },
+          "pred_17": {
+            "numpy_W": 2068855056.5027347,
+            "peer_function_W": 2068855056.5027347
+          },
+          "ensemble": {
+            "numpy_W": 2063719840.541735,
+            "peer_function_W": 2063719840.541735
+          }
+        }
+      }
+    },
+    "verification_source_sha256": "8bf835edae725774a20c71dff514a9b396266bffcc4fa1eb405f214ac1e1803b"
+  }
+}
