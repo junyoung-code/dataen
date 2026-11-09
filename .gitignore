@@ -3,6 +3,7 @@
 /data
 /handover 2/
 /private/
+/teammate/
 /archive/
 /workspaces/*
 !/workspaces/README.md

@@ -1,0 +1,101 @@
+{
+  "selection": "Fixed 3x3 meteorological grid; no plant coordinates read",
+  "grid_shape": [
+    781,
+    602
+  ],
+  "reference_initialization": "2024070100",
+  "reference_lead": 24,
+  "points": [
+    {
+      "label": "p1",
+      "fixed_latitude": 34.0,
+      "fixed_longitude": 125.0,
+      "X": 199,
+      "Y": 122,
+      "model_latitude": 33.99594664361758,
+      "model_longitude": 124.99795666638276,
+      "distance_km": 0.4884922600886242
+    },
+    {
+      "label": "p2",
+      "fixed_latitude": 34.0,
+      "fixed_longitude": 127.0,
+      "X": 320,
+      "Y": 122,
+      "model_latitude": 33.99599882308949,
+      "model_longitude": 126.9970018061895,
+      "distance_km": 0.5237740344534784
+    },
+    {
+      "label": "p3",
+      "fixed_latitude": 34.0,
+      "fixed_longitude": 129.0,
+      "X": 441,
+      "Y": 125,
+      "model_latitude": 33.99574997099231,
+      "model_longitude": 128.99665831834983,
+      "distance_km": 0.5641226023679213
+    },
+    {
+      "label": "p4",
+      "fixed_latitude": 36.0,
+      "fixed_longitude": 125.0,
+      "X": 201,
+      "Y": 268,
+      "model_latitude": 36.00212823372766,
+      "model_longitude": 125.0008996177786,
+      "distance_km": 0.25010372094402383
+    },
+    {
+      "label": "p5",
+      "fixed_latitude": 36.0,
+      "fixed_longitude": 127.0,
+      "X": 318,
+      "Y": 268,
+      "model_latitude": 36.00218057217626,
+      "model_longitude": 126.99390225161864,
+      "distance_km": 0.5997366930382552
+    },
+    {
+      "label": "p6",
+      "fixed_latitude": 36.0,
+      "fixed_longitude": 129.0,
+      "X": 436,
+      "Y": 271,
+      "model_latitude": 36.00291194949062,
+      "model_longitude": 129.00460148794474,
+      "distance_km": 0.5255333739852311
+    },
+    {
+      "label": "p7",
+      "fixed_latitude": 38.0,
+      "fixed_longitude": 125.0,
+      "X": 203,
+      "Y": 413,
+      "model_latitude": 38.00561002270735,
+      "model_longitude": 125.00424987482403,
+      "distance_km": 0.7264947840395378
+    },
+    {
+      "label": "p8",
+      "fixed_latitude": 38.0,
+      "fixed_longitude": 127.0,
+      "X": 317,
+      "Y": 413,
+      "model_latitude": 38.00548962844226,
+      "model_longitude": 127.00796112264109,
+      "distance_km": 0.9269232839417401
+    },
+    {
+      "label": "p9",
+      "fixed_latitude": 38.0,
+      "fixed_longitude": 129.0,
+      "X": 430,
+      "Y": 415,
+      "model_latitude": 37.99407249197792,
+      "model_longitude": 128.99417166974072,
+      "distance_km": 0.8338192213940895
+    }
+  ]
+}

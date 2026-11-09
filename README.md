@@ -9,6 +9,7 @@
 | 지금 어디까지 했는지 | [현재 상태](CONTEXT.md) |
 | 다음에 무엇을 할지 | [작업 계획](EXPERIMENT_PLAN.md) |
 | 무엇을 실험했고 결과가 어땠는지 | [실험 이력](EXPERIMENTS.md) |
+| UM 요청·시간 정렬·모델·재현 코드 | [UM 팀원 인계](docs/experiments/parallel/2026-11-09-um-handoff.md) |
 | P4·G315·F3가 무슨 뜻인지 | [용어와 번호 설명](docs/GLOSSARY.md) |
 | 코드·데이터·결과가 어디 있는지 | [폴더 안내](docs/PROJECT_STRUCTURE.md) |
 | Codex가 지킬 작업 규칙 | [AGENTS.md](AGENTS.md) |
